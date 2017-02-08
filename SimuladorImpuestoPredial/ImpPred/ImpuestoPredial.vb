@@ -20,13 +20,14 @@ Namespace ImpPred
             {4, "Malo"}}
 
         Private Shared ReadOnly Uits As New Dictionary(Of Integer, Decimal)
-        Private ReadOnly _contexto As New Contexto
+        Private Shared _contexto As Contexto
 
-        Sub New()
+        Sub New(contexto As Contexto)
             Predios = New List(Of Predio)
+            _Contexto = contexto
         End Sub
 
-        Property Año As Integer
+        Shared Property Año As Integer = Year(Now)
 
         ReadOnly Property Uit As Decimal
             Get

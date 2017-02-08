@@ -1,12 +1,11 @@
-﻿Imports SimuladorImpuestoPredial.ImpPred
+﻿Imports SimuladorImpuestoPredial.Entidades
+Imports SimuladorImpuestoPredial.ImpPred
 
 Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim aaaa As New ImpuestoPredial
-        aaaa.Año = 2017
-        Dim p As New Predio
-        p.ImpuestoPredial = aaaa
-        aaaa.Predios.Add(p)
-        Dim aaaaaaaaa = aaaa.Uit
+    Private ReadOnly _impuestoPredial As New ImpuestoPredial(_contexto)
+    Private ReadOnly _contexto As New Contexto
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ToolStripDropDownButton1.Items.Add(_contexto)
+        ImpuestoPredialBindingSource.DataSource = _impuestoPredial
     End Sub
 End Class

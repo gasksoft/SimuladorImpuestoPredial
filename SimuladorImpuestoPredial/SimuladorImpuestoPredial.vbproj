@@ -95,6 +95,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Categoria.vb" />
+    <Compile Include="Entidades\Depreciacion.vb" />
     <Compile Include="ImpPred\ImpuestoPredial.vb" />
     <Compile Include="ImpPred\Construccion.vb" />
     <Compile Include="Entidades\Contexto.vb" />
@@ -142,6 +144,9 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\SimuladorImpuestoPredial.ImpPred.Construccion.datasource" />
+    <None Include="My Project\DataSources\SimuladorImpuestoPredial.ImpPred.ImpuestoPredial.datasource" />
+    <None Include="My Project\DataSources\SimuladorImpuestoPredial.ImpPred.Predio.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>

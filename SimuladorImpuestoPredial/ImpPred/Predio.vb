@@ -33,7 +33,5 @@
                 Return TerrenoValor + ConstruccionesValor
             End Get
         End Property
-
-        Property ImpuestoPredial As ImpuestoPredial
     End Class
 End NameSpace
