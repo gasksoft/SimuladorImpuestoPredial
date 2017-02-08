@@ -16,7 +16,7 @@
 
         ReadOnly Property TerrenoValor As Decimal
             Get
-                Return TerrenoAreaTotal*Arancel
+                Return TerrenoAreaTotal * Arancel
             End Get
         End Property
 
@@ -34,4 +34,4 @@
             End Get
         End Property
     End Class
-End NameSpace
+End Namespace
