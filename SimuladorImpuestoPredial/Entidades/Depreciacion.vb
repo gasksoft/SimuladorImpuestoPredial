@@ -2,7 +2,7 @@
 Imports System.ComponentModel.DataAnnotations.Schema
 
 Namespace Entidades
-    Public Class Depreciacion
+    Public MustInherit Class Depreciacion
         <Key, Column(Order:=0)>
         Property Clasificacion As Integer
         <Key, Column(Order:=1)>

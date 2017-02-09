@@ -2,7 +2,6 @@
 
 Namespace ImpPred
     Public Class Construccion
-        Private ReadOnly _contexto As New Contexto
         Property Nivel As Integer = 1
         Property Año As Integer = Year(Now)
         Property Mes As Integer = Month(Now)
@@ -26,69 +25,40 @@ Namespace ImpPred
         Public Property Cp As String = "A"
         Public Property Ct As String = "A"
         Public Property Cmc As String = "A"
-        Public Property Clasificacion As Integer = 1
         Public Property Material As Integer = 1
         Public Property Estado As Integer = 1
 
-        Public ReadOnly Property Vies As Decimal
-            Get
-                Return _
-                    (From c In _contexto.Categorias Where c.Año = ImpuestoPredial.Año And c.Cat = Cies).
-                        FirstOrDefault?.Vies
-            End Get
-        End Property
+        Private Function GetVies() As Decimal
+            Return If(ParametrosCalculo.Categorias(Cies).Vies, 0)
+        End Function
 
-        Public ReadOnly Property Vb As Decimal
-            Get
-                Return _
-                    (From c In _contexto.Categorias Where c.Año = ImpuestoPredial.Año And c.Cat = Cb).
-                        FirstOrDefault?.Vb
-            End Get
-        End Property
+        Private Function GetVb() As Decimal
+            Return If(ParametrosCalculo.Categorias(Cb).Vb, 0)
+        End Function
 
-        Public ReadOnly Property Vr As Decimal
-            Get
-                Return _
-                    (From c In _contexto.Categorias Where c.Año = ImpuestoPredial.Año And c.Cat = Cr).
-                        FirstOrDefault?.Vr
-            End Get
-        End Property
+        Private Function GetVr() As Decimal
+            Return If(ParametrosCalculo.Categorias(Cr).Vr, 0)
+        End Function
 
-        Public ReadOnly Property Vpv As Decimal
-            Get
-                Return _
-                    (From c In _contexto.Categorias Where c.Año = ImpuestoPredial.Año And c.Cat = Cpv).
-                        FirstOrDefault?.Vpv
-            End Get
-        End Property
+        Private Function GetVpv() As Decimal
+            Return If(ParametrosCalculo.Categorias(Cpv).Vpv, 0)
+        End Function
 
-        Public ReadOnly Property Vp As Decimal
-            Get
-                Return _
-                    (From c In _contexto.Categorias Where c.Año = ImpuestoPredial.Año And c.Cat = Cp).
-                        FirstOrDefault?.Vp
-            End Get
-        End Property
+        Private Function GetVp() As Decimal
+            Return If(ParametrosCalculo.Categorias(Cp).Vp, 0)
+        End Function
 
-        Public ReadOnly Property Vt As Decimal
-            Get
-                Return _
-                    (From c In _contexto.Categorias Where c.Año = ImpuestoPredial.Año And c.Cat = Ct).
-                        FirstOrDefault?.Vt
-            End Get
-        End Property
+        Private Function GetVt() As Decimal
+            Return If(ParametrosCalculo.Categorias(Ct).Vt, 0)
+        End Function
 
-        Public ReadOnly Property Vmc As Decimal
-            Get
-                Return _
-                    (From c In _contexto.Categorias Where c.Año = ImpuestoPredial.Año And c.Cat = Cmc).
-                        FirstOrDefault?.Vmc
-            End Get
-        End Property
+        Private Function GetVmc() As Decimal
+            Return If(ParametrosCalculo.Categorias(Cmc).Vmc, 0)
+        End Function
 
         ReadOnly Property ValorUnitario As Decimal
             Get
-                Return Vies + Vb + Vr + Vpv + Vp + Vt + Vmc
+                Return GetVies() + GetVb() + GetVr() + GetVpv() + GetVp() + GetVt() + GetVmc()
             End Get
         End Property
 
@@ -104,7 +74,7 @@ Namespace ImpPred
             End Get
         End Property
 
-        ReadOnly Property Depreciacion As Decimal
+        ReadOnly Property PorcDepreciacion As Decimal
             Get
                 Dim ga As Integer
                 Dim a = Antiguedad
@@ -132,33 +102,47 @@ Namespace ImpPred
                     ga = 55
                 End If
                 Return (
-                    From d In _contexto.Depreciaciones
+                    From d In ParametrosCalculo.Depreciaciones
                     Where d.Antiguedad = ga And
-                          d.Clasificacion = Clasificacion And
+                          d.Clasificacion = Predio.Clasificacion And
                           d.Estado = Estado And
                           d.Material = Material).FirstOrDefault?.Porcentaje
             End Get
         End Property
 
+        ReadOnly Property ValorDepreciacion As Decimal
+            Get
+                Return ValorUnitarioIncrementado * PorcDepreciacion / 100
+            End Get
+        End Property
+
         ReadOnly Property ValorUnitarioDepreciado As Decimal
             Get
-                Return ValorUnitarioIncrementado * (1 - Depreciacion / 100)
+                Return ValorUnitarioIncrementado * (1 - PorcDepreciacion / 100)
             End Get
         End Property
 
         Property AreaConstruida As Decimal
-        Property AreaConstruidaComunPorcentaje As Decimal = 100
+        ReadOnly Property AreaConstruidaValor As Decimal
+            Get
+                Return ValorUnitarioDepreciado * AreaConstruida
+            End Get
+        End Property
+        Property AreaConstruidaComunPorcentaje As Decimal
 
         ReadOnly Property AreaConstruidaComunValor As Decimal
             Get
-                Return AreaConstruida * AreaConstruidaComunPorcentaje / 100
+                Return AreaConstruidaValor * AreaConstruidaComunPorcentaje / 100
             End Get
         End Property
 
         Public ReadOnly Property Valor As Decimal
             Get
-                Return AreaConstruidaComunValor * ValorUnitarioDepreciado
+                Return If(AreaConstruidaComunValor > 0, AreaConstruidaComunValor, AreaConstruidaValor)
             End Get
         End Property
+
+        Public Property Predio As Predio
+
     End Class
 End Namespace

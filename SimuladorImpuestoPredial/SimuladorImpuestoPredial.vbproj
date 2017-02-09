@@ -142,6 +142,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ImpPred\Predio.vb" />
+    <Compile Include="ParametrosCalculo.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -162,6 +163,7 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\ParametrosCalculo.datasource" />
     <None Include="My Project\DataSources\SimuladorImpuestoPredial.ImpPred.Construccion.datasource" />
     <None Include="My Project\DataSources\SimuladorImpuestoPredial.ImpPred.ImpuestoPredial.datasource" />
     <None Include="My Project\DataSources\SimuladorImpuestoPredial.ImpPred.Predio.datasource" />

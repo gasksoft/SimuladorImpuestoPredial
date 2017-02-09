@@ -1,46 +1,20 @@
-﻿Imports SimuladorImpuestoPredial.Entidades
+﻿Imports System.ComponentModel
+Imports SimuladorImpuestoPredial.Entidades
 
 Namespace ImpPred
     Public Class ImpuestoPredial
-        Public Shared ClasificacionPredioDictionary As New Dictionary(Of Integer, String) From {
-            {1, "Casa habitación, departamentos para viviendas incluidas las ubicadas en edificios"},
-            {2, "Tiendas, depósitos, centros de recreación o esparcimiento, clubes sociales o instituciones"},
-            {3, "Edificios – oficinas"},
-            {4, "Edificaciones de salud, cines, industrias, edificaciones de uso educativo, talleres"}}
+        Implements INotifyPropertyChanged
 
-        Public Shared MaterialPredominanteDictionary As New Dictionary(Of Integer, String) From {
-            {1, "Concreto"},
-            {2, "Ladrillo"},
-            {3, "Adobe"}}
+        Private _exonerado As Boolean
+        Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
 
-        Public Shared EstadoConservacionDictionary As New Dictionary(Of Integer, String) From {
-            {1, "Muy Bueno"},
-            {2, "Bueno"},
-            {3, "Regular"},
-            {4, "Malo"}}
-
-        Private Shared ReadOnly Uits As New Dictionary(Of Integer, Decimal)
-        Private Shared _contexto As Contexto
-
-        Sub New(contexto As Contexto)
-            Predios = New List(Of Predio)
-            _Contexto = contexto
+        Sub New()
+            AddHandler Predios.ListChanged,
+                Sub()
+                    RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(BaseImponible)))
+                End Sub
         End Sub
-
-        Shared Property Año As Integer = Year(Now)
-
-        ReadOnly Property Uit As Decimal
-            Get
-                Dim valor As Decimal
-                If Not Uits.TryGetValue(Año, valor) Then
-                    valor = (From u In _contexto.Uits Where u.Año = Año).FirstOrDefault?.Valor
-                    Uits(Año) = valor
-                End If
-                Return valor
-            End Get
-        End Property
-
-        ReadOnly Property Predios As List(Of Predio)
+        ReadOnly Property Predios As New BindingList(Of Predio)
 
         ReadOnly Property BaseImponible As Decimal
             Get
@@ -49,12 +23,19 @@ Namespace ImpPred
         End Property
 
         Property Exonerado As Boolean
-        Property ExoneradoSueldo As Decimal
+            Get
+                Return _exonerado
+            End Get
+            Set
+                _exonerado = Value
+                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(BaseImponible)))
+            End Set
+        End Property
 
         ReadOnly Property BaseImponibleDeducida As Decimal
             Get
-                If Exonerado AndAlso ExoneradoSueldo <= Uit Then
-                    Return Math.Max(0, BaseImponible - 50 * Uit)
+                If Exonerado Then
+                    Return Math.Max(0, BaseImponible - 50 * ParametrosCalculo.Uit)
                 Else
                     Return BaseImponible
                 End If
@@ -64,7 +45,7 @@ Namespace ImpPred
         ReadOnly Property BaseImponibleTramo1 As Decimal
             Get
                 Dim b = BaseImponibleDeducida
-                Dim u = Uit
+                Dim u = ParametrosCalculo.Uit
                 Return Math.Max(If(b > 15 * u, 15 * u, b), 0)
             End Get
         End Property
@@ -78,7 +59,7 @@ Namespace ImpPred
         ReadOnly Property BaseImponibleTramo2 As Decimal
             Get
                 Dim b = BaseImponibleDeducida
-                Dim u = Uit
+                Dim u = ParametrosCalculo.Uit
                 Return Math.Max(If(b > 60 * u, 60 * u - 15 * u, b - 15 * u) * 0.006, 0)
             End Get
         End Property
@@ -92,7 +73,7 @@ Namespace ImpPred
         ReadOnly Property BaseImponibleTramo3 As Decimal
             Get
                 Dim b = BaseImponibleDeducida
-                Dim u = Uit
+                Dim u = ParametrosCalculo.Uit
                 Return Math.Max((b - 60 * u) * 0.01, 0)
             End Get
         End Property
