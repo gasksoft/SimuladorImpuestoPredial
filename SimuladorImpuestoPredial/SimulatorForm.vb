@@ -3,6 +3,7 @@ Imports SimuladorImpuestoPredial.ImpPred
 
 Public Class SimulatorForm
     Private ReadOnly _impuestoPredial As New ImpuestoPredial()
+    Private _enlazandoControles As Boolean
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         For Each item In ParametrosCalculo.Uits.Keys
             ToolStripDropDownButton1.Items.Add(item)
@@ -22,6 +23,7 @@ Public Class SimulatorForm
     End Sub
     Private Sub OnYearChange(sender As Object, e As EventArgs)
         ParametrosCalculo.Año = ToolStripDropDownButton1.ComboBox.SelectedItem
+        ImpuestoPredialBindingSource.ResetBindings(False)
     End Sub
     Private Sub PrediosBindingSource_ListChanged(sender As Object, e As ListChangedEventArgs) _
         Handles PrediosBindingSource.ListChanged
@@ -31,16 +33,14 @@ Public Class SimulatorForm
         Handles ConstruccionesBindingSource.ListChanged
         GroupBox7.Enabled = ConstruccionesBindingSource.Current IsNot Nothing
     End Sub
-    'Private Sub ValidacionCategoriasConstruccion(sender As Object, e As CancelEventArgs) Handles _
-    '        CmcTextBox.Validating, CtTextBox.Validating, CpTextBox.Validating, CpvTextBox.Validating, CrTextBox.Validating, CbTextBox.Validating, CiesTextBox.Validating
-    '    Dim txt As TextBox = sender
-    '    Me.Text = txt.Text
-    'End Sub
-    Private Shared Sub PasarElFocoAlSiguienteTextAlLlegarAlMaxLenght(sender As Object, e As EventArgs) _
+    Private Sub PasarElFocoAlSiguienteTextAlLlegarAlMaxLenght(sender As Object, e As EventArgs) _
         Handles CmcTextBox.TextChanged, CtTextBox.TextChanged, CpTextBox.TextChanged, CpvTextBox.TextChanged,
                 CrTextBox.TextChanged, CbTextBox.TextChanged, CiesTextBox.TextChanged
         Dim txt As TextBox = sender
-        If txt.TextLength = txt.MaxLength Then SendKeys.Send("{TAB}")
+        If txt.TextLength = txt.MaxLength AndAlso
+           Not _enlazandoControles Then
+            SendKeys.Send("{TAB}")
+        End If
     End Sub
     Private Shared Sub SelTextOnEnter(sender As Object, e As EventArgs) _
         Handles CmcTextBox.Enter,
@@ -56,5 +56,12 @@ Public Class SimulatorForm
             txt.SelectionLength = txt.Text.Length
         End If
     End Sub
-
+    Private Sub PrediosBindingSource_CurrentChanged(sender As Object, e As EventArgs) _
+        Handles PrediosBindingSource.CurrentChanged
+        _enlazandoControles = True
+    End Sub
+    Private Sub PrediosBindingSource_BindingComplete(sender As Object, e As BindingCompleteEventArgs) _
+        Handles PrediosBindingSource.BindingComplete
+        _enlazandoControles = False
+    End Sub
 End Class

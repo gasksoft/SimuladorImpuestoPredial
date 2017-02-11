@@ -49,6 +49,8 @@ Partial Class SimulatorForm
         Dim AreaConstruidaLabel As System.Windows.Forms.Label
         Dim AreaConstruidaComunPorcentajeLabel As System.Windows.Forms.Label
         Dim MesLabel1 As System.Windows.Forms.Label
+        Dim ValorLabel As System.Windows.Forms.Label
+        Dim TerrenoValorLabel1 As System.Windows.Forms.Label
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -130,6 +132,7 @@ Partial Class SimulatorForm
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.ValorTextBox = New System.Windows.Forms.TextBox()
         Me.MesComboBox = New System.Windows.Forms.ComboBox()
         Me.AreaConstruidaComunPorcentajeTextBox = New System.Windows.Forms.TextBox()
         Me.AreaConstruidaTextBox = New System.Windows.Forms.TextBox()
@@ -145,6 +148,7 @@ Partial Class SimulatorForm
         Me.AñoTextBox = New System.Windows.Forms.TextBox()
         Me.NivelTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.TerrenoValorTextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.ClasificacionComboBox = New System.Windows.Forms.ComboBox()
@@ -175,6 +179,8 @@ Partial Class SimulatorForm
         AreaConstruidaLabel = New System.Windows.Forms.Label()
         AreaConstruidaComunPorcentajeLabel = New System.Windows.Forms.Label()
         MesLabel1 = New System.Windows.Forms.Label()
+        ValorLabel = New System.Windows.Forms.Label()
+        TerrenoValorLabel1 = New System.Windows.Forms.Label()
         CType(Me.PrediosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ImpuestoPredialBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ConstruccionesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -430,6 +436,24 @@ Partial Class SimulatorForm
         MesLabel1.TabIndex = 4
         MesLabel1.Text = "Mes:"
         '
+        'ValorLabel
+        '
+        ValorLabel.AutoSize = True
+        ValorLabel.Location = New System.Drawing.Point(770, 18)
+        ValorLabel.Name = "ValorLabel"
+        ValorLabel.Size = New System.Drawing.Size(36, 13)
+        ValorLabel.TabIndex = 28
+        ValorLabel.Text = "Valor:"
+        '
+        'TerrenoValorLabel1
+        '
+        TerrenoValorLabel1.AutoSize = True
+        TerrenoValorLabel1.Location = New System.Drawing.Point(716, 24)
+        TerrenoValorLabel1.Name = "TerrenoValorLabel1"
+        TerrenoValorLabel1.Size = New System.Drawing.Size(36, 13)
+        TerrenoValorLabel1.TabIndex = 8
+        TerrenoValorLabel1.Text = "Valor:"
+        '
         'PrediosBindingSource
         '
         Me.PrediosBindingSource.DataMember = "Predios"
@@ -449,7 +473,7 @@ Partial Class SimulatorForm
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(5, 5)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(824, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(898, 25)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -532,6 +556,7 @@ Partial Class SimulatorForm
         Me.BaseImponibleTextBox.ReadOnly = True
         Me.BaseImponibleTextBox.Size = New System.Drawing.Size(76, 22)
         Me.BaseImponibleTextBox.TabIndex = 2
+        Me.BaseImponibleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'BaseImponibleDeducidaTextBox
         '
@@ -541,24 +566,25 @@ Partial Class SimulatorForm
         Me.BaseImponibleDeducidaTextBox.ReadOnly = True
         Me.BaseImponibleDeducidaTextBox.Size = New System.Drawing.Size(76, 22)
         Me.BaseImponibleDeducidaTextBox.TabIndex = 4
+        Me.BaseImponibleDeducidaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'InsolutoTextBox
         '
-        Me.InsolutoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImpuestoPredialBindingSource, "Insoluto", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
+        Me.InsolutoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImpuestoPredialBindingSource, "Insoluto", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "C2"))
         Me.InsolutoTextBox.Location = New System.Drawing.Point(736, 104)
         Me.InsolutoTextBox.Name = "InsolutoTextBox"
         Me.InsolutoTextBox.ReadOnly = True
         Me.InsolutoTextBox.Size = New System.Drawing.Size(76, 22)
         Me.InsolutoTextBox.TabIndex = 6
+        Me.InsolutoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'ExoneradoCheckBox
         '
-        Me.ExoneradoCheckBox.Appearance = System.Windows.Forms.Appearance.Button
         Me.ExoneradoCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ExoneradoCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ImpuestoPredialBindingSource, "Exonerado", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.ExoneradoCheckBox.Location = New System.Drawing.Point(736, 18)
+        Me.ExoneradoCheckBox.Location = New System.Drawing.Point(722, 18)
         Me.ExoneradoCheckBox.Name = "ExoneradoCheckBox"
-        Me.ExoneradoCheckBox.Size = New System.Drawing.Size(76, 24)
+        Me.ExoneradoCheckBox.Size = New System.Drawing.Size(90, 24)
         Me.ExoneradoCheckBox.TabIndex = 0
         Me.ExoneradoCheckBox.Text = "Exonerado:"
         Me.ExoneradoCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -681,7 +707,7 @@ Partial Class SimulatorForm
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Location = New System.Drawing.Point(5, 30)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(824, 140)
+        Me.GroupBox1.Size = New System.Drawing.Size(898, 140)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Resumen"
@@ -731,7 +757,7 @@ Partial Class SimulatorForm
         Me.ConstruccionesDataGridView.ReadOnly = True
         Me.ConstruccionesDataGridView.RowHeadersVisible = False
         Me.ConstruccionesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ConstruccionesDataGridView.Size = New System.Drawing.Size(812, 235)
+        Me.ConstruccionesDataGridView.Size = New System.Drawing.Size(886, 118)
         Me.ConstruccionesDataGridView.TabIndex = 0
         Me.ConstruccionesDataGridView.TabStop = False
         '
@@ -911,19 +937,21 @@ Partial Class SimulatorForm
         '
         'TerrenoAreaExclusivaTextBox
         '
-        Me.TerrenoAreaExclusivaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PrediosBindingSource, "TerrenoAreaExclusiva", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "#,###,###,###,##0.00 m²"))
+        Me.TerrenoAreaExclusivaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PrediosBindingSource, "TerrenoAreaExclusiva", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "N2"))
         Me.TerrenoAreaExclusivaTextBox.Location = New System.Drawing.Point(93, 21)
         Me.TerrenoAreaExclusivaTextBox.Name = "TerrenoAreaExclusivaTextBox"
         Me.TerrenoAreaExclusivaTextBox.Size = New System.Drawing.Size(100, 22)
         Me.TerrenoAreaExclusivaTextBox.TabIndex = 1
+        Me.TerrenoAreaExclusivaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TerrenoAreaComunTextBox
         '
-        Me.TerrenoAreaComunTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PrediosBindingSource, "TerrenoAreaComun", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "#,###,###,###,##0.00 m²"))
+        Me.TerrenoAreaComunTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PrediosBindingSource, "TerrenoAreaComun", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "N2"))
         Me.TerrenoAreaComunTextBox.Location = New System.Drawing.Point(278, 21)
         Me.TerrenoAreaComunTextBox.Name = "TerrenoAreaComunTextBox"
         Me.TerrenoAreaComunTextBox.Size = New System.Drawing.Size(100, 22)
         Me.TerrenoAreaComunTextBox.TabIndex = 3
+        Me.TerrenoAreaComunTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TerrenoAreaTotalTextBox
         '
@@ -933,6 +961,7 @@ Partial Class SimulatorForm
         Me.TerrenoAreaTotalTextBox.ReadOnly = True
         Me.TerrenoAreaTotalTextBox.Size = New System.Drawing.Size(100, 22)
         Me.TerrenoAreaTotalTextBox.TabIndex = 5
+        Me.TerrenoAreaTotalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'ArancelTextBox
         '
@@ -941,6 +970,7 @@ Partial Class SimulatorForm
         Me.ArancelTextBox.Name = "ArancelTextBox"
         Me.ArancelTextBox.Size = New System.Drawing.Size(100, 22)
         Me.ArancelTextBox.TabIndex = 7
+        Me.ArancelTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TerrenoValorTextBox
         '
@@ -950,6 +980,7 @@ Partial Class SimulatorForm
         Me.TerrenoValorTextBox.ReadOnly = True
         Me.TerrenoValorTextBox.Size = New System.Drawing.Size(100, 22)
         Me.TerrenoValorTextBox.TabIndex = 1
+        Me.TerrenoValorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'ConstruccionesValorTextBox
         '
@@ -959,6 +990,7 @@ Partial Class SimulatorForm
         Me.ConstruccionesValorTextBox.ReadOnly = True
         Me.ConstruccionesValorTextBox.Size = New System.Drawing.Size(100, 22)
         Me.ConstruccionesValorTextBox.TabIndex = 3
+        Me.ConstruccionesValorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'AvaluoTextBox
         '
@@ -968,6 +1000,7 @@ Partial Class SimulatorForm
         Me.AvaluoTextBox.ReadOnly = True
         Me.AvaluoTextBox.Size = New System.Drawing.Size(100, 22)
         Me.AvaluoTextBox.TabIndex = 5
+        Me.AvaluoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'GroupBox2
         '
@@ -978,7 +1011,7 @@ Partial Class SimulatorForm
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox2.Location = New System.Drawing.Point(5, 170)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(824, 555)
+        Me.GroupBox2.Size = New System.Drawing.Size(898, 414)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detalles del Predio"
@@ -990,7 +1023,7 @@ Partial Class SimulatorForm
         Me.GroupBox5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox5.Location = New System.Drawing.Point(3, 71)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(818, 350)
+        Me.GroupBox5.Size = New System.Drawing.Size(892, 234)
         Me.GroupBox5.TabIndex = 1
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Construcciones"
@@ -1002,7 +1035,7 @@ Partial Class SimulatorForm
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(3, 18)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(812, 260)
+        Me.Panel2.Size = New System.Drawing.Size(886, 143)
         Me.Panel2.TabIndex = 1
         '
         'BindingNavigator2
@@ -1013,14 +1046,14 @@ Partial Class SimulatorForm
         Me.BindingNavigator2.DeleteItem = Me.ToolStripButton2
         Me.BindingNavigator2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BindingNavigator2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.ToolStripButton1, Me.ToolStripButton2})
-        Me.BindingNavigator2.Location = New System.Drawing.Point(0, 235)
+        Me.BindingNavigator2.Location = New System.Drawing.Point(0, 118)
         Me.BindingNavigator2.MoveFirstItem = Me.ToolStripButton3
         Me.BindingNavigator2.MoveLastItem = Me.ToolStripButton6
         Me.BindingNavigator2.MoveNextItem = Me.ToolStripButton5
         Me.BindingNavigator2.MovePreviousItem = Me.ToolStripButton4
         Me.BindingNavigator2.Name = "BindingNavigator2"
         Me.BindingNavigator2.PositionItem = Me.ToolStripTextBox1
-        Me.BindingNavigator2.Size = New System.Drawing.Size(812, 25)
+        Me.BindingNavigator2.Size = New System.Drawing.Size(886, 25)
         Me.BindingNavigator2.TabIndex = 1
         Me.BindingNavigator2.Text = "BindingNavigator2"
         '
@@ -1111,6 +1144,8 @@ Partial Class SimulatorForm
         '
         'GroupBox7
         '
+        Me.GroupBox7.Controls.Add(ValorLabel)
+        Me.GroupBox7.Controls.Add(Me.ValorTextBox)
         Me.GroupBox7.Controls.Add(MesLabel1)
         Me.GroupBox7.Controls.Add(AreaConstruidaComunPorcentajeLabel)
         Me.GroupBox7.Controls.Add(Me.MesComboBox)
@@ -1140,12 +1175,22 @@ Partial Class SimulatorForm
         Me.GroupBox7.Controls.Add(NivelLabel)
         Me.GroupBox7.Controls.Add(Me.NivelTextBox)
         Me.GroupBox7.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GroupBox7.Location = New System.Drawing.Point(3, 278)
+        Me.GroupBox7.Location = New System.Drawing.Point(3, 161)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(812, 69)
+        Me.GroupBox7.Size = New System.Drawing.Size(886, 70)
         Me.GroupBox7.TabIndex = 1
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Detalles de la Construccion"
+        '
+        'ValorTextBox
+        '
+        Me.ValorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConstruccionesBindingSource, "Valor", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "C2"))
+        Me.ValorTextBox.Location = New System.Drawing.Point(769, 34)
+        Me.ValorTextBox.Name = "ValorTextBox"
+        Me.ValorTextBox.ReadOnly = True
+        Me.ValorTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.ValorTextBox.TabIndex = 29
+        Me.ValorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'MesComboBox
         '
@@ -1160,19 +1205,21 @@ Partial Class SimulatorForm
         '
         'AreaConstruidaComunPorcentajeTextBox
         '
-        Me.AreaConstruidaComunPorcentajeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConstruccionesBindingSource, "AreaConstruidaComunPorcentaje", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "##0.0000%"))
+        Me.AreaConstruidaComunPorcentajeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConstruccionesBindingSource, "AreaConstruidaComunPorcentaje", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "N4"))
         Me.AreaConstruidaComunPorcentajeTextBox.Location = New System.Drawing.Point(663, 34)
         Me.AreaConstruidaComunPorcentajeTextBox.Name = "AreaConstruidaComunPorcentajeTextBox"
         Me.AreaConstruidaComunPorcentajeTextBox.Size = New System.Drawing.Size(100, 22)
         Me.AreaConstruidaComunPorcentajeTextBox.TabIndex = 27
+        Me.AreaConstruidaComunPorcentajeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'AreaConstruidaTextBox
         '
-        Me.AreaConstruidaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConstruccionesBindingSource, "AreaConstruida", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "#,###,###,###,##0.00 m²"))
+        Me.AreaConstruidaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConstruccionesBindingSource, "AreaConstruida", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "N2"))
         Me.AreaConstruidaTextBox.Location = New System.Drawing.Point(567, 34)
         Me.AreaConstruidaTextBox.Name = "AreaConstruidaTextBox"
         Me.AreaConstruidaTextBox.Size = New System.Drawing.Size(90, 22)
         Me.AreaConstruidaTextBox.TabIndex = 25
+        Me.AreaConstruidaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'CiesTextBox
         '
@@ -1289,6 +1336,8 @@ Partial Class SimulatorForm
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(TerrenoValorLabel1)
+        Me.GroupBox3.Controls.Add(Me.TerrenoValorTextBox1)
         Me.GroupBox3.Controls.Add(TerrenoAreaExclusivaLabel)
         Me.GroupBox3.Controls.Add(Me.TerrenoAreaExclusivaTextBox)
         Me.GroupBox3.Controls.Add(TerrenoAreaComunLabel)
@@ -1298,12 +1347,22 @@ Partial Class SimulatorForm
         Me.GroupBox3.Controls.Add(ArancelLabel)
         Me.GroupBox3.Controls.Add(Me.ArancelTextBox)
         Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GroupBox3.Location = New System.Drawing.Point(3, 421)
+        Me.GroupBox3.Location = New System.Drawing.Point(3, 305)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(818, 62)
+        Me.GroupBox3.Size = New System.Drawing.Size(892, 52)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Terreno"
+        '
+        'TerrenoValorTextBox1
+        '
+        Me.TerrenoValorTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PrediosBindingSource, "TerrenoValor", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "C2"))
+        Me.TerrenoValorTextBox1.Location = New System.Drawing.Point(758, 21)
+        Me.TerrenoValorTextBox1.Name = "TerrenoValorTextBox1"
+        Me.TerrenoValorTextBox1.ReadOnly = True
+        Me.TerrenoValorTextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.TerrenoValorTextBox1.TabIndex = 9
+        Me.TerrenoValorTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'GroupBox6
         '
@@ -1314,9 +1373,9 @@ Partial Class SimulatorForm
         Me.GroupBox6.Controls.Add(AvaluoLabel)
         Me.GroupBox6.Controls.Add(Me.AvaluoTextBox)
         Me.GroupBox6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GroupBox6.Location = New System.Drawing.Point(3, 483)
+        Me.GroupBox6.Location = New System.Drawing.Point(3, 357)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(818, 69)
+        Me.GroupBox6.Size = New System.Drawing.Size(892, 54)
         Me.GroupBox6.TabIndex = 3
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Valorización Predio"
@@ -1330,7 +1389,7 @@ Partial Class SimulatorForm
         Me.GroupBox4.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox4.Location = New System.Drawing.Point(3, 18)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(818, 53)
+        Me.GroupBox4.Size = New System.Drawing.Size(892, 53)
         Me.GroupBox4.TabIndex = 0
         Me.GroupBox4.TabStop = False
         '
@@ -1344,7 +1403,7 @@ Partial Class SimulatorForm
         Me.ClasificacionComboBox.FormattingEnabled = True
         Me.ClasificacionComboBox.Location = New System.Drawing.Point(401, 21)
         Me.ClasificacionComboBox.Name = "ClasificacionComboBox"
-        Me.ClasificacionComboBox.Size = New System.Drawing.Size(408, 21)
+        Me.ClasificacionComboBox.Size = New System.Drawing.Size(482, 21)
         Me.ClasificacionComboBox.TabIndex = 3
         '
         'SimulatorForm
@@ -1352,7 +1411,7 @@ Partial Class SimulatorForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(834, 730)
+        Me.ClientSize = New System.Drawing.Size(908, 589)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ToolStrip1)
@@ -1483,4 +1542,6 @@ Partial Class SimulatorForm
     Friend WithEvents DataGridViewTextBoxColumn35 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn36 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn37 As DataGridViewTextBoxColumn
+    Friend WithEvents ValorTextBox As TextBox
+    Friend WithEvents TerrenoValorTextBox1 As TextBox
 End Class

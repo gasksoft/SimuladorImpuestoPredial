@@ -3,12 +3,20 @@
 Namespace ImpPred
     Public Class Predio
         Implements INotifyPropertyChanged
+        Private _clasificacion As Integer = 1
         Private _arancel As Decimal
         Private _terrenoAreaExclusiva As Decimal
         Private _terrenoAreaComun As Decimal
-        Private _clasificacion As Integer = 1
+
+        Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
         Sub New()
-            AddHandler Construcciones.AddingNew, AddressOf AgregandoConstruccion
+            AddHandler Construcciones.AddingNew,
+                Sub(sender As Object, e As AddingNewEventArgs)
+                    e.NewObject = New Construccion
+                    Dim construccion As Construccion = e.NewObject
+                    construccion.Predio = Me
+                End Sub
+            AddHandler Construcciones.ListChanged, Sub() RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(ConstruccionesValor)))
         End Sub
         Private Sub AgregandoConstruccion(sender As Object, e As AddingNewEventArgs)
             e.NewObject = New Construccion
@@ -22,7 +30,7 @@ Namespace ImpPred
             End Get
             Set
                 _clasificacion = Value
-                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs("Avaluo"))
+                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(Clasificacion)))
             End Set
         End Property
         Property Arancel As Decimal
@@ -31,7 +39,7 @@ Namespace ImpPred
             End Get
             Set
                 _arancel = Value
-                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs("Avaluo"))
+                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(Arancel)))
             End Set
         End Property
         Property TerrenoAreaExclusiva As Decimal
@@ -40,7 +48,7 @@ Namespace ImpPred
             End Get
             Set
                 _terrenoAreaExclusiva = Value
-                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs("Avaluo"))
+                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(TerrenoAreaExclusiva)))
             End Set
         End Property
         Property TerrenoAreaComun As Decimal
@@ -49,7 +57,7 @@ Namespace ImpPred
             End Get
             Set
                 _terrenoAreaComun = Value
-                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs("Avaluo"))
+                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(TerrenoAreaComun)))
             End Set
         End Property
         ReadOnly Property TerrenoAreaTotal As Decimal
@@ -62,7 +70,6 @@ Namespace ImpPred
                 Return TerrenoAreaTotal * Arancel
             End Get
         End Property
-        ReadOnly Property Construcciones As New BindingList(Of Construccion)
         ReadOnly Property ConstruccionesValor As Decimal
             Get
                 Return Construcciones.Sum(Function(c) c.Valor)
@@ -73,6 +80,6 @@ Namespace ImpPred
                 Return TerrenoValor + ConstruccionesValor
             End Get
         End Property
-        Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
+        ReadOnly Property Construcciones As New BindingList(Of Construccion)
     End Class
 End Namespace

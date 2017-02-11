@@ -12,7 +12,6 @@ Namespace ImpPred
                     RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(BaseImponible)))
                 End Sub
         End Sub
-        ReadOnly Property Predios As New BindingList(Of Predio)
         ReadOnly Property BaseImponible As Decimal
             Get
                 Return Predios.Sum(Function(p) p.Avaluo)
@@ -24,7 +23,7 @@ Namespace ImpPred
             End Get
             Set
                 _exonerado = Value
-                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(BaseImponible)))
+                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(Exonerado)))
             End Set
         End Property
         ReadOnly Property BaseImponibleDeducida As Decimal
@@ -36,46 +35,19 @@ Namespace ImpPred
                 End If
             End Get
         End Property
-        ReadOnly Property BaseImponibleTramo1 As Decimal
-            Get
-                Dim b = BaseImponibleDeducida
-                Dim u = ParametrosCalculo.Uit
-                Return Math.Max(If(b > 15 * u, 15 * u, b), 0)
-            End Get
-        End Property
-        ReadOnly Property InsolutoTramo1 As Decimal
-            Get
-                Return Math.Max(BaseImponibleTramo1 * 0.002, 0)
-            End Get
-        End Property
-        ReadOnly Property BaseImponibleTramo2 As Decimal
-            Get
-                Dim b = BaseImponibleDeducida
-                Dim u = ParametrosCalculo.Uit
-                Return Math.Max(If(b > 60 * u, 60 * u - 15 * u, b - 15 * u) * 0.006, 0)
-            End Get
-        End Property
-        ReadOnly Property InsolutoTramo2 As Decimal
-            Get
-                Return Math.Max(BaseImponibleTramo2 * 0.006, 0)
-            End Get
-        End Property
-        ReadOnly Property BaseImponibleTramo3 As Decimal
-            Get
-                Dim b = BaseImponibleDeducida
-                Dim u = ParametrosCalculo.Uit
-                Return Math.Max((b - 60 * u) * 0.01, 0)
-            End Get
-        End Property
-        ReadOnly Property InsolutoTramo3 As Decimal
-            Get
-                Return Math.Max(BaseImponibleTramo3 * 0.01, 0)
-            End Get
-        End Property
         ReadOnly Property Insoluto As Decimal
             Get
-                Return InsolutoTramo1 + InsolutoTramo2 + InsolutoTramo3
+                Dim bi = BaseImponibleDeducida
+                Dim u = ParametrosCalculo.Uit
+                Dim bit1 = If(bi > 15 * u, 15 * u, bi)
+                Dim it1 = bit1 * 0.002
+                Dim bit2 = If(bi > 15 * u, bi - bit1, 0)
+                Dim it2 = bit2 * 0.006
+                Dim bit3 = If(bi > 60 * u, bi - bit1 - bit2, 0)
+                Dim it3 = bit3 * 0.01
+                Return it1 + it2 + it3
             End Get
         End Property
+        ReadOnly Property Predios As New BindingList(Of Predio)
     End Class
 End Namespace
