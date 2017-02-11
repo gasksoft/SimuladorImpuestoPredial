@@ -77,7 +77,7 @@ Public Class ParametrosCalculo
         Using contexto As New Contexto
             _uits = New ReadOnlyDictionary(Of Integer, Decimal) _
                 (
-                    (From u In contexto.Uits Order By u.Año Descending Take 8).
+                    (From u In contexto.Uits Order By u.Año Descending Take 10).
                     ToDictionary((Function(u) u.Año), (Function(u) u.Valor)))
         End Using
     End Sub
