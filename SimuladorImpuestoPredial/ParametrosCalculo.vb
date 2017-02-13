@@ -28,11 +28,11 @@ Public Module ParametrosCalculo
             {3, "Regular"},
             {4, "Malo"}}
          )
-    Friend Function GetUits() As ReadOnlyDictionary(Of Integer, Decimal)
+    Function GetUits() As ReadOnlyDictionary(Of Integer, Decimal)
         If _uits Is Nothing Then FillUits()
         Return _uits
     End Function
-    Friend Property Año As Integer
+    Property Año As Integer
         Get
             Return _año
         End Get
@@ -48,13 +48,13 @@ Public Module ParametrosCalculo
         If Not _uit.HasValue Then _uit = GetUits(Año)
         Return _uit
     End Function
-    Public Function GetCategorias() As ReadOnlyDictionary(Of String, Categoria)
+    Function GetCategorias() As ReadOnlyDictionary(Of String, Categoria)
         If _categorias Is Nothing Then
             FillCategorias()
         End If
         Return _categorias
     End Function
-    Public Function GetDepreciaciones() As ReadOnlyCollection(Of Depreciacion)
+    Function GetDepreciaciones() As ReadOnlyCollection(Of Depreciacion)
         If _depreciaciones Is Nothing Then
             _depreciaciones = New ReadOnlyCollection(Of Depreciacion)((From d In Contexto.Depreciaciones).ToList)
         End If

@@ -8,22 +8,22 @@ Public Class SimulatorForm
         For Each item In GetUits().Keys
             ToolStripDropDownButton1.Items.Add(item)
         Next
-        AddHandler ToolStripDropDownButton1.ComboBox.SelectedIndexChanged, AddressOf OnYearChange
+        AddHandler ToolStripDropDownButton1.ComboBox.SelectedIndexChanged,
+            Sub()
+                Año() = ToolStripDropDownButton1.ComboBox.SelectedItem
+                ImpuestoPredialBindingSource.ResetBindings(False)
+            End Sub
         ToolStripDropDownButton1.SelectedIndex = 0
         ClasificacionComboBox.DisplayMember = "Value"
         ClasificacionComboBox.ValueMember = "Key"
         ClasificacionComboBox.DataSource = ClasificacionPredioDictionary.ToArray
         MaterialComboBox.DisplayMember = "Value"
         MaterialComboBox.ValueMember = "Key"
-        MaterialComboBox.DataSource = ParametrosCalculo.MaterialPredominanteDictionary.ToArray
+        MaterialComboBox.DataSource = MaterialPredominanteDictionary.ToArray
         EstadoComboBox.DisplayMember = "Value"
         EstadoComboBox.ValueMember = "Key"
-        EstadoComboBox.DataSource = ParametrosCalculo.EstadoConservacionDictionary.ToArray
+        EstadoComboBox.DataSource = EstadoConservacionDictionary.ToArray
         ImpuestoPredialBindingSource.DataSource = _impuestoPredial
-    End Sub
-    Private Sub OnYearChange(sender As Object, e As EventArgs)
-        ParametrosCalculo.Año() = ToolStripDropDownButton1.ComboBox.SelectedItem
-        ImpuestoPredialBindingSource.ResetBindings(False)
     End Sub
     Private Sub PrediosBindingSource_ListChanged(sender As Object, e As ListChangedEventArgs) _
         Handles PrediosBindingSource.ListChanged

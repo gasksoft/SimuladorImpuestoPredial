@@ -1,4 +1,5 @@
-﻿Imports System.ComponentModel.DataAnnotations
+﻿Imports System.ComponentModel
+Imports System.ComponentModel.DataAnnotations
 Imports System.ComponentModel.DataAnnotations.Schema
 
 Namespace Entidades
@@ -6,12 +7,13 @@ Namespace Entidades
         <Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)>
         Property IdIfp As Integer
         Property Desc As String
-        Property IdUM As Integer
+        Property IdUm As Integer
         Property IdIfpDeno As Integer
         Property IdDescComp As Integer
         <ForeignKey(NameOf(IdIfpDeno))>
         Overridable Property IfpDeno As IfpDeno
-        <ForeignKey(NameOf(IdUM))>
-        Overridable Property IfpUM As IfpUm
+        <ForeignKey(NameOf(IdUm))>
+        Overridable Property IfpUM As IfpUM
+        Overridable Property ifpVus As BindingList(Of IfpVu)
     End Class
 End Namespace

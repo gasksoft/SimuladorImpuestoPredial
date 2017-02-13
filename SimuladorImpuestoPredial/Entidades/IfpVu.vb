@@ -6,8 +6,9 @@ Namespace Entidades
         <Key, Column(Order:=0)>
         Property IdIfp As Integer
         <Key, Column(Order:=1)>
-        <ForeignKey(NameOf(IdIfp))>
         Property Año As Integer
         Property Valor As Decimal
+        <ForeignKey(NameOf(IdIfp))>
+        Overridable Property Ifp As Ifp
     End Class
 End NameSpace
