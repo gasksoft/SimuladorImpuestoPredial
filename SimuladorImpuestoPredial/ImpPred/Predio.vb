@@ -13,15 +13,15 @@ Namespace ImpPred
             AddHandler Construcciones.AddingNew,
                 Sub(sender As Object, e As AddingNewEventArgs)
                     e.NewObject = New Construccion
-                    Dim construccion As Construccion = e.NewObject
-                    construccion.Predio = Me
+                    e.NewObject.Predio = Me
                 End Sub
             AddHandler Construcciones.ListChanged, Sub() RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(ConstruccionesValor)))
-        End Sub
-        Private Sub AgregandoConstruccion(sender As Object, e As AddingNewEventArgs)
-            e.NewObject = New Construccion
-            Dim construccion As Construccion = e.NewObject
-            construccion.Predio = Me
+            AddHandler ObrasComplementarias.AddingNew,
+                Sub(sender As Object, e As AddingNewEventArgs)
+                    e.NewObject = New Construccion
+                    e.NewObject.Predio = Me
+                End Sub
+            AddHandler ObrasComplementarias.ListChanged, Sub() RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(ObrasComplementariasValor)))
         End Sub
         Property Direccion As String
         Property Clasificacion As Integer
@@ -75,11 +75,18 @@ Namespace ImpPred
                 Return Construcciones.Sum(Function(c) c.Valor)
             End Get
         End Property
+        ReadOnly Property ObrasComplementariasValor As Decimal
+            Get
+                Return ObrasComplementarias.Sum(Function(c) c.Valor)
+            End Get
+        End Property
+
         ReadOnly Property Avaluo As Decimal
             Get
-                Return TerrenoValor + ConstruccionesValor
+                Return TerrenoValor + ConstruccionesValor + ObrasComplementariasValor
             End Get
         End Property
         ReadOnly Property Construcciones As New BindingList(Of Construccion)
+        ReadOnly Property ObrasComplementarias As New BindingList(Of ObraComplementaria)
     End Class
 End Namespace

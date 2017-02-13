@@ -34,7 +34,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -51,6 +51,7 @@
     <DocumentationFile>SimuladorImpuestoPredial.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -76,10 +77,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>BF4B6EAA765E659A473B4748EF18196B288D259A</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>B9EF2B034654CB597C71676AFC5ECE89C32CF3C7</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>SimuladorImpuestoPredial_ClaveTemporal.pfx</ManifestKeyFile>
+    <ManifestKeyFile>SimuladorImpuestoPredial_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -114,6 +115,12 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>GaSKSoft.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -164,11 +171,16 @@
   <ItemGroup>
     <Compile Include="Entidades\Categoria.vb" />
     <Compile Include="Entidades\Depreciacion.vb" />
-    <Compile Include="ImpPred\Ifp.vb" />
+    <Compile Include="Entidades\Ifp.vb" />
+    <Compile Include="Entidades\IfpDeno.vb" />
+    <Compile Include="Entidades\IfpUm.vb" />
+    <Compile Include="Entidades\IfpVu.vb" />
+    <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="ImpPred\ImpuestoPredial.vb" />
     <Compile Include="ImpPred\Construccion.vb" />
     <Compile Include="Entidades\Contexto.vb" />
     <Compile Include="Entidades\Uit.vb" />
+    <Compile Include="ImpPred\ObraComplementaria.vb" />
     <Compile Include="SimulatorForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +227,7 @@
     <Content Include="x86\SQLite.Interop.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="GaSKSoft.pfx" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -230,6 +243,7 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="SimuladorImpuestoPredial_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

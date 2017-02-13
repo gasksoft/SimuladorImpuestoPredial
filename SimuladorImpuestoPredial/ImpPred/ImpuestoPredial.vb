@@ -1,5 +1,4 @@
 ﻿Imports System.ComponentModel
-
 Namespace ImpPred
     Public Class ImpuestoPredial
         Implements INotifyPropertyChanged
@@ -7,10 +6,7 @@ Namespace ImpPred
         Private _exonerado As Boolean
         Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
         Sub New()
-            AddHandler Predios.ListChanged,
-                Sub()
-                    RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(BaseImponible)))
-                End Sub
+            AddHandler Predios.ListChanged, Sub() RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(BaseImponible)))
         End Sub
         ReadOnly Property BaseImponible As Decimal
             Get
@@ -29,7 +25,7 @@ Namespace ImpPred
         ReadOnly Property BaseImponibleDeducida As Decimal
             Get
                 If Exonerado Then
-                    Return Math.Max(0, BaseImponible - 50 * ParametrosCalculo.Uit)
+                    Return Math.Max(0, BaseImponible - 50 * GetUit())
                 Else
                     Return BaseImponible
                 End If
@@ -38,14 +34,14 @@ Namespace ImpPred
         ReadOnly Property Insoluto As Decimal
             Get
                 Dim bi = BaseImponibleDeducida
-                Dim u = ParametrosCalculo.Uit
+                Dim u = GetUit()
                 Dim bit1 = If(bi > 15 * u, 15 * u, bi)
                 Dim it1 = bit1 * 0.002
                 Dim bit2 = If(bi > 15 * u, bi - bit1, 0)
                 Dim it2 = bit2 * 0.006
                 Dim bit3 = If(bi > 60 * u, bi - bit1 - bit2, 0)
                 Dim it3 = bit3 * 0.01
-                Return it1 + it2 + it3
+                Return Math.Max(it1 + it2 + it3, 0.006 * u)
             End Get
         End Property
         ReadOnly Property Predios As New BindingList(Of Predio)

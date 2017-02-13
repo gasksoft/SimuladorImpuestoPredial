@@ -5,14 +5,14 @@ Public Class SimulatorForm
     Private ReadOnly _impuestoPredial As New ImpuestoPredial()
     Private _enlazandoControles As Boolean
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        For Each item In ParametrosCalculo.Uits.Keys
+        For Each item In GetUits().Keys
             ToolStripDropDownButton1.Items.Add(item)
         Next
         AddHandler ToolStripDropDownButton1.ComboBox.SelectedIndexChanged, AddressOf OnYearChange
         ToolStripDropDownButton1.SelectedIndex = 0
         ClasificacionComboBox.DisplayMember = "Value"
         ClasificacionComboBox.ValueMember = "Key"
-        ClasificacionComboBox.DataSource = ParametrosCalculo.ClasificacionPredioDictionary.ToArray
+        ClasificacionComboBox.DataSource = ClasificacionPredioDictionary.ToArray
         MaterialComboBox.DisplayMember = "Value"
         MaterialComboBox.ValueMember = "Key"
         MaterialComboBox.DataSource = ParametrosCalculo.MaterialPredominanteDictionary.ToArray
@@ -22,16 +22,16 @@ Public Class SimulatorForm
         ImpuestoPredialBindingSource.DataSource = _impuestoPredial
     End Sub
     Private Sub OnYearChange(sender As Object, e As EventArgs)
-        ParametrosCalculo.Año = ToolStripDropDownButton1.ComboBox.SelectedItem
+        ParametrosCalculo.Año() = ToolStripDropDownButton1.ComboBox.SelectedItem
         ImpuestoPredialBindingSource.ResetBindings(False)
     End Sub
     Private Sub PrediosBindingSource_ListChanged(sender As Object, e As ListChangedEventArgs) _
         Handles PrediosBindingSource.ListChanged
-        GroupBox2.Enabled = PrediosBindingSource.Current IsNot Nothing
+        DetPredioGB.Enabled = PrediosBindingSource.Current IsNot Nothing
     End Sub
     Private Sub ConstruccionesBindingSource_ListChanged(sender As Object, e As ListChangedEventArgs) _
         Handles ConstruccionesBindingSource.ListChanged
-        GroupBox7.Enabled = ConstruccionesBindingSource.Current IsNot Nothing
+        DetallesConstruccionGb.Enabled = ConstruccionesBindingSource.Current IsNot Nothing
     End Sub
     Private Sub PasarElFocoAlSiguienteTextAlLlegarAlMaxLenght(sender As Object, e As EventArgs) _
         Handles CmcTextBox.TextChanged, CtTextBox.TextChanged, CpTextBox.TextChanged, CpvTextBox.TextChanged,

@@ -61,7 +61,7 @@ Namespace ImpPred
         End Property
         ReadOnly Property Categorias As String
             Get
-                Return $"{Cmc}{Ct}{Cp}{Cpv}{Cr}{Cb}{Cies}"
+                Return $"{Cmc}{CT}{CP}{Cpv}{CR}{CB}{Cies}"
             End Get
         End Property
         Property Cies As String
@@ -73,22 +73,22 @@ Namespace ImpPred
                 RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(Cies)))
             End Set
         End Property
-        Property Cb As String
+        Property CB As String
             Get
                 Return _cb
             End Get
             Set
                 _cb = Value
-                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(Cb)))
+                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(CB)))
             End Set
         End Property
-        Property Cr As String
+        Property CR As String
             Get
                 Return _cr
             End Get
             Set
                 _cr = Value
-                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(Cr)))
+                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(CR)))
             End Set
         End Property
         Property Cpv As String
@@ -100,22 +100,22 @@ Namespace ImpPred
                 RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(Cpv)))
             End Set
         End Property
-        Property Cp As String
+        Property CP As String
             Get
                 Return _cp
             End Get
             Set
                 _cp = Value
-                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(Cp)))
+                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(CP)))
             End Set
         End Property
-        Property Ct As String
+        Property CT As String
             Get
                 Return _ct
             End Get
             Set
                 _ct = Value
-                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(Ct)))
+                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(CT)))
             End Set
         End Property
         Property Cmc As String
@@ -147,7 +147,7 @@ Namespace ImpPred
         End Property
         Private Function GetValueFromCategoria(strCat As String) As Decimal
             Dim cat As Categoria = Nothing
-            If Not ParametrosCalculo.Categorias.TryGetValue(CallByName(Me, $"C{strCat}", CallType.Get), cat) Then _
+            If Not ParametrosCalculo.GetCategorias().TryGetValue(CallByName(Me, $"C{strCat}", CallType.Get), cat) Then _
                 Return 0
             Return If(CallByName(cat, $"V{strCat}", CallType.Get), 0)
         End Function
@@ -170,7 +170,7 @@ Namespace ImpPred
             Get
                 Dim ga As Integer = Math.Min(Math.Max(Math.Ceiling(Antiguedad / 5) * 5, 5), 55)
                 Return (
-                    From d In ParametrosCalculo.Depreciaciones
+                    From d In ParametrosCalculo.GetDepreciaciones()
                     Where d.Antiguedad = ga And
                               d.Clasificacion = Predio.Clasificacion And
                               d.Estado = Estado And
@@ -212,7 +212,7 @@ Namespace ImpPred
         End Property
         ReadOnly Property AreaConstruidaComunValor As Decimal
             Get
-                Return AreaConstruidaValor * AreaConstruidaComunPorcentaje
+                Return AreaConstruidaValor * AreaConstruidaComunPorcentaje / 100
             End Get
         End Property
         Public ReadOnly Property Valor As Decimal
