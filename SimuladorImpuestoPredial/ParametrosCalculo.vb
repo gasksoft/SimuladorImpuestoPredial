@@ -1,4 +1,5 @@
 ﻿Imports System.Collections.ObjectModel
+Imports System.Data.Entity
 Imports SimuladorImpuestoPredial.Entidades
 
 Public Module ParametrosCalculo
@@ -7,7 +8,9 @@ Public Module ParametrosCalculo
     Private _uit As Decimal?
     Private _categorias As ReadOnlyDictionary(Of String, Categoria)
     Private _depreciaciones As ReadOnlyCollection(Of Depreciacion)
+    Private _ifpDenominaciones As ReadOnlyCollection(Of IfpDeno)
     Private _año As Integer
+    Private _fo As Decimal?
     Friend ReadOnly ClasificacionPredioDictionary As New ReadOnlyDictionary(Of Integer, String) _
         (New Dictionary(Of Integer, String) From {
             {1, "Casa habitación, departamentos para viviendas incluidas las ubicadas en edificios"},
@@ -29,7 +32,11 @@ Public Module ParametrosCalculo
             {4, "Malo"}}
          )
     Function GetUits() As ReadOnlyDictionary(Of Integer, Decimal)
-        If _uits Is Nothing Then FillUits()
+        If _uits Is Nothing Then
+            _uits = New ReadOnlyDictionary(Of Integer, Decimal)(
+                (From u In Contexto.Uits Order By u.Año Descending Take 10).
+                ToDictionary((Function(u) u.Año), (Function(u) u.Valor)))
+        End If
         Return _uits
     End Function
     Property Año As Integer
@@ -41,6 +48,7 @@ Public Module ParametrosCalculo
                 _año = Value
                 _uit = Nothing
                 _categorias = Nothing
+                _fo = Nothing
             End If
         End Set
     End Property
@@ -50,7 +58,10 @@ Public Module ParametrosCalculo
     End Function
     Function GetCategorias() As ReadOnlyDictionary(Of String, Categoria)
         If _categorias Is Nothing Then
-            FillCategorias()
+            _categorias = New ReadOnlyDictionary(Of String, Categoria) _
+            (
+                (From c In Contexto.Categorias Where c.Año = Año).
+                ToDictionary(Function(c) c.Cat))
         End If
         Return _categorias
     End Function
@@ -60,16 +71,16 @@ Public Module ParametrosCalculo
         End If
         Return _depreciaciones
     End Function
-    Private Sub FillUits()
-        _uits = New ReadOnlyDictionary(Of Integer, Decimal) _
-            (
-                (From u In Contexto.Uits Order By u.Año Descending Take 10).
-                ToDictionary((Function(u) u.Año), (Function(u) u.Valor)))
-    End Sub
-    Private Sub FillCategorias()
-        _categorias = New ReadOnlyDictionary(Of String, Categoria) _
-            (
-                (From c In Contexto.Categorias Where c.Año = Año).
-                ToDictionary(Function(c) c.Cat))
-    End Sub
+    Function GetIfpDenominaciones() As ReadOnlyCollection(Of IfpDeno)
+        If _ifpDenominaciones Is Nothing Then
+            _ifpDenominaciones = New ReadOnlyCollection(Of IfpDeno)((From d In Contexto.IfpDenos).Include("ifps").Include("ifps.ifpum").ToList)
+        End If
+        Return _ifpDenominaciones
+    End Function
+    Function GetFactorOficializacion() As Decimal
+        If Not _fo.HasValue Then
+            _fo = (From f In Contexto.Fos Where f.Año = _año).FirstOrDefault?.Valor
+        End If
+        Return _fo
+    End Function
 End Module

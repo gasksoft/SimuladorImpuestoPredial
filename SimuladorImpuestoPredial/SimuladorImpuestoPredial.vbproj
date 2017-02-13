@@ -171,6 +171,7 @@
   <ItemGroup>
     <Compile Include="Entidades\Categoria.vb" />
     <Compile Include="Entidades\Depreciacion.vb" />
+    <Compile Include="Entidades\Fo.vb" />
     <Compile Include="Entidades\Ifp.vb" />
     <Compile Include="Entidades\IfpDeno.vb" />
     <Compile Include="Entidades\IfpUm.vb" />
@@ -205,6 +206,7 @@
     </Compile>
     <Compile Include="ImpPred\Predio.vb" />
     <Compile Include="ParametrosCalculo.vb" />
+    <Compile Include="Utils.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="SimulatorForm.resx">
@@ -233,6 +235,7 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\SimuladorImpuestoPredial.Entidades.IfpDeno.datasource" />
     <None Include="My Project\DataSources\SimuladorImpuestoPredial.ImpPred.Construccion.datasource" />
     <None Include="My Project\DataSources\SimuladorImpuestoPredial.ImpPred.ImpuestoPredial.datasource" />
     <None Include="My Project\DataSources\SimuladorImpuestoPredial.ImpPred.Predio.datasource" />

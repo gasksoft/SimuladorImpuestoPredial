@@ -17,6 +17,7 @@ Namespace Entidades
         Property IfpUms As DbSet(Of IfpUM)
         Property Ifps As DbSet(Of Ifp)
         Property IfpVus As DbSet(Of IfpVu)
+        Property Fos As DbSet(Of Fo)
         Protected Overrides Sub OnModelCreating(modelBuilder As DbModelBuilder)
             If modelBuilder Is Nothing Then Return
             modelBuilder.Conventions.Remove(Of PluralizingTableNameConvention)()

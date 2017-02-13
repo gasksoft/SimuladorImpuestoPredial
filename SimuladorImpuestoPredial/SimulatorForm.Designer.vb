@@ -51,25 +51,31 @@ Partial Class SimulatorForm
         Dim MesLabel1 As System.Windows.Forms.Label
         Dim ValorLabel As System.Windows.Forms.Label
         Dim TerrenoValorLabel1 As System.Windows.Forms.Label
+        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SimulatorForm))
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle65 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle57 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle61 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle62 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle63 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle64 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PrediosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ImpuestoPredialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ConstruccionesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MainTs = New System.Windows.Forms.ToolStrip()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripComboBox()
         Me.PredioDataGridView = New System.Windows.Forms.DataGridView()
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValorTerrenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValorConstruccionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AvaluoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BaseImponibleTextBox = New System.Windows.Forms.TextBox()
         Me.BaseImponibleDeducidaTextBox = New System.Windows.Forms.TextBox()
         Me.InsolutoTextBox = New System.Windows.Forms.TextBox()
@@ -90,6 +96,21 @@ Partial Class SimulatorForm
         Me.LisatadoPrediosPanel = New System.Windows.Forms.Panel()
         Me.DireccionTextBox = New System.Windows.Forms.TextBox()
         Me.ConstruccionesDataGridView = New System.Windows.Forms.DataGridView()
+        Me.NivelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MaterialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AñoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClasificacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CategoriasDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValorUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IncrementoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValorDepreciacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AreaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AreaConstruidaValorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PorcConstruccionComunDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValorConstruccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TerrenoAreaExclusivaTextBox = New System.Windows.Forms.TextBox()
         Me.TerrenoAreaComunTextBox = New System.Windows.Forms.TextBox()
         Me.TerrenoAreaTotalTextBox = New System.Windows.Forms.TextBox()
@@ -98,6 +119,8 @@ Partial Class SimulatorForm
         Me.ConstruccionesValorTextBox = New System.Windows.Forms.TextBox()
         Me.AvaluoTextBox = New System.Windows.Forms.TextBox()
         Me.DetPredioGB = New System.Windows.Forms.GroupBox()
+        Me.ConstIfpTabs = New System.Windows.Forms.TabControl()
+        Me.ConstruccionesTab = New System.Windows.Forms.TabPage()
         Me.ConstrucciuonesPanel = New System.Windows.Forms.Panel()
         Me.ConstruccionesBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
@@ -127,36 +150,23 @@ Partial Class SimulatorForm
         Me.MaterialComboBox = New System.Windows.Forms.ComboBox()
         Me.AñoTextBox = New System.Windows.Forms.TextBox()
         Me.NivelTextBox = New System.Windows.Forms.TextBox()
+        Me.IfpTab = New System.Windows.Forms.TabPage()
+        Me.IfpsComboBox = New System.Windows.Forms.ComboBox()
+        Me.IfpsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IfpDenoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IfpDenoComboBox = New System.Windows.Forms.ComboBox()
         Me.TadosTerrenoGb = New System.Windows.Forms.GroupBox()
         Me.TerrenoValorTextBox1 = New System.Windows.Forms.TextBox()
         Me.ValorizacionPredioGb = New System.Windows.Forms.GroupBox()
         Me.DatosPredioGb = New System.Windows.Forms.GroupBox()
         Me.ClasificacionComboBox = New System.Windows.Forms.ComboBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.MaterialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AñoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ClasificacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ValorDepreciacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AreaConstruidaValorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ConstIfpTabs = New System.Windows.Forms.TabControl()
-        Me.ConstruccionesTab = New System.Windows.Forms.TabPage()
-        Me.IfpTab = New System.Windows.Forms.TabPage()
-        Me.NivelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CategoriasDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ValorUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IncrementoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AreaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PorcConstruccionComunDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ValorConstruccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ImpuestoPredialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ValorTerrenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ValorConstruccionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AvaluoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IfpVusBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IfpVusDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         BaseImponibleLabel = New System.Windows.Forms.Label()
         BaseImponibleDeducidaLabel = New System.Windows.Forms.Label()
         InsolutoLabel = New System.Windows.Forms.Label()
@@ -186,6 +196,7 @@ Partial Class SimulatorForm
         ValorLabel = New System.Windows.Forms.Label()
         TerrenoValorLabel1 = New System.Windows.Forms.Label()
         CType(Me.PrediosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ImpuestoPredialBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ConstruccionesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MainTs.SuspendLayout()
         CType(Me.PredioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -195,16 +206,20 @@ Partial Class SimulatorForm
         Me.LisatadoPrediosPanel.SuspendLayout()
         CType(Me.ConstruccionesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DetPredioGB.SuspendLayout()
+        Me.ConstIfpTabs.SuspendLayout()
+        Me.ConstruccionesTab.SuspendLayout()
         Me.ConstrucciuonesPanel.SuspendLayout()
         CType(Me.ConstruccionesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ConstruccionesBindingNavigator.SuspendLayout()
         Me.DetallesConstruccionGb.SuspendLayout()
+        Me.IfpTab.SuspendLayout()
+        CType(Me.IfpsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IfpDenoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TadosTerrenoGb.SuspendLayout()
         Me.ValorizacionPredioGb.SuspendLayout()
         Me.DatosPredioGb.SuspendLayout()
-        Me.ConstIfpTabs.SuspendLayout()
-        Me.ConstruccionesTab.SuspendLayout()
-        CType(Me.ImpuestoPredialBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IfpVusBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IfpVusDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BaseImponibleLabel
@@ -464,6 +479,10 @@ Partial Class SimulatorForm
         Me.PrediosBindingSource.DataMember = "Predios"
         Me.PrediosBindingSource.DataSource = Me.ImpuestoPredialBindingSource
         '
+        'ImpuestoPredialBindingSource
+        '
+        Me.ImpuestoPredialBindingSource.DataSource = GetType(SimuladorImpuestoPredial.ImpPred.ImpuestoPredial)
+        '
         'ConstruccionesBindingSource
         '
         Me.ConstruccionesBindingSource.DataMember = "Construcciones"
@@ -493,7 +512,7 @@ Partial Class SimulatorForm
         Me.PredioDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.PredioDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PredioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.PredioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DireccionDataGridViewTextBoxColumn, Me.ValorTerrenoDataGridViewTextBoxColumn, Me.ValorConstruccionesDataGridViewTextBoxColumn, Me.ObrasComplementariasValorDataGridViewTextBoxColumn, Me.AvaluoDataGridViewTextBoxColumn})
+        Me.PredioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ObrasComplementariasValorDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.ValorTerrenoDataGridViewTextBoxColumn, Me.ValorConstruccionesDataGridViewTextBoxColumn, Me.AvaluoDataGridViewTextBoxColumn})
         Me.PredioDataGridView.DataSource = Me.PrediosBindingSource
         Me.PredioDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PredioDataGridView.Location = New System.Drawing.Point(0, 0)
@@ -505,6 +524,67 @@ Partial Class SimulatorForm
         Me.PredioDataGridView.Size = New System.Drawing.Size(498, 92)
         Me.PredioDataGridView.TabIndex = 0
         Me.PredioDataGridView.TabStop = False
+        '
+        'ObrasComplementariasValorDataGridViewTextBoxColumn
+        '
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.DataPropertyName = "ObrasComplementariasValor"
+        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle53.Format = "C2"
+        DataGridViewCellStyle53.NullValue = Nothing
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle53
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.HeaderText = "V. O. Comp."
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.Name = "ObrasComplementariasValorDataGridViewTextBoxColumn"
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.Width = 74
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Direccion"
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DireccionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'ValorTerrenoDataGridViewTextBoxColumn
+        '
+        Me.ValorTerrenoDataGridViewTextBoxColumn.DataPropertyName = "TerrenoValor"
+        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle54.Format = "C2"
+        DataGridViewCellStyle54.NullValue = Nothing
+        Me.ValorTerrenoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle54
+        Me.ValorTerrenoDataGridViewTextBoxColumn.HeaderText = "V. Terreno"
+        Me.ValorTerrenoDataGridViewTextBoxColumn.Name = "ValorTerrenoDataGridViewTextBoxColumn"
+        Me.ValorTerrenoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ValorTerrenoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ValorTerrenoDataGridViewTextBoxColumn.Width = 64
+        '
+        'ValorConstruccionesDataGridViewTextBoxColumn
+        '
+        Me.ValorConstruccionesDataGridViewTextBoxColumn.DataPropertyName = "ConstruccionesValor"
+        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle55.Format = "C2"
+        DataGridViewCellStyle55.NullValue = Nothing
+        Me.ValorConstruccionesDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle55
+        Me.ValorConstruccionesDataGridViewTextBoxColumn.HeaderText = "V. Constr."
+        Me.ValorConstruccionesDataGridViewTextBoxColumn.Name = "ValorConstruccionesDataGridViewTextBoxColumn"
+        Me.ValorConstruccionesDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ValorConstruccionesDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ValorConstruccionesDataGridViewTextBoxColumn.Width = 63
+        '
+        'AvaluoDataGridViewTextBoxColumn
+        '
+        Me.AvaluoDataGridViewTextBoxColumn.DataPropertyName = "Avaluo"
+        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle56.Format = "C2"
+        DataGridViewCellStyle56.NullValue = Nothing
+        Me.AvaluoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle56
+        Me.AvaluoDataGridViewTextBoxColumn.HeaderText = "Avaluo"
+        Me.AvaluoDataGridViewTextBoxColumn.Name = "AvaluoDataGridViewTextBoxColumn"
+        Me.AvaluoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AvaluoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.AvaluoDataGridViewTextBoxColumn.Width = 48
         '
         'BaseImponibleTextBox
         '
@@ -697,17 +777,17 @@ Partial Class SimulatorForm
         Me.ConstruccionesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ConstruccionesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NivelDataGridViewTextBoxColumn, Me.MaterialDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn, Me.AñoDataGridViewTextBoxColumn, Me.ClasificacionDataGridViewTextBoxColumn, Me.CategoriasDataGridViewTextBoxColumn, Me.ValorUnitarioDataGridViewTextBoxColumn, Me.IncrementoDataGridViewTextBoxColumn, Me.ValorDepreciacionDataGridViewTextBoxColumn, Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn, Me.AreaDataGridViewTextBoxColumn, Me.AreaConstruidaValorDataGridViewTextBoxColumn, Me.PorcConstruccionComunDataGridViewTextBoxColumn, Me.ValorCinbstruccionComunDataGridViewTextBoxColumn, Me.ValorConstruccionDataGridViewTextBoxColumn})
         Me.ConstruccionesDataGridView.DataSource = Me.ConstruccionesBindingSource
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle13.Format = "C2"
-        DataGridViewCellStyle13.NullValue = Nothing
-        DataGridViewCellStyle13.Padding = New System.Windows.Forms.Padding(2)
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ConstruccionesDataGridView.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle65.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle65.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle65.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle65.Format = "C2"
+        DataGridViewCellStyle65.NullValue = Nothing
+        DataGridViewCellStyle65.Padding = New System.Windows.Forms.Padding(2)
+        DataGridViewCellStyle65.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle65.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle65.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ConstruccionesDataGridView.DefaultCellStyle = DataGridViewCellStyle65
         Me.ConstruccionesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ConstruccionesDataGridView.Location = New System.Drawing.Point(0, 0)
         Me.ConstruccionesDataGridView.MultiSelect = False
@@ -718,6 +798,180 @@ Partial Class SimulatorForm
         Me.ConstruccionesDataGridView.Size = New System.Drawing.Size(886, 143)
         Me.ConstruccionesDataGridView.TabIndex = 0
         Me.ConstruccionesDataGridView.TabStop = False
+        '
+        'NivelDataGridViewTextBoxColumn
+        '
+        Me.NivelDataGridViewTextBoxColumn.DataPropertyName = "Nivel"
+        DataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle57.Format = "N0"
+        DataGridViewCellStyle57.NullValue = Nothing
+        Me.NivelDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle57
+        Me.NivelDataGridViewTextBoxColumn.HeaderText = "Niv"
+        Me.NivelDataGridViewTextBoxColumn.Name = "NivelDataGridViewTextBoxColumn"
+        Me.NivelDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NivelDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.NivelDataGridViewTextBoxColumn.ToolTipText = "Nivel de edificación (piso)"
+        Me.NivelDataGridViewTextBoxColumn.Width = 33
+        '
+        'MaterialDataGridViewTextBoxColumn
+        '
+        Me.MaterialDataGridViewTextBoxColumn.DataPropertyName = "Material"
+        DataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle58.Format = "N0"
+        DataGridViewCellStyle58.NullValue = Nothing
+        Me.MaterialDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle58
+        Me.MaterialDataGridViewTextBoxColumn.HeaderText = "MEP"
+        Me.MaterialDataGridViewTextBoxColumn.Name = "MaterialDataGridViewTextBoxColumn"
+        Me.MaterialDataGridViewTextBoxColumn.ReadOnly = True
+        Me.MaterialDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.MaterialDataGridViewTextBoxColumn.ToolTipText = "MAterial estructural predominante"
+        Me.MaterialDataGridViewTextBoxColumn.Width = 39
+        '
+        'EstadoDataGridViewTextBoxColumn
+        '
+        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "Estado"
+        DataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle59.Format = "N0"
+        Me.EstadoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle59
+        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "EC"
+        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
+        Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EstadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.EstadoDataGridViewTextBoxColumn.ToolTipText = "Estado de Conservacion"
+        Me.EstadoDataGridViewTextBoxColumn.Width = 30
+        '
+        'AñoDataGridViewTextBoxColumn
+        '
+        Me.AñoDataGridViewTextBoxColumn.DataPropertyName = "Año"
+        DataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle60.Format = "N0"
+        Me.AñoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle60
+        Me.AñoDataGridViewTextBoxColumn.HeaderText = "Año"
+        Me.AñoDataGridViewTextBoxColumn.Name = "AñoDataGridViewTextBoxColumn"
+        Me.AñoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AñoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.AñoDataGridViewTextBoxColumn.ToolTipText = "Año de Construccion"
+        Me.AñoDataGridViewTextBoxColumn.Width = 38
+        '
+        'ClasificacionDataGridViewTextBoxColumn
+        '
+        Me.ClasificacionDataGridViewTextBoxColumn.DataPropertyName = "Clasificacion"
+        DataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle61.Format = "N0"
+        Me.ClasificacionDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle61
+        Me.ClasificacionDataGridViewTextBoxColumn.HeaderText = "C"
+        Me.ClasificacionDataGridViewTextBoxColumn.Name = "ClasificacionDataGridViewTextBoxColumn"
+        Me.ClasificacionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ClasificacionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ClasificacionDataGridViewTextBoxColumn.ToolTipText = "Clasificación del predio"
+        Me.ClasificacionDataGridViewTextBoxColumn.Width = 24
+        '
+        'CategoriasDataGridViewTextBoxColumn
+        '
+        Me.CategoriasDataGridViewTextBoxColumn.DataPropertyName = "Categorias"
+        DataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.CategoriasDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle62
+        Me.CategoriasDataGridViewTextBoxColumn.HeaderText = "Categorias"
+        Me.CategoriasDataGridViewTextBoxColumn.Name = "CategoriasDataGridViewTextBoxColumn"
+        Me.CategoriasDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CategoriasDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.CategoriasDataGridViewTextBoxColumn.Width = 72
+        '
+        'ValorUnitarioDataGridViewTextBoxColumn
+        '
+        Me.ValorUnitarioDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitario"
+        Me.ValorUnitarioDataGridViewTextBoxColumn.HeaderText = "VU"
+        Me.ValorUnitarioDataGridViewTextBoxColumn.Name = "ValorUnitarioDataGridViewTextBoxColumn"
+        Me.ValorUnitarioDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ValorUnitarioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ValorUnitarioDataGridViewTextBoxColumn.ToolTipText = "Valor Unitario"
+        Me.ValorUnitarioDataGridViewTextBoxColumn.Width = 32
+        '
+        'IncrementoDataGridViewTextBoxColumn
+        '
+        Me.IncrementoDataGridViewTextBoxColumn.DataPropertyName = "Incremento5Porc"
+        Me.IncrementoDataGridViewTextBoxColumn.HeaderText = "5% Inc"
+        Me.IncrementoDataGridViewTextBoxColumn.Name = "IncrementoDataGridViewTextBoxColumn"
+        Me.IncrementoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IncrementoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.IncrementoDataGridViewTextBoxColumn.ToolTipText = "5% Incremento a partir del Quinto Piso"
+        Me.IncrementoDataGridViewTextBoxColumn.Width = 50
+        '
+        'ValorDepreciacionDataGridViewTextBoxColumn
+        '
+        Me.ValorDepreciacionDataGridViewTextBoxColumn.DataPropertyName = "ValorDepreciacion"
+        Me.ValorDepreciacionDataGridViewTextBoxColumn.HeaderText = "VD"
+        Me.ValorDepreciacionDataGridViewTextBoxColumn.Name = "ValorDepreciacionDataGridViewTextBoxColumn"
+        Me.ValorDepreciacionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ValorDepreciacionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ValorDepreciacionDataGridViewTextBoxColumn.ToolTipText = "Depreciación"
+        Me.ValorDepreciacionDataGridViewTextBoxColumn.Width = 32
+        '
+        'ValorUnitarioDepreciadoDataGridViewTextBoxColumn
+        '
+        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitarioDepreciado"
+        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.HeaderText = "VUD"
+        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.Name = "ValorUnitarioDepreciadoDataGridViewTextBoxColumn"
+        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.ToolTipText = "Valor Unitario Depreciado"
+        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.Width = 40
+        '
+        'AreaDataGridViewTextBoxColumn
+        '
+        Me.AreaDataGridViewTextBoxColumn.DataPropertyName = "AreaConstruida"
+        DataGridViewCellStyle63.Format = "#,###,###,##0.00 m²"
+        DataGridViewCellStyle63.NullValue = Nothing
+        Me.AreaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle63
+        Me.AreaDataGridViewTextBoxColumn.HeaderText = "Area"
+        Me.AreaDataGridViewTextBoxColumn.Name = "AreaDataGridViewTextBoxColumn"
+        Me.AreaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AreaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.AreaDataGridViewTextBoxColumn.ToolTipText = "Area Construida"
+        Me.AreaDataGridViewTextBoxColumn.Width = 40
+        '
+        'AreaConstruidaValorDataGridViewTextBoxColumn
+        '
+        Me.AreaConstruidaValorDataGridViewTextBoxColumn.DataPropertyName = "AreaConstruidaValor"
+        Me.AreaConstruidaValorDataGridViewTextBoxColumn.HeaderText = "VAC"
+        Me.AreaConstruidaValorDataGridViewTextBoxColumn.Name = "AreaConstruidaValorDataGridViewTextBoxColumn"
+        Me.AreaConstruidaValorDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AreaConstruidaValorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.AreaConstruidaValorDataGridViewTextBoxColumn.ToolTipText = "Valor Area Construida"
+        Me.AreaConstruidaValorDataGridViewTextBoxColumn.Width = 37
+        '
+        'PorcConstruccionComunDataGridViewTextBoxColumn
+        '
+        Me.PorcConstruccionComunDataGridViewTextBoxColumn.DataPropertyName = "AreaConstruidaComunPorcentaje"
+        DataGridViewCellStyle64.Format = "N4"
+        DataGridViewCellStyle64.NullValue = Nothing
+        Me.PorcConstruccionComunDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle64
+        Me.PorcConstruccionComunDataGridViewTextBoxColumn.HeaderText = "% Comun"
+        Me.PorcConstruccionComunDataGridViewTextBoxColumn.Name = "PorcConstruccionComunDataGridViewTextBoxColumn"
+        Me.PorcConstruccionComunDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PorcConstruccionComunDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.PorcConstruccionComunDataGridViewTextBoxColumn.ToolTipText = "Porcentaje de area común"
+        Me.PorcConstruccionComunDataGridViewTextBoxColumn.Width = 66
+        '
+        'ValorCinbstruccionComunDataGridViewTextBoxColumn
+        '
+        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.DataPropertyName = "AreaConstruidaComunValor"
+        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.HeaderText = "VACC"
+        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.Name = "ValorCinbstruccionComunDataGridViewTextBoxColumn"
+        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.ToolTipText = "Valor de area construida común"
+        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.Width = 44
+        '
+        'ValorConstruccionDataGridViewTextBoxColumn
+        '
+        Me.ValorConstruccionDataGridViewTextBoxColumn.DataPropertyName = "Valor"
+        Me.ValorConstruccionDataGridViewTextBoxColumn.HeaderText = "VTC"
+        Me.ValorConstruccionDataGridViewTextBoxColumn.Name = "ValorConstruccionDataGridViewTextBoxColumn"
+        Me.ValorConstruccionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ValorConstruccionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ValorConstruccionDataGridViewTextBoxColumn.ToolTipText = "Valor total de la construcción"
+        Me.ValorConstruccionDataGridViewTextBoxColumn.Width = 35
         '
         'TerrenoAreaExclusivaTextBox
         '
@@ -799,6 +1053,29 @@ Partial Class SimulatorForm
         Me.DetPredioGB.TabIndex = 2
         Me.DetPredioGB.TabStop = False
         Me.DetPredioGB.Text = "Detalles del Predio"
+        '
+        'ConstIfpTabs
+        '
+        Me.ConstIfpTabs.Controls.Add(Me.ConstruccionesTab)
+        Me.ConstIfpTabs.Controls.Add(Me.IfpTab)
+        Me.ConstIfpTabs.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ConstIfpTabs.Location = New System.Drawing.Point(3, 71)
+        Me.ConstIfpTabs.Name = "ConstIfpTabs"
+        Me.ConstIfpTabs.SelectedIndex = 0
+        Me.ConstIfpTabs.Size = New System.Drawing.Size(900, 264)
+        Me.ConstIfpTabs.TabIndex = 24
+        '
+        'ConstruccionesTab
+        '
+        Me.ConstruccionesTab.Controls.Add(Me.ConstrucciuonesPanel)
+        Me.ConstruccionesTab.Controls.Add(Me.DetallesConstruccionGb)
+        Me.ConstruccionesTab.Location = New System.Drawing.Point(4, 22)
+        Me.ConstruccionesTab.Name = "ConstruccionesTab"
+        Me.ConstruccionesTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.ConstruccionesTab.Size = New System.Drawing.Size(892, 238)
+        Me.ConstruccionesTab.TabIndex = 0
+        Me.ConstruccionesTab.Text = "TabPage1"
+        Me.ConstruccionesTab.UseVisualStyleBackColor = True
         '
         'ConstrucciuonesPanel
         '
@@ -1106,6 +1383,53 @@ Partial Class SimulatorForm
         Me.NivelTextBox.Size = New System.Drawing.Size(38, 22)
         Me.NivelTextBox.TabIndex = 1
         '
+        'IfpTab
+        '
+        Me.IfpTab.AutoScroll = True
+        Me.IfpTab.Controls.Add(Me.IfpVusDataGridView)
+        Me.IfpTab.Controls.Add(Me.IfpsComboBox)
+        Me.IfpTab.Controls.Add(Me.IfpDenoComboBox)
+        Me.IfpTab.Location = New System.Drawing.Point(4, 22)
+        Me.IfpTab.Name = "IfpTab"
+        Me.IfpTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.IfpTab.Size = New System.Drawing.Size(892, 238)
+        Me.IfpTab.TabIndex = 1
+        Me.IfpTab.Text = "TabPage2"
+        Me.IfpTab.UseVisualStyleBackColor = True
+        '
+        'IfpsComboBox
+        '
+        Me.IfpsComboBox.DataSource = Me.IfpsBindingSource
+        Me.IfpsComboBox.DisplayMember = "Desc"
+        Me.IfpsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.IfpsComboBox.FormattingEnabled = True
+        Me.IfpsComboBox.Location = New System.Drawing.Point(6, 33)
+        Me.IfpsComboBox.Name = "IfpsComboBox"
+        Me.IfpsComboBox.Size = New System.Drawing.Size(496, 21)
+        Me.IfpsComboBox.TabIndex = 1
+        Me.IfpsComboBox.ValueMember = "Desc"
+        '
+        'IfpsBindingSource
+        '
+        Me.IfpsBindingSource.DataMember = "Ifps"
+        Me.IfpsBindingSource.DataSource = Me.IfpDenoBindingSource
+        '
+        'IfpDenoBindingSource
+        '
+        Me.IfpDenoBindingSource.DataSource = GetType(SimuladorImpuestoPredial.Entidades.IfpDeno)
+        '
+        'IfpDenoComboBox
+        '
+        Me.IfpDenoComboBox.DataSource = Me.IfpDenoBindingSource
+        Me.IfpDenoComboBox.DisplayMember = "Desc"
+        Me.IfpDenoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.IfpDenoComboBox.FormattingEnabled = True
+        Me.IfpDenoComboBox.Location = New System.Drawing.Point(6, 6)
+        Me.IfpDenoComboBox.Name = "IfpDenoComboBox"
+        Me.IfpDenoComboBox.Size = New System.Drawing.Size(496, 21)
+        Me.IfpDenoComboBox.TabIndex = 0
+        Me.IfpDenoComboBox.ValueMember = "Desc"
+        '
         'TadosTerrenoGb
         '
         Me.TadosTerrenoGb.Controls.Add(TerrenoValorLabel1)
@@ -1178,277 +1502,45 @@ Partial Class SimulatorForm
         Me.ClasificacionComboBox.Size = New System.Drawing.Size(490, 21)
         Me.ClasificacionComboBox.TabIndex = 3
         '
-        'MaterialDataGridViewTextBoxColumn
+        'IfpVusBindingSource
         '
-        Me.MaterialDataGridViewTextBoxColumn.DataPropertyName = "Material"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.Format = "N0"
-        DataGridViewCellStyle6.NullValue = Nothing
-        Me.MaterialDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle6
-        Me.MaterialDataGridViewTextBoxColumn.HeaderText = "MEP"
-        Me.MaterialDataGridViewTextBoxColumn.Name = "MaterialDataGridViewTextBoxColumn"
-        Me.MaterialDataGridViewTextBoxColumn.ReadOnly = True
-        Me.MaterialDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.MaterialDataGridViewTextBoxColumn.ToolTipText = "MAterial estructural predominante"
-        Me.MaterialDataGridViewTextBoxColumn.Width = 39
+        Me.IfpVusBindingSource.DataMember = "IfpVus"
+        Me.IfpVusBindingSource.DataSource = Me.IfpsBindingSource
         '
-        'EstadoDataGridViewTextBoxColumn
+        'IfpVusDataGridView
         '
-        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "Estado"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.Format = "N0"
-        Me.EstadoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle7
-        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "EC"
-        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
-        Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.EstadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.EstadoDataGridViewTextBoxColumn.ToolTipText = "Estado de Conservacion"
-        Me.EstadoDataGridViewTextBoxColumn.Width = 30
+        Me.IfpVusDataGridView.AutoGenerateColumns = False
+        Me.IfpVusDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.IfpVusDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.IfpVusDataGridView.DataSource = Me.IfpVusBindingSource
+        Me.IfpVusDataGridView.Location = New System.Drawing.Point(508, 15)
+        Me.IfpVusDataGridView.Name = "IfpVusDataGridView"
+        Me.IfpVusDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.IfpVusDataGridView.TabIndex = 2
         '
-        'AñoDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn2
         '
-        Me.AñoDataGridViewTextBoxColumn.DataPropertyName = "Año"
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.Format = "N0"
-        Me.AñoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle8
-        Me.AñoDataGridViewTextBoxColumn.HeaderText = "Año"
-        Me.AñoDataGridViewTextBoxColumn.Name = "AñoDataGridViewTextBoxColumn"
-        Me.AñoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.AñoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.AñoDataGridViewTextBoxColumn.ToolTipText = "Año de Construccion"
-        Me.AñoDataGridViewTextBoxColumn.Width = 38
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "IdIfp"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "IdIfp"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
-        'ClasificacionDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn3
         '
-        Me.ClasificacionDataGridViewTextBoxColumn.DataPropertyName = "Clasificacion"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.Format = "N0"
-        Me.ClasificacionDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle9
-        Me.ClasificacionDataGridViewTextBoxColumn.HeaderText = "C"
-        Me.ClasificacionDataGridViewTextBoxColumn.Name = "ClasificacionDataGridViewTextBoxColumn"
-        Me.ClasificacionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ClasificacionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ClasificacionDataGridViewTextBoxColumn.ToolTipText = "Clasificación del predio"
-        Me.ClasificacionDataGridViewTextBoxColumn.Width = 24
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Año"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Año"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
-        'ValorDepreciacionDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn4
         '
-        Me.ValorDepreciacionDataGridViewTextBoxColumn.DataPropertyName = "ValorDepreciacion"
-        Me.ValorDepreciacionDataGridViewTextBoxColumn.HeaderText = "VD"
-        Me.ValorDepreciacionDataGridViewTextBoxColumn.Name = "ValorDepreciacionDataGridViewTextBoxColumn"
-        Me.ValorDepreciacionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ValorDepreciacionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ValorDepreciacionDataGridViewTextBoxColumn.ToolTipText = "Depreciación"
-        Me.ValorDepreciacionDataGridViewTextBoxColumn.Width = 32
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Valor"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Valor"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
-        'AreaConstruidaValorDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn5
         '
-        Me.AreaConstruidaValorDataGridViewTextBoxColumn.DataPropertyName = "AreaConstruidaValor"
-        Me.AreaConstruidaValorDataGridViewTextBoxColumn.HeaderText = "VAC"
-        Me.AreaConstruidaValorDataGridViewTextBoxColumn.Name = "AreaConstruidaValorDataGridViewTextBoxColumn"
-        Me.AreaConstruidaValorDataGridViewTextBoxColumn.ReadOnly = True
-        Me.AreaConstruidaValorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.AreaConstruidaValorDataGridViewTextBoxColumn.ToolTipText = "Valor Area Construida"
-        Me.AreaConstruidaValorDataGridViewTextBoxColumn.Width = 37
-        '
-        'ConstIfpTabs
-        '
-        Me.ConstIfpTabs.Controls.Add(Me.ConstruccionesTab)
-        Me.ConstIfpTabs.Controls.Add(Me.IfpTab)
-        Me.ConstIfpTabs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ConstIfpTabs.Location = New System.Drawing.Point(3, 71)
-        Me.ConstIfpTabs.Name = "ConstIfpTabs"
-        Me.ConstIfpTabs.SelectedIndex = 0
-        Me.ConstIfpTabs.Size = New System.Drawing.Size(900, 264)
-        Me.ConstIfpTabs.TabIndex = 24
-        '
-        'ConstruccionesTab
-        '
-        Me.ConstruccionesTab.Controls.Add(Me.ConstrucciuonesPanel)
-        Me.ConstruccionesTab.Controls.Add(Me.DetallesConstruccionGb)
-        Me.ConstruccionesTab.Location = New System.Drawing.Point(4, 22)
-        Me.ConstruccionesTab.Name = "ConstruccionesTab"
-        Me.ConstruccionesTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.ConstruccionesTab.Size = New System.Drawing.Size(892, 238)
-        Me.ConstruccionesTab.TabIndex = 0
-        Me.ConstruccionesTab.Text = "TabPage1"
-        Me.ConstruccionesTab.UseVisualStyleBackColor = True
-        '
-        'IfpTab
-        '
-        Me.IfpTab.Location = New System.Drawing.Point(4, 22)
-        Me.IfpTab.Name = "IfpTab"
-        Me.IfpTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.IfpTab.Size = New System.Drawing.Size(892, 238)
-        Me.IfpTab.TabIndex = 1
-        Me.IfpTab.Text = "TabPage2"
-        Me.IfpTab.UseVisualStyleBackColor = True
-        '
-        'NivelDataGridViewTextBoxColumn
-        '
-        Me.NivelDataGridViewTextBoxColumn.DataPropertyName = "Nivel"
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.Format = "N0"
-        DataGridViewCellStyle5.NullValue = Nothing
-        Me.NivelDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
-        Me.NivelDataGridViewTextBoxColumn.HeaderText = "Niv"
-        Me.NivelDataGridViewTextBoxColumn.Name = "NivelDataGridViewTextBoxColumn"
-        Me.NivelDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NivelDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.NivelDataGridViewTextBoxColumn.ToolTipText = "Nivel de edificación (piso)"
-        Me.NivelDataGridViewTextBoxColumn.Width = 33
-        '
-        'CategoriasDataGridViewTextBoxColumn
-        '
-        Me.CategoriasDataGridViewTextBoxColumn.DataPropertyName = "Categorias"
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.CategoriasDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle10
-        Me.CategoriasDataGridViewTextBoxColumn.HeaderText = "Categorias"
-        Me.CategoriasDataGridViewTextBoxColumn.Name = "CategoriasDataGridViewTextBoxColumn"
-        Me.CategoriasDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CategoriasDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.CategoriasDataGridViewTextBoxColumn.Width = 72
-        '
-        'ValorUnitarioDataGridViewTextBoxColumn
-        '
-        Me.ValorUnitarioDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitario"
-        Me.ValorUnitarioDataGridViewTextBoxColumn.HeaderText = "VU"
-        Me.ValorUnitarioDataGridViewTextBoxColumn.Name = "ValorUnitarioDataGridViewTextBoxColumn"
-        Me.ValorUnitarioDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ValorUnitarioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ValorUnitarioDataGridViewTextBoxColumn.ToolTipText = "Valor Unitario"
-        Me.ValorUnitarioDataGridViewTextBoxColumn.Width = 32
-        '
-        'IncrementoDataGridViewTextBoxColumn
-        '
-        Me.IncrementoDataGridViewTextBoxColumn.DataPropertyName = "Incremento5Porc"
-        Me.IncrementoDataGridViewTextBoxColumn.HeaderText = "5% Inc"
-        Me.IncrementoDataGridViewTextBoxColumn.Name = "IncrementoDataGridViewTextBoxColumn"
-        Me.IncrementoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IncrementoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.IncrementoDataGridViewTextBoxColumn.ToolTipText = "5% Incremento a partir del Quinto Piso"
-        Me.IncrementoDataGridViewTextBoxColumn.Width = 50
-        '
-        'ValorUnitarioDepreciadoDataGridViewTextBoxColumn
-        '
-        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitarioDepreciado"
-        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.HeaderText = "VUD"
-        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.Name = "ValorUnitarioDepreciadoDataGridViewTextBoxColumn"
-        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.ToolTipText = "Valor Unitario Depreciado"
-        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.Width = 40
-        '
-        'AreaDataGridViewTextBoxColumn
-        '
-        Me.AreaDataGridViewTextBoxColumn.DataPropertyName = "AreaConstruida"
-        DataGridViewCellStyle11.Format = "#,###,###,##0.00 m²"
-        DataGridViewCellStyle11.NullValue = Nothing
-        Me.AreaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle11
-        Me.AreaDataGridViewTextBoxColumn.HeaderText = "Area"
-        Me.AreaDataGridViewTextBoxColumn.Name = "AreaDataGridViewTextBoxColumn"
-        Me.AreaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.AreaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.AreaDataGridViewTextBoxColumn.ToolTipText = "Area Construida"
-        Me.AreaDataGridViewTextBoxColumn.Width = 40
-        '
-        'PorcConstruccionComunDataGridViewTextBoxColumn
-        '
-        Me.PorcConstruccionComunDataGridViewTextBoxColumn.DataPropertyName = "AreaConstruidaComunPorcentaje"
-        DataGridViewCellStyle12.Format = "N4"
-        DataGridViewCellStyle12.NullValue = Nothing
-        Me.PorcConstruccionComunDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle12
-        Me.PorcConstruccionComunDataGridViewTextBoxColumn.HeaderText = "% Comun"
-        Me.PorcConstruccionComunDataGridViewTextBoxColumn.Name = "PorcConstruccionComunDataGridViewTextBoxColumn"
-        Me.PorcConstruccionComunDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PorcConstruccionComunDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.PorcConstruccionComunDataGridViewTextBoxColumn.ToolTipText = "Porcentaje de area común"
-        Me.PorcConstruccionComunDataGridViewTextBoxColumn.Width = 66
-        '
-        'ValorCinbstruccionComunDataGridViewTextBoxColumn
-        '
-        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.DataPropertyName = "AreaConstruidaComunValor"
-        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.HeaderText = "VACC"
-        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.Name = "ValorCinbstruccionComunDataGridViewTextBoxColumn"
-        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.ToolTipText = "Valor de area construida común"
-        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.Width = 44
-        '
-        'ValorConstruccionDataGridViewTextBoxColumn
-        '
-        Me.ValorConstruccionDataGridViewTextBoxColumn.DataPropertyName = "Valor"
-        Me.ValorConstruccionDataGridViewTextBoxColumn.HeaderText = "VTC"
-        Me.ValorConstruccionDataGridViewTextBoxColumn.Name = "ValorConstruccionDataGridViewTextBoxColumn"
-        Me.ValorConstruccionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ValorConstruccionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ValorConstruccionDataGridViewTextBoxColumn.ToolTipText = "Valor total de la construcción"
-        Me.ValorConstruccionDataGridViewTextBoxColumn.Width = 35
-        '
-        'ImpuestoPredialBindingSource
-        '
-        Me.ImpuestoPredialBindingSource.DataSource = GetType(SimuladorImpuestoPredial.ImpPred.ImpuestoPredial)
-        '
-        'DireccionDataGridViewTextBoxColumn
-        '
-        Me.DireccionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion"
-        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Direccion"
-        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
-        Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DireccionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'ValorTerrenoDataGridViewTextBoxColumn
-        '
-        Me.ValorTerrenoDataGridViewTextBoxColumn.DataPropertyName = "TerrenoValor"
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle1.Format = "C2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.ValorTerrenoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
-        Me.ValorTerrenoDataGridViewTextBoxColumn.HeaderText = "V. Terreno"
-        Me.ValorTerrenoDataGridViewTextBoxColumn.Name = "ValorTerrenoDataGridViewTextBoxColumn"
-        Me.ValorTerrenoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ValorTerrenoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ValorTerrenoDataGridViewTextBoxColumn.Width = 64
-        '
-        'ValorConstruccionesDataGridViewTextBoxColumn
-        '
-        Me.ValorConstruccionesDataGridViewTextBoxColumn.DataPropertyName = "ConstruccionesValor"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.ValorConstruccionesDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ValorConstruccionesDataGridViewTextBoxColumn.HeaderText = "V. Constr."
-        Me.ValorConstruccionesDataGridViewTextBoxColumn.Name = "ValorConstruccionesDataGridViewTextBoxColumn"
-        Me.ValorConstruccionesDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ValorConstruccionesDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ValorConstruccionesDataGridViewTextBoxColumn.Width = 63
-        '
-        'ObrasComplementariasValorDataGridViewTextBoxColumn
-        '
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.DataPropertyName = "ObrasComplementariasValor"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle3.Format = "C2"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.HeaderText = "V. O. Comp."
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.Name = "ObrasComplementariasValorDataGridViewTextBoxColumn"
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.Width = 74
-        '
-        'AvaluoDataGridViewTextBoxColumn
-        '
-        Me.AvaluoDataGridViewTextBoxColumn.DataPropertyName = "Avaluo"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle4.Format = "C2"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.AvaluoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
-        Me.AvaluoDataGridViewTextBoxColumn.HeaderText = "Avaluo"
-        Me.AvaluoDataGridViewTextBoxColumn.Name = "AvaluoDataGridViewTextBoxColumn"
-        Me.AvaluoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.AvaluoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.AvaluoDataGridViewTextBoxColumn.Width = 48
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Ifp"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Ifp"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
         'SimulatorForm
         '
@@ -1464,6 +1556,7 @@ Partial Class SimulatorForm
         Me.Padding = New System.Windows.Forms.Padding(5)
         Me.Text = "Simulador Impuesto Predial"
         CType(Me.PrediosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ImpuestoPredialBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ConstruccionesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MainTs.ResumeLayout(False)
         Me.MainTs.PerformLayout()
@@ -1477,6 +1570,8 @@ Partial Class SimulatorForm
         Me.LisatadoPrediosPanel.PerformLayout()
         CType(Me.ConstruccionesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DetPredioGB.ResumeLayout(False)
+        Me.ConstIfpTabs.ResumeLayout(False)
+        Me.ConstruccionesTab.ResumeLayout(False)
         Me.ConstrucciuonesPanel.ResumeLayout(False)
         Me.ConstrucciuonesPanel.PerformLayout()
         CType(Me.ConstruccionesBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1484,15 +1579,17 @@ Partial Class SimulatorForm
         Me.ConstruccionesBindingNavigator.PerformLayout()
         Me.DetallesConstruccionGb.ResumeLayout(False)
         Me.DetallesConstruccionGb.PerformLayout()
+        Me.IfpTab.ResumeLayout(False)
+        CType(Me.IfpsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IfpDenoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TadosTerrenoGb.ResumeLayout(False)
         Me.TadosTerrenoGb.PerformLayout()
         Me.ValorizacionPredioGb.ResumeLayout(False)
         Me.ValorizacionPredioGb.PerformLayout()
         Me.DatosPredioGb.ResumeLayout(False)
         Me.DatosPredioGb.PerformLayout()
-        Me.ConstIfpTabs.ResumeLayout(False)
-        Me.ConstruccionesTab.ResumeLayout(False)
-        CType(Me.ImpuestoPredialBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IfpVusBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IfpVusDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1592,4 +1689,14 @@ Partial Class SimulatorForm
     Friend WithEvents ValorConstruccionesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ObrasComplementariasValorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AvaluoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IfpsComboBox As ComboBox
+    Friend WithEvents IfpsBindingSource As BindingSource
+    Friend WithEvents IfpDenoBindingSource As BindingSource
+    Friend WithEvents IfpDenoComboBox As ComboBox
+    Friend WithEvents IfpVusDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents IfpVusBindingSource As BindingSource
 End Class

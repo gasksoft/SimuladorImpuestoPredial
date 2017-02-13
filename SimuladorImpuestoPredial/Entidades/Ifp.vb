@@ -14,6 +14,6 @@ Namespace Entidades
         Overridable Property IfpDeno As IfpDeno
         <ForeignKey(NameOf(IdUm))>
         Overridable Property IfpUM As IfpUM
-        Overridable Property ifpVus As BindingList(Of IfpVu)
+        Overridable Property IfpVus As BindingList(Of IfpVu)
     End Class
 End Namespace

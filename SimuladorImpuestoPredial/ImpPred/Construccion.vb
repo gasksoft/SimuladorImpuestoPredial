@@ -1,5 +1,6 @@
 ﻿
 Imports System.ComponentModel
+Imports System.Net.Security
 Imports SimuladorImpuestoPredial.Entidades
 
 Namespace ImpPred
@@ -56,7 +57,7 @@ Namespace ImpPred
         End Property
         ReadOnly Property Antiguedad As Double
             Get
-                Return DateDiff(DateInterval.Month, New Date(Año, Mes, 1), Now) / 12
+                Return GetAntiguedad(Año, Mes)
             End Get
         End Property
         ReadOnly Property Categorias As String

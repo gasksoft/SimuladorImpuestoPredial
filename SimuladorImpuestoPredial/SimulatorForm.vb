@@ -24,6 +24,7 @@ Public Class SimulatorForm
         EstadoComboBox.ValueMember = "Key"
         EstadoComboBox.DataSource = EstadoConservacionDictionary.ToArray
         ImpuestoPredialBindingSource.DataSource = _impuestoPredial
+        IfpDenoBindingSource.DataSource = GetIfpDenominaciones.ToArray
     End Sub
     Private Sub PrediosBindingSource_ListChanged(sender As Object, e As ListChangedEventArgs) _
         Handles PrediosBindingSource.ListChanged
