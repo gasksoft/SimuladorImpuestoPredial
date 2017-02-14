@@ -169,13 +169,7 @@ Namespace ImpPred
         End Property
         ReadOnly Property PorcDepreciacion As Decimal
             Get
-                Dim ga As Integer = Math.Min(Math.Max(Math.Ceiling(Antiguedad / 5) * 5, 5), 55)
-                Return (
-                    From d In ParametrosCalculo.GetDepreciaciones()
-                    Where d.Antiguedad = ga And
-                              d.Clasificacion = Predio.Clasificacion And
-                              d.Estado = Estado And
-                              d.Material = Material).FirstOrDefault?.Porcentaje
+                Return GetDepreciacion(Antiguedad, Predio.Clasificacion, Estado, Material)
             End Get
         End Property
         ReadOnly Property ValorDepreciacion As Decimal

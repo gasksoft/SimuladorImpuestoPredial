@@ -206,7 +206,6 @@
     </Compile>
     <Compile Include="ImpPred\Predio.vb" />
     <Compile Include="ParametrosCalculo.vb" />
-    <Compile Include="Utils.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="SimulatorForm.resx">

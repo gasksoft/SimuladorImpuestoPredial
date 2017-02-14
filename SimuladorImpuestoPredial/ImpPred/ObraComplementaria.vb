@@ -1,7 +1,14 @@
-﻿Namespace ImpPred
+﻿Imports System.Security.Permissions
+Imports SimuladorImpuestoPredial.Entidades
+
+Namespace ImpPred
     Public Class ObraComplementaria
-        Property CodDen As Integer
-        Property CodCom As Integer
+        Property idIfp As Integer
+        ReadOnly Property CodIfp As String
+            Get
+                Return $"{Ifp?.IfpDeno?.IdIfpDeno}.{Ifp?.IdDescComp}"
+            End Get
+        End Property
         Property Año As Integer
         Property Mes As Integer
         ReadOnly Property Antiguedad As Double
@@ -10,14 +17,46 @@
             End Get
         End Property
         ReadOnly Property Denominacion As String
+            Get
+                Return Ifp?.IfpDeno?.Desc
+            End Get
+        End Property
         ReadOnly Property Componente As String
+            Get
+                Return Ifp?.Desc
+            End Get
+        End Property
         ReadOnly Property ValorUnitario As Decimal
-        ReadOnly Property UnidadMedida As String
         Property Material As Integer
         Property Estado As Integer
-        Property PorcPartic As Decimal = 100
+        ReadOnly Property PorcDepreciacion As Decimal
+            Get
+                Return GetDepreciacion(Antiguedad, Predio.Clasificacion, Estado, Material)
+            End Get
+        End Property
+        ReadOnly Property Depreciacion As Decimal
+            Get
+                Return ValorUnitario * PorcDepreciacion / 100
+            End Get
+        End Property
+        ReadOnly Property ValorUnitarioDepreciado As Decimal
+            Get
+                Return ValorUnitario - Depreciacion
+            End Get
+        End Property
         Property Cantidad As Decimal
+        ReadOnly Property UnidadMedida As String
+            Get
+                Return Ifp?.IfpUM?.Abb
+            End Get
+        End Property
+        Property PorcPartic As Decimal = 100
         ReadOnly Property Valor As Decimal
+            Get
+                Return ValorUnitarioDepreciado * PorcPartic * Cantidad / 100
+            End Get
+        End Property
+        ReadOnly Property Ifp As Ifp
         Property Predio As Predio
     End Class
 End NameSpace

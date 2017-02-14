@@ -51,20 +51,20 @@ Partial Class SimulatorForm
         Dim MesLabel1 As System.Windows.Forms.Label
         Dim ValorLabel As System.Windows.Forms.Label
         Dim TerrenoValorLabel1 As System.Windows.Forms.Label
-        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle66 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle67 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle68 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle69 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SimulatorForm))
-        Dim DataGridViewCellStyle65 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle57 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle61 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle62 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle63 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle64 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle78 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle70 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle71 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle72 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle73 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle74 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle75 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle76 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle77 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PrediosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ImpuestoPredialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ConstruccionesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -162,11 +162,6 @@ Partial Class SimulatorForm
         Me.ClasificacionComboBox = New System.Windows.Forms.ComboBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.IfpVusBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IfpVusDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         BaseImponibleLabel = New System.Windows.Forms.Label()
         BaseImponibleDeducidaLabel = New System.Windows.Forms.Label()
         InsolutoLabel = New System.Windows.Forms.Label()
@@ -219,7 +214,6 @@ Partial Class SimulatorForm
         Me.ValorizacionPredioGb.SuspendLayout()
         Me.DatosPredioGb.SuspendLayout()
         CType(Me.IfpVusBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IfpVusDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BaseImponibleLabel
@@ -528,10 +522,10 @@ Partial Class SimulatorForm
         'ObrasComplementariasValorDataGridViewTextBoxColumn
         '
         Me.ObrasComplementariasValorDataGridViewTextBoxColumn.DataPropertyName = "ObrasComplementariasValor"
-        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle53.Format = "C2"
-        DataGridViewCellStyle53.NullValue = Nothing
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle53
+        DataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle66.Format = "C2"
+        DataGridViewCellStyle66.NullValue = Nothing
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle66
         Me.ObrasComplementariasValorDataGridViewTextBoxColumn.HeaderText = "V. O. Comp."
         Me.ObrasComplementariasValorDataGridViewTextBoxColumn.Name = "ObrasComplementariasValorDataGridViewTextBoxColumn"
         Me.ObrasComplementariasValorDataGridViewTextBoxColumn.ReadOnly = True
@@ -550,10 +544,10 @@ Partial Class SimulatorForm
         'ValorTerrenoDataGridViewTextBoxColumn
         '
         Me.ValorTerrenoDataGridViewTextBoxColumn.DataPropertyName = "TerrenoValor"
-        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle54.Format = "C2"
-        DataGridViewCellStyle54.NullValue = Nothing
-        Me.ValorTerrenoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle54
+        DataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle67.Format = "C2"
+        DataGridViewCellStyle67.NullValue = Nothing
+        Me.ValorTerrenoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle67
         Me.ValorTerrenoDataGridViewTextBoxColumn.HeaderText = "V. Terreno"
         Me.ValorTerrenoDataGridViewTextBoxColumn.Name = "ValorTerrenoDataGridViewTextBoxColumn"
         Me.ValorTerrenoDataGridViewTextBoxColumn.ReadOnly = True
@@ -563,10 +557,10 @@ Partial Class SimulatorForm
         'ValorConstruccionesDataGridViewTextBoxColumn
         '
         Me.ValorConstruccionesDataGridViewTextBoxColumn.DataPropertyName = "ConstruccionesValor"
-        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle55.Format = "C2"
-        DataGridViewCellStyle55.NullValue = Nothing
-        Me.ValorConstruccionesDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle55
+        DataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle68.Format = "C2"
+        DataGridViewCellStyle68.NullValue = Nothing
+        Me.ValorConstruccionesDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle68
         Me.ValorConstruccionesDataGridViewTextBoxColumn.HeaderText = "V. Constr."
         Me.ValorConstruccionesDataGridViewTextBoxColumn.Name = "ValorConstruccionesDataGridViewTextBoxColumn"
         Me.ValorConstruccionesDataGridViewTextBoxColumn.ReadOnly = True
@@ -576,10 +570,10 @@ Partial Class SimulatorForm
         'AvaluoDataGridViewTextBoxColumn
         '
         Me.AvaluoDataGridViewTextBoxColumn.DataPropertyName = "Avaluo"
-        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle56.Format = "C2"
-        DataGridViewCellStyle56.NullValue = Nothing
-        Me.AvaluoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle56
+        DataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle69.Format = "C2"
+        DataGridViewCellStyle69.NullValue = Nothing
+        Me.AvaluoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle69
         Me.AvaluoDataGridViewTextBoxColumn.HeaderText = "Avaluo"
         Me.AvaluoDataGridViewTextBoxColumn.Name = "AvaluoDataGridViewTextBoxColumn"
         Me.AvaluoDataGridViewTextBoxColumn.ReadOnly = True
@@ -777,17 +771,17 @@ Partial Class SimulatorForm
         Me.ConstruccionesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ConstruccionesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NivelDataGridViewTextBoxColumn, Me.MaterialDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn, Me.AñoDataGridViewTextBoxColumn, Me.ClasificacionDataGridViewTextBoxColumn, Me.CategoriasDataGridViewTextBoxColumn, Me.ValorUnitarioDataGridViewTextBoxColumn, Me.IncrementoDataGridViewTextBoxColumn, Me.ValorDepreciacionDataGridViewTextBoxColumn, Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn, Me.AreaDataGridViewTextBoxColumn, Me.AreaConstruidaValorDataGridViewTextBoxColumn, Me.PorcConstruccionComunDataGridViewTextBoxColumn, Me.ValorCinbstruccionComunDataGridViewTextBoxColumn, Me.ValorConstruccionDataGridViewTextBoxColumn})
         Me.ConstruccionesDataGridView.DataSource = Me.ConstruccionesBindingSource
-        DataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle65.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle65.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle65.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle65.Format = "C2"
-        DataGridViewCellStyle65.NullValue = Nothing
-        DataGridViewCellStyle65.Padding = New System.Windows.Forms.Padding(2)
-        DataGridViewCellStyle65.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle65.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle65.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ConstruccionesDataGridView.DefaultCellStyle = DataGridViewCellStyle65
+        DataGridViewCellStyle78.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle78.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle78.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle78.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle78.Format = "C2"
+        DataGridViewCellStyle78.NullValue = Nothing
+        DataGridViewCellStyle78.Padding = New System.Windows.Forms.Padding(2)
+        DataGridViewCellStyle78.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle78.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle78.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ConstruccionesDataGridView.DefaultCellStyle = DataGridViewCellStyle78
         Me.ConstruccionesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ConstruccionesDataGridView.Location = New System.Drawing.Point(0, 0)
         Me.ConstruccionesDataGridView.MultiSelect = False
@@ -802,10 +796,10 @@ Partial Class SimulatorForm
         'NivelDataGridViewTextBoxColumn
         '
         Me.NivelDataGridViewTextBoxColumn.DataPropertyName = "Nivel"
-        DataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle57.Format = "N0"
-        DataGridViewCellStyle57.NullValue = Nothing
-        Me.NivelDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle57
+        DataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle70.Format = "N0"
+        DataGridViewCellStyle70.NullValue = Nothing
+        Me.NivelDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle70
         Me.NivelDataGridViewTextBoxColumn.HeaderText = "Niv"
         Me.NivelDataGridViewTextBoxColumn.Name = "NivelDataGridViewTextBoxColumn"
         Me.NivelDataGridViewTextBoxColumn.ReadOnly = True
@@ -816,10 +810,10 @@ Partial Class SimulatorForm
         'MaterialDataGridViewTextBoxColumn
         '
         Me.MaterialDataGridViewTextBoxColumn.DataPropertyName = "Material"
-        DataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle58.Format = "N0"
-        DataGridViewCellStyle58.NullValue = Nothing
-        Me.MaterialDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle58
+        DataGridViewCellStyle71.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle71.Format = "N0"
+        DataGridViewCellStyle71.NullValue = Nothing
+        Me.MaterialDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle71
         Me.MaterialDataGridViewTextBoxColumn.HeaderText = "MEP"
         Me.MaterialDataGridViewTextBoxColumn.Name = "MaterialDataGridViewTextBoxColumn"
         Me.MaterialDataGridViewTextBoxColumn.ReadOnly = True
@@ -830,9 +824,9 @@ Partial Class SimulatorForm
         'EstadoDataGridViewTextBoxColumn
         '
         Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "Estado"
-        DataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle59.Format = "N0"
-        Me.EstadoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle59
+        DataGridViewCellStyle72.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle72.Format = "N0"
+        Me.EstadoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle72
         Me.EstadoDataGridViewTextBoxColumn.HeaderText = "EC"
         Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
         Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
@@ -843,9 +837,9 @@ Partial Class SimulatorForm
         'AñoDataGridViewTextBoxColumn
         '
         Me.AñoDataGridViewTextBoxColumn.DataPropertyName = "Año"
-        DataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle60.Format = "N0"
-        Me.AñoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle60
+        DataGridViewCellStyle73.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle73.Format = "N0"
+        Me.AñoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle73
         Me.AñoDataGridViewTextBoxColumn.HeaderText = "Año"
         Me.AñoDataGridViewTextBoxColumn.Name = "AñoDataGridViewTextBoxColumn"
         Me.AñoDataGridViewTextBoxColumn.ReadOnly = True
@@ -856,9 +850,9 @@ Partial Class SimulatorForm
         'ClasificacionDataGridViewTextBoxColumn
         '
         Me.ClasificacionDataGridViewTextBoxColumn.DataPropertyName = "Clasificacion"
-        DataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle61.Format = "N0"
-        Me.ClasificacionDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle61
+        DataGridViewCellStyle74.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle74.Format = "N0"
+        Me.ClasificacionDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle74
         Me.ClasificacionDataGridViewTextBoxColumn.HeaderText = "C"
         Me.ClasificacionDataGridViewTextBoxColumn.Name = "ClasificacionDataGridViewTextBoxColumn"
         Me.ClasificacionDataGridViewTextBoxColumn.ReadOnly = True
@@ -869,8 +863,8 @@ Partial Class SimulatorForm
         'CategoriasDataGridViewTextBoxColumn
         '
         Me.CategoriasDataGridViewTextBoxColumn.DataPropertyName = "Categorias"
-        DataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.CategoriasDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle62
+        DataGridViewCellStyle75.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.CategoriasDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle75
         Me.CategoriasDataGridViewTextBoxColumn.HeaderText = "Categorias"
         Me.CategoriasDataGridViewTextBoxColumn.Name = "CategoriasDataGridViewTextBoxColumn"
         Me.CategoriasDataGridViewTextBoxColumn.ReadOnly = True
@@ -920,9 +914,9 @@ Partial Class SimulatorForm
         'AreaDataGridViewTextBoxColumn
         '
         Me.AreaDataGridViewTextBoxColumn.DataPropertyName = "AreaConstruida"
-        DataGridViewCellStyle63.Format = "#,###,###,##0.00 m²"
-        DataGridViewCellStyle63.NullValue = Nothing
-        Me.AreaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle63
+        DataGridViewCellStyle76.Format = "#,###,###,##0.00 m²"
+        DataGridViewCellStyle76.NullValue = Nothing
+        Me.AreaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle76
         Me.AreaDataGridViewTextBoxColumn.HeaderText = "Area"
         Me.AreaDataGridViewTextBoxColumn.Name = "AreaDataGridViewTextBoxColumn"
         Me.AreaDataGridViewTextBoxColumn.ReadOnly = True
@@ -943,9 +937,9 @@ Partial Class SimulatorForm
         'PorcConstruccionComunDataGridViewTextBoxColumn
         '
         Me.PorcConstruccionComunDataGridViewTextBoxColumn.DataPropertyName = "AreaConstruidaComunPorcentaje"
-        DataGridViewCellStyle64.Format = "N4"
-        DataGridViewCellStyle64.NullValue = Nothing
-        Me.PorcConstruccionComunDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle64
+        DataGridViewCellStyle77.Format = "N4"
+        DataGridViewCellStyle77.NullValue = Nothing
+        Me.PorcConstruccionComunDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle77
         Me.PorcConstruccionComunDataGridViewTextBoxColumn.HeaderText = "% Comun"
         Me.PorcConstruccionComunDataGridViewTextBoxColumn.Name = "PorcConstruccionComunDataGridViewTextBoxColumn"
         Me.PorcConstruccionComunDataGridViewTextBoxColumn.ReadOnly = True
@@ -1386,7 +1380,6 @@ Partial Class SimulatorForm
         'IfpTab
         '
         Me.IfpTab.AutoScroll = True
-        Me.IfpTab.Controls.Add(Me.IfpVusDataGridView)
         Me.IfpTab.Controls.Add(Me.IfpsComboBox)
         Me.IfpTab.Controls.Add(Me.IfpDenoComboBox)
         Me.IfpTab.Location = New System.Drawing.Point(4, 22)
@@ -1507,41 +1500,6 @@ Partial Class SimulatorForm
         Me.IfpVusBindingSource.DataMember = "IfpVus"
         Me.IfpVusBindingSource.DataSource = Me.IfpsBindingSource
         '
-        'IfpVusDataGridView
-        '
-        Me.IfpVusDataGridView.AutoGenerateColumns = False
-        Me.IfpVusDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.IfpVusDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
-        Me.IfpVusDataGridView.DataSource = Me.IfpVusBindingSource
-        Me.IfpVusDataGridView.Location = New System.Drawing.Point(508, 15)
-        Me.IfpVusDataGridView.Name = "IfpVusDataGridView"
-        Me.IfpVusDataGridView.Size = New System.Drawing.Size(300, 220)
-        Me.IfpVusDataGridView.TabIndex = 2
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "IdIfp"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "IdIfp"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Año"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Año"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Valor"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Valor"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Ifp"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Ifp"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
         'SimulatorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1589,7 +1547,6 @@ Partial Class SimulatorForm
         Me.DatosPredioGb.ResumeLayout(False)
         Me.DatosPredioGb.PerformLayout()
         CType(Me.IfpVusBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IfpVusDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1693,10 +1650,5 @@ Partial Class SimulatorForm
     Friend WithEvents IfpsBindingSource As BindingSource
     Friend WithEvents IfpDenoBindingSource As BindingSource
     Friend WithEvents IfpDenoComboBox As ComboBox
-    Friend WithEvents IfpVusDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents IfpVusBindingSource As BindingSource
 End Class
