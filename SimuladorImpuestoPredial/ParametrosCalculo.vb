@@ -66,7 +66,7 @@ Public Module ParametrosCalculo
         End If
         Return _categorias
     End Function
-    Function GetDepreciaciones() As ReadOnlyCollection(Of Depreciacion)
+    Private Function GetDepreciaciones() As ReadOnlyCollection(Of Depreciacion)
         If _depreciaciones Is Nothing Then
             _depreciaciones = New ReadOnlyCollection(Of Depreciacion)((From d In Contexto.Depreciaciones).ToList)
         End If

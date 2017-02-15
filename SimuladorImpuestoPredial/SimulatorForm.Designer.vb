@@ -506,7 +506,7 @@ Partial Class SimulatorForm
         Me.PredioDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.PredioDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PredioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.PredioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ObrasComplementariasValorDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.ValorTerrenoDataGridViewTextBoxColumn, Me.ValorConstruccionesDataGridViewTextBoxColumn, Me.AvaluoDataGridViewTextBoxColumn})
+        Me.PredioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DireccionDataGridViewTextBoxColumn, Me.ObrasComplementariasValorDataGridViewTextBoxColumn, Me.ValorTerrenoDataGridViewTextBoxColumn, Me.ValorConstruccionesDataGridViewTextBoxColumn, Me.AvaluoDataGridViewTextBoxColumn})
         Me.PredioDataGridView.DataSource = Me.PrediosBindingSource
         Me.PredioDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PredioDataGridView.Location = New System.Drawing.Point(0, 0)

@@ -51,9 +51,14 @@ Namespace ImpPred
             End Get
         End Property
         Property PorcPartic As Decimal = 100
+        ReadOnly Property Fo As Decimal
+            Get
+                Return GetFactorOficializacion()
+            End Get
+        End Property
         ReadOnly Property Valor As Decimal
             Get
-                Return ValorUnitarioDepreciado * PorcPartic * Cantidad / 100
+                Return ValorUnitarioDepreciado * PorcPartic * Fo * Cantidad / 100
             End Get
         End Property
         ReadOnly Property Ifp As Ifp
