@@ -1,5 +1,4 @@
-﻿Imports System.Security.Permissions
-Imports SimuladorImpuestoPredial.Entidades
+﻿Imports SimuladorImpuestoPredial.Entidades
 
 Namespace ImpPred
     Public Class ObraComplementaria
@@ -36,7 +35,7 @@ Namespace ImpPred
         End Property
         ReadOnly Property Depreciacion As Decimal
             Get
-                Return ValorUnitario * PorcDepreciacion / 100
+                Return ValorUnitario*PorcDepreciacion/100
             End Get
         End Property
         ReadOnly Property ValorUnitarioDepreciado As Decimal
@@ -58,7 +57,7 @@ Namespace ImpPred
         End Property
         ReadOnly Property Valor As Decimal
             Get
-                Return ValorUnitarioDepreciado * PorcPartic * Fo * Cantidad / 100
+                Return ValorUnitarioDepreciado*PorcPartic*Fo*Cantidad/100
             End Get
         End Property
         ReadOnly Property Ifp As Ifp

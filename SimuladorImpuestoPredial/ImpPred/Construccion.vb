@@ -1,6 +1,5 @@
 ﻿
 Imports System.ComponentModel
-Imports System.Net.Security
 Imports SimuladorImpuestoPredial.Entidades
 
 Namespace ImpPred
@@ -148,7 +147,7 @@ Namespace ImpPred
         End Property
         Private Function GetValueFromCategoria(strCat As String) As Decimal
             Dim cat As Categoria = Nothing
-            If Not ParametrosCalculo.GetCategorias().TryGetValue(CallByName(Me, $"C{strCat}", CallType.Get), cat) Then _
+            If Not GetCategorias().TryGetValue(CallByName(Me, $"C{strCat}", CallType.Get), cat) Then _
                 Return 0
             Return If(CallByName(cat, $"V{strCat}", CallType.Get), 0)
         End Function
@@ -159,7 +158,7 @@ Namespace ImpPred
         End Property
         ReadOnly Property Incremento5Porc As Decimal
             Get
-                Return If(Nivel > 4, ValorUnitario * 0.05, 0)
+                Return If(Nivel > 4, ValorUnitario*0.05, 0)
             End Get
         End Property
         ReadOnly Property ValorUnitarioIncrementado As Decimal
@@ -174,12 +173,12 @@ Namespace ImpPred
         End Property
         ReadOnly Property ValorDepreciacion As Decimal
             Get
-                Return ValorUnitarioIncrementado * PorcDepreciacion / 100
+                Return ValorUnitarioIncrementado*PorcDepreciacion/100
             End Get
         End Property
         ReadOnly Property ValorUnitarioDepreciado As Decimal
             Get
-                Return ValorUnitarioIncrementado * (1 - PorcDepreciacion / 100)
+                Return ValorUnitarioIncrementado*(1 - PorcDepreciacion/100)
             End Get
         End Property
         Property AreaConstruida As Decimal
@@ -193,7 +192,7 @@ Namespace ImpPred
         End Property
         ReadOnly Property AreaConstruidaValor As Decimal
             Get
-                Return ValorUnitarioDepreciado * AreaConstruida
+                Return ValorUnitarioDepreciado*AreaConstruida
             End Get
         End Property
         Property AreaConstruidaComunPorcentaje As Decimal
@@ -207,7 +206,7 @@ Namespace ImpPred
         End Property
         ReadOnly Property AreaConstruidaComunValor As Decimal
             Get
-                Return AreaConstruidaValor * AreaConstruidaComunPorcentaje / 100
+                Return AreaConstruidaValor*AreaConstruidaComunPorcentaje/100
             End Get
         End Property
         Public ReadOnly Property Valor As Decimal

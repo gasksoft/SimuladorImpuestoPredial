@@ -7,7 +7,6 @@ Namespace ImpPred
         Private _arancel As Decimal
         Private _terrenoAreaExclusiva As Decimal
         Private _terrenoAreaComun As Decimal
-
         Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
         Sub New()
             AddHandler Construcciones.AddingNew,
@@ -15,13 +14,15 @@ Namespace ImpPred
                     e.NewObject = New Construccion
                     e.NewObject.Predio = Me
                 End Sub
-            AddHandler Construcciones.ListChanged, Sub() RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(ConstruccionesValor)))
+            AddHandler Construcciones.ListChanged,
+                Sub() RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(ConstruccionesValor)))
             AddHandler ObrasComplementarias.AddingNew,
                 Sub(sender As Object, e As AddingNewEventArgs)
                     e.NewObject = New Construccion
                     e.NewObject.Predio = Me
                 End Sub
-            AddHandler ObrasComplementarias.ListChanged, Sub() RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(ObrasComplementariasValor)))
+            AddHandler ObrasComplementarias.ListChanged,
+                Sub() RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(ObrasComplementariasValor)))
         End Sub
         Property Direccion As String
         Property Clasificacion As Integer
@@ -67,7 +68,7 @@ Namespace ImpPred
         End Property
         ReadOnly Property TerrenoValor As Decimal
             Get
-                Return TerrenoAreaTotal * Arancel
+                Return TerrenoAreaTotal*Arancel
             End Get
         End Property
         ReadOnly Property ConstruccionesValor As Decimal
@@ -80,7 +81,6 @@ Namespace ImpPred
                 Return ObrasComplementarias.Sum(Function(c) c.Valor)
             End Get
         End Property
-
         ReadOnly Property Avaluo As Decimal
             Get
                 Return TerrenoValor + ConstruccionesValor + ObrasComplementariasValor

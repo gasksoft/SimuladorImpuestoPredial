@@ -49,30 +49,29 @@ Partial Class SimulatorForm
         Dim AreaConstruidaLabel As System.Windows.Forms.Label
         Dim AreaConstruidaComunPorcentajeLabel As System.Windows.Forms.Label
         Dim MesLabel1 As System.Windows.Forms.Label
-        Dim ValorLabel As System.Windows.Forms.Label
         Dim TerrenoValorLabel1 As System.Windows.Forms.Label
-        Dim DataGridViewCellStyle66 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle67 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle68 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle69 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SimulatorForm))
-        Dim DataGridViewCellStyle78 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle70 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle71 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle72 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle73 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle74 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle75 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle76 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle77 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PrediosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ImpuestoPredialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ConstruccionesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MainTs = New System.Windows.Forms.ToolStrip()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripComboBox()
         Me.PredioDataGridView = New System.Windows.Forms.DataGridView()
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ValorTerrenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ValorConstruccionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AvaluoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -93,6 +92,7 @@ Partial Class SimulatorForm
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ResumenGB = New System.Windows.Forms.GroupBox()
+        Me.SinDetalleCheckBox = New System.Windows.Forms.CheckBox()
         Me.LisatadoPrediosPanel = New System.Windows.Forms.Panel()
         Me.DireccionTextBox = New System.Windows.Forms.TextBox()
         Me.ConstruccionesDataGridView = New System.Windows.Forms.DataGridView()
@@ -135,7 +135,6 @@ Partial Class SimulatorForm
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.DetallesConstruccionGb = New System.Windows.Forms.GroupBox()
-        Me.ValorTextBox = New System.Windows.Forms.TextBox()
         Me.MesComboBox = New System.Windows.Forms.ComboBox()
         Me.AreaConstruidaComunPorcentajeTextBox = New System.Windows.Forms.TextBox()
         Me.AreaConstruidaTextBox = New System.Windows.Forms.TextBox()
@@ -162,6 +161,46 @@ Partial Class SimulatorForm
         Me.ClasificacionComboBox = New System.Windows.Forms.ComboBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.IfpVusBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.labelDCI = New System.Windows.Forms.Label()
+        Me.labelVCI = New System.Windows.Forms.Label()
+        Me.LabelTituloCategoria = New System.Windows.Forms.Label()
+        Me.labelECI = New System.Windows.Forms.Label()
+        Me.labelECA = New System.Windows.Forms.Label()
+        Me.labelVCG = New System.Windows.Forms.Label()
+        Me.labelVCA = New System.Windows.Forms.Label()
+        Me.labelVCH = New System.Windows.Forms.Label()
+        Me.labelDCA = New System.Windows.Forms.Label()
+        Me.labelVCE = New System.Windows.Forms.Label()
+        Me.labelECB = New System.Windows.Forms.Label()
+        Me.labelVCF = New System.Windows.Forms.Label()
+        Me.labelDCB = New System.Windows.Forms.Label()
+        Me.labelVCD = New System.Windows.Forms.Label()
+        Me.labelVCC = New System.Windows.Forms.Label()
+        Me.labelECG = New System.Windows.Forms.Label()
+        Me.labelDCC = New System.Windows.Forms.Label()
+        Me.labelECH = New System.Windows.Forms.Label()
+        Me.labelECC = New System.Windows.Forms.Label()
+        Me.labelECF = New System.Windows.Forms.Label()
+        Me.labelVCB = New System.Windows.Forms.Label()
+        Me.labelECE = New System.Windows.Forms.Label()
+        Me.labelECD = New System.Windows.Forms.Label()
+        Me.labelDCD = New System.Windows.Forms.Label()
+        Me.LabelDCH = New System.Windows.Forms.Label()
+        Me.labelDCE = New System.Windows.Forms.Label()
+        Me.labelDCG = New System.Windows.Forms.Label()
+        Me.labelDCF = New System.Windows.Forms.Label()
         BaseImponibleLabel = New System.Windows.Forms.Label()
         BaseImponibleDeducidaLabel = New System.Windows.Forms.Label()
         InsolutoLabel = New System.Windows.Forms.Label()
@@ -188,7 +227,6 @@ Partial Class SimulatorForm
         AreaConstruidaLabel = New System.Windows.Forms.Label()
         AreaConstruidaComunPorcentajeLabel = New System.Windows.Forms.Label()
         MesLabel1 = New System.Windows.Forms.Label()
-        ValorLabel = New System.Windows.Forms.Label()
         TerrenoValorLabel1 = New System.Windows.Forms.Label()
         CType(Me.PrediosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ImpuestoPredialBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -214,12 +252,19 @@ Partial Class SimulatorForm
         Me.ValorizacionPredioGb.SuspendLayout()
         Me.DatosPredioGb.SuspendLayout()
         CType(Me.IfpVusBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
+        Me.SplitContainer1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'BaseImponibleLabel
         '
+        BaseImponibleLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         BaseImponibleLabel.AutoSize = True
-        BaseImponibleLabel.Location = New System.Drawing.Point(701, 22)
+        BaseImponibleLabel.Location = New System.Drawing.Point(611, 30)
         BaseImponibleLabel.Name = "BaseImponibleLabel"
         BaseImponibleLabel.Size = New System.Drawing.Size(89, 13)
         BaseImponibleLabel.TabIndex = 1
@@ -227,17 +272,19 @@ Partial Class SimulatorForm
         '
         'BaseImponibleDeducidaLabel
         '
+        BaseImponibleDeducidaLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         BaseImponibleDeducidaLabel.AutoSize = True
-        BaseImponibleDeducidaLabel.Location = New System.Drawing.Point(649, 50)
+        BaseImponibleDeducidaLabel.Location = New System.Drawing.Point(589, 58)
         BaseImponibleDeducidaLabel.Name = "BaseImponibleDeducidaLabel"
-        BaseImponibleDeducidaLabel.Size = New System.Drawing.Size(141, 13)
+        BaseImponibleDeducidaLabel.Size = New System.Drawing.Size(111, 13)
         BaseImponibleDeducidaLabel.TabIndex = 3
-        BaseImponibleDeducidaLabel.Text = "Base Imponible Deducida:"
+        BaseImponibleDeducidaLabel.Text = "Base Imp. Deducida:"
         '
         'InsolutoLabel
         '
+        InsolutoLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         InsolutoLabel.AutoSize = True
-        InsolutoLabel.Location = New System.Drawing.Point(737, 78)
+        InsolutoLabel.Location = New System.Drawing.Point(647, 86)
         InsolutoLabel.Name = "InsolutoLabel"
         InsolutoLabel.Size = New System.Drawing.Size(53, 13)
         InsolutoLabel.TabIndex = 5
@@ -255,7 +302,7 @@ Partial Class SimulatorForm
         'TerrenoAreaComunLabel
         '
         TerrenoAreaComunLabel.AutoSize = True
-        TerrenoAreaComunLabel.Location = New System.Drawing.Point(199, 24)
+        TerrenoAreaComunLabel.Location = New System.Drawing.Point(179, 24)
         TerrenoAreaComunLabel.Name = "TerrenoAreaComunLabel"
         TerrenoAreaComunLabel.Size = New System.Drawing.Size(73, 13)
         TerrenoAreaComunLabel.TabIndex = 2
@@ -264,7 +311,7 @@ Partial Class SimulatorForm
         'TerrenoAreaTotalLabel
         '
         TerrenoAreaTotalLabel.AutoSize = True
-        TerrenoAreaTotalLabel.Location = New System.Drawing.Point(384, 24)
+        TerrenoAreaTotalLabel.Location = New System.Drawing.Point(344, 24)
         TerrenoAreaTotalLabel.Name = "TerrenoAreaTotalLabel"
         TerrenoAreaTotalLabel.Size = New System.Drawing.Size(60, 13)
         TerrenoAreaTotalLabel.TabIndex = 4
@@ -273,7 +320,7 @@ Partial Class SimulatorForm
         'ArancelLabel
         '
         ArancelLabel.AutoSize = True
-        ArancelLabel.Location = New System.Drawing.Point(556, 24)
+        ArancelLabel.Location = New System.Drawing.Point(496, 24)
         ArancelLabel.Name = "ArancelLabel"
         ArancelLabel.Size = New System.Drawing.Size(48, 13)
         ArancelLabel.TabIndex = 6
@@ -450,19 +497,10 @@ Partial Class SimulatorForm
         MesLabel1.TabIndex = 4
         MesLabel1.Text = "Mes:"
         '
-        'ValorLabel
-        '
-        ValorLabel.AutoSize = True
-        ValorLabel.Location = New System.Drawing.Point(770, 18)
-        ValorLabel.Name = "ValorLabel"
-        ValorLabel.Size = New System.Drawing.Size(36, 13)
-        ValorLabel.TabIndex = 28
-        ValorLabel.Text = "Valor:"
-        '
         'TerrenoValorLabel1
         '
         TerrenoValorLabel1.AutoSize = True
-        TerrenoValorLabel1.Location = New System.Drawing.Point(716, 24)
+        TerrenoValorLabel1.Location = New System.Drawing.Point(636, 24)
         TerrenoValorLabel1.Name = "TerrenoValorLabel1"
         TerrenoValorLabel1.Size = New System.Drawing.Size(36, 13)
         TerrenoValorLabel1.TabIndex = 8
@@ -485,9 +523,9 @@ Partial Class SimulatorForm
         'MainTs
         '
         Me.MainTs.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1})
-        Me.MainTs.Location = New System.Drawing.Point(5, 5)
+        Me.MainTs.Location = New System.Drawing.Point(0, 0)
         Me.MainTs.Name = "MainTs"
-        Me.MainTs.Size = New System.Drawing.Size(906, 25)
+        Me.MainTs.Size = New System.Drawing.Size(789, 25)
         Me.MainTs.TabIndex = 0
         Me.MainTs.Text = "ToolStrip1"
         '
@@ -515,22 +553,9 @@ Partial Class SimulatorForm
         Me.PredioDataGridView.ReadOnly = True
         Me.PredioDataGridView.RowHeadersVisible = False
         Me.PredioDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.PredioDataGridView.Size = New System.Drawing.Size(498, 92)
+        Me.PredioDataGridView.Size = New System.Drawing.Size(489, 67)
         Me.PredioDataGridView.TabIndex = 0
         Me.PredioDataGridView.TabStop = False
-        '
-        'ObrasComplementariasValorDataGridViewTextBoxColumn
-        '
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.DataPropertyName = "ObrasComplementariasValor"
-        DataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle66.Format = "C2"
-        DataGridViewCellStyle66.NullValue = Nothing
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle66
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.HeaderText = "V. O. Comp."
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.Name = "ObrasComplementariasValorDataGridViewTextBoxColumn"
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.Width = 74
         '
         'DireccionDataGridViewTextBoxColumn
         '
@@ -541,13 +566,26 @@ Partial Class SimulatorForm
         Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
         Me.DireccionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
+        'ObrasComplementariasValorDataGridViewTextBoxColumn
+        '
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.DataPropertyName = "ObrasComplementariasValor"
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.HeaderText = "V. O. Comp."
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.Name = "ObrasComplementariasValorDataGridViewTextBoxColumn"
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ObrasComplementariasValorDataGridViewTextBoxColumn.Width = 74
+        '
         'ValorTerrenoDataGridViewTextBoxColumn
         '
         Me.ValorTerrenoDataGridViewTextBoxColumn.DataPropertyName = "TerrenoValor"
-        DataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle67.Format = "C2"
-        DataGridViewCellStyle67.NullValue = Nothing
-        Me.ValorTerrenoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle67
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.ValorTerrenoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
         Me.ValorTerrenoDataGridViewTextBoxColumn.HeaderText = "V. Terreno"
         Me.ValorTerrenoDataGridViewTextBoxColumn.Name = "ValorTerrenoDataGridViewTextBoxColumn"
         Me.ValorTerrenoDataGridViewTextBoxColumn.ReadOnly = True
@@ -557,10 +595,10 @@ Partial Class SimulatorForm
         'ValorConstruccionesDataGridViewTextBoxColumn
         '
         Me.ValorConstruccionesDataGridViewTextBoxColumn.DataPropertyName = "ConstruccionesValor"
-        DataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle68.Format = "C2"
-        DataGridViewCellStyle68.NullValue = Nothing
-        Me.ValorConstruccionesDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle68
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle3.Format = "C2"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.ValorConstruccionesDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
         Me.ValorConstruccionesDataGridViewTextBoxColumn.HeaderText = "V. Constr."
         Me.ValorConstruccionesDataGridViewTextBoxColumn.Name = "ValorConstruccionesDataGridViewTextBoxColumn"
         Me.ValorConstruccionesDataGridViewTextBoxColumn.ReadOnly = True
@@ -570,10 +608,10 @@ Partial Class SimulatorForm
         'AvaluoDataGridViewTextBoxColumn
         '
         Me.AvaluoDataGridViewTextBoxColumn.DataPropertyName = "Avaluo"
-        DataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle69.Format = "C2"
-        DataGridViewCellStyle69.NullValue = Nothing
-        Me.AvaluoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle69
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle4.Format = "C2"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.AvaluoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
         Me.AvaluoDataGridViewTextBoxColumn.HeaderText = "Avaluo"
         Me.AvaluoDataGridViewTextBoxColumn.Name = "AvaluoDataGridViewTextBoxColumn"
         Me.AvaluoDataGridViewTextBoxColumn.ReadOnly = True
@@ -582,8 +620,9 @@ Partial Class SimulatorForm
         '
         'BaseImponibleTextBox
         '
+        Me.BaseImponibleTextBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BaseImponibleTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImpuestoPredialBindingSource, "BaseImponible", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "C2"))
-        Me.BaseImponibleTextBox.Location = New System.Drawing.Point(796, 19)
+        Me.BaseImponibleTextBox.Location = New System.Drawing.Point(701, 27)
         Me.BaseImponibleTextBox.Name = "BaseImponibleTextBox"
         Me.BaseImponibleTextBox.ReadOnly = True
         Me.BaseImponibleTextBox.Size = New System.Drawing.Size(76, 22)
@@ -592,8 +631,9 @@ Partial Class SimulatorForm
         '
         'BaseImponibleDeducidaTextBox
         '
+        Me.BaseImponibleDeducidaTextBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BaseImponibleDeducidaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImpuestoPredialBindingSource, "BaseImponibleDeducida", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
-        Me.BaseImponibleDeducidaTextBox.Location = New System.Drawing.Point(796, 47)
+        Me.BaseImponibleDeducidaTextBox.Location = New System.Drawing.Point(701, 55)
         Me.BaseImponibleDeducidaTextBox.Name = "BaseImponibleDeducidaTextBox"
         Me.BaseImponibleDeducidaTextBox.ReadOnly = True
         Me.BaseImponibleDeducidaTextBox.Size = New System.Drawing.Size(76, 22)
@@ -602,8 +642,9 @@ Partial Class SimulatorForm
         '
         'InsolutoTextBox
         '
+        Me.InsolutoTextBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.InsolutoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImpuestoPredialBindingSource, "Insoluto", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "C2"))
-        Me.InsolutoTextBox.Location = New System.Drawing.Point(796, 75)
+        Me.InsolutoTextBox.Location = New System.Drawing.Point(701, 83)
         Me.InsolutoTextBox.Name = "InsolutoTextBox"
         Me.InsolutoTextBox.ReadOnly = True
         Me.InsolutoTextBox.Size = New System.Drawing.Size(76, 22)
@@ -612,11 +653,12 @@ Partial Class SimulatorForm
         '
         'ExoneradoCheckBox
         '
+        Me.ExoneradoCheckBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ExoneradoCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ExoneradoCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ImpuestoPredialBindingSource, "Exonerado", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.ExoneradoCheckBox.Location = New System.Drawing.Point(545, 18)
+        Me.ExoneradoCheckBox.Location = New System.Drawing.Point(498, 28)
         Me.ExoneradoCheckBox.Name = "ExoneradoCheckBox"
-        Me.ExoneradoCheckBox.Size = New System.Drawing.Size(90, 24)
+        Me.ExoneradoCheckBox.Size = New System.Drawing.Size(85, 24)
         Me.ExoneradoCheckBox.TabIndex = 0
         Me.ExoneradoCheckBox.Text = "Exonerado:"
         Me.ExoneradoCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -637,7 +679,7 @@ Partial Class SimulatorForm
         Me.PrediosBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.PrediosBindingNavigator.Name = "PrediosBindingNavigator"
         Me.PrediosBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.PrediosBindingNavigator.Size = New System.Drawing.Size(498, 25)
+        Me.PrediosBindingNavigator.Size = New System.Drawing.Size(489, 25)
         Me.PrediosBindingNavigator.TabIndex = 1
         Me.PrediosBindingNavigator.Text = "BindingNavigator1"
         '
@@ -728,6 +770,7 @@ Partial Class SimulatorForm
         '
         'ResumenGB
         '
+        Me.ResumenGB.Controls.Add(Me.SinDetalleCheckBox)
         Me.ResumenGB.Controls.Add(Me.LisatadoPrediosPanel)
         Me.ResumenGB.Controls.Add(BaseImponibleDeducidaLabel)
         Me.ResumenGB.Controls.Add(Me.ExoneradoCheckBox)
@@ -737,21 +780,34 @@ Partial Class SimulatorForm
         Me.ResumenGB.Controls.Add(InsolutoLabel)
         Me.ResumenGB.Controls.Add(Me.InsolutoTextBox)
         Me.ResumenGB.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ResumenGB.Location = New System.Drawing.Point(5, 30)
+        Me.ResumenGB.Location = New System.Drawing.Point(0, 0)
         Me.ResumenGB.Name = "ResumenGB"
-        Me.ResumenGB.Size = New System.Drawing.Size(906, 113)
+        Me.ResumenGB.Size = New System.Drawing.Size(789, 130)
         Me.ResumenGB.TabIndex = 1
         Me.ResumenGB.TabStop = False
         Me.ResumenGB.Text = "Resumen"
         '
+        'SinDetalleCheckBox
+        '
+        Me.SinDetalleCheckBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SinDetalleCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.SinDetalleCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ImpuestoPredialBindingSource, "SinDetalle", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.SinDetalleCheckBox.Location = New System.Drawing.Point(498, 53)
+        Me.SinDetalleCheckBox.Name = "SinDetalleCheckBox"
+        Me.SinDetalleCheckBox.Size = New System.Drawing.Size(85, 24)
+        Me.SinDetalleCheckBox.TabIndex = 24
+        Me.SinDetalleCheckBox.Text = "Sin Detalle"
+        Me.SinDetalleCheckBox.UseVisualStyleBackColor = True
+        '
         'LisatadoPrediosPanel
         '
-        Me.LisatadoPrediosPanel.Controls.Add(Me.PrediosBindingNavigator)
+        Me.LisatadoPrediosPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LisatadoPrediosPanel.Controls.Add(Me.PredioDataGridView)
-        Me.LisatadoPrediosPanel.Dock = System.Windows.Forms.DockStyle.Left
+        Me.LisatadoPrediosPanel.Controls.Add(Me.PrediosBindingNavigator)
         Me.LisatadoPrediosPanel.Location = New System.Drawing.Point(3, 18)
         Me.LisatadoPrediosPanel.Name = "LisatadoPrediosPanel"
-        Me.LisatadoPrediosPanel.Size = New System.Drawing.Size(498, 92)
+        Me.LisatadoPrediosPanel.Size = New System.Drawing.Size(489, 92)
         Me.LisatadoPrediosPanel.TabIndex = 23
         '
         'DireccionTextBox
@@ -771,17 +827,16 @@ Partial Class SimulatorForm
         Me.ConstruccionesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ConstruccionesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NivelDataGridViewTextBoxColumn, Me.MaterialDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn, Me.AñoDataGridViewTextBoxColumn, Me.ClasificacionDataGridViewTextBoxColumn, Me.CategoriasDataGridViewTextBoxColumn, Me.ValorUnitarioDataGridViewTextBoxColumn, Me.IncrementoDataGridViewTextBoxColumn, Me.ValorDepreciacionDataGridViewTextBoxColumn, Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn, Me.AreaDataGridViewTextBoxColumn, Me.AreaConstruidaValorDataGridViewTextBoxColumn, Me.PorcConstruccionComunDataGridViewTextBoxColumn, Me.ValorCinbstruccionComunDataGridViewTextBoxColumn, Me.ValorConstruccionDataGridViewTextBoxColumn})
         Me.ConstruccionesDataGridView.DataSource = Me.ConstruccionesBindingSource
-        DataGridViewCellStyle78.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle78.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle78.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle78.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle78.Format = "C2"
-        DataGridViewCellStyle78.NullValue = Nothing
-        DataGridViewCellStyle78.Padding = New System.Windows.Forms.Padding(2)
-        DataGridViewCellStyle78.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle78.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle78.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ConstruccionesDataGridView.DefaultCellStyle = DataGridViewCellStyle78
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle13.Format = "C2"
+        DataGridViewCellStyle13.NullValue = Nothing
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ConstruccionesDataGridView.DefaultCellStyle = DataGridViewCellStyle13
         Me.ConstruccionesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ConstruccionesDataGridView.Location = New System.Drawing.Point(0, 0)
         Me.ConstruccionesDataGridView.MultiSelect = False
@@ -789,87 +844,87 @@ Partial Class SimulatorForm
         Me.ConstruccionesDataGridView.ReadOnly = True
         Me.ConstruccionesDataGridView.RowHeadersVisible = False
         Me.ConstruccionesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ConstruccionesDataGridView.Size = New System.Drawing.Size(886, 143)
+        Me.ConstruccionesDataGridView.Size = New System.Drawing.Size(769, 126)
         Me.ConstruccionesDataGridView.TabIndex = 0
         Me.ConstruccionesDataGridView.TabStop = False
         '
         'NivelDataGridViewTextBoxColumn
         '
         Me.NivelDataGridViewTextBoxColumn.DataPropertyName = "Nivel"
-        DataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle70.Format = "N0"
-        DataGridViewCellStyle70.NullValue = Nothing
-        Me.NivelDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle70
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.Format = "N0"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.NivelDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
         Me.NivelDataGridViewTextBoxColumn.HeaderText = "Niv"
         Me.NivelDataGridViewTextBoxColumn.Name = "NivelDataGridViewTextBoxColumn"
         Me.NivelDataGridViewTextBoxColumn.ReadOnly = True
         Me.NivelDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.NivelDataGridViewTextBoxColumn.ToolTipText = "Nivel de edificación (piso)"
-        Me.NivelDataGridViewTextBoxColumn.Width = 33
+        Me.NivelDataGridViewTextBoxColumn.Width = 29
         '
         'MaterialDataGridViewTextBoxColumn
         '
         Me.MaterialDataGridViewTextBoxColumn.DataPropertyName = "Material"
-        DataGridViewCellStyle71.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle71.Format = "N0"
-        DataGridViewCellStyle71.NullValue = Nothing
-        Me.MaterialDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle71
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.Format = "N0"
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.MaterialDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle6
         Me.MaterialDataGridViewTextBoxColumn.HeaderText = "MEP"
         Me.MaterialDataGridViewTextBoxColumn.Name = "MaterialDataGridViewTextBoxColumn"
         Me.MaterialDataGridViewTextBoxColumn.ReadOnly = True
         Me.MaterialDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.MaterialDataGridViewTextBoxColumn.ToolTipText = "MAterial estructural predominante"
-        Me.MaterialDataGridViewTextBoxColumn.Width = 39
+        Me.MaterialDataGridViewTextBoxColumn.Width = 35
         '
         'EstadoDataGridViewTextBoxColumn
         '
         Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "Estado"
-        DataGridViewCellStyle72.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle72.Format = "N0"
-        Me.EstadoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle72
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.Format = "N0"
+        Me.EstadoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle7
         Me.EstadoDataGridViewTextBoxColumn.HeaderText = "EC"
         Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
         Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
         Me.EstadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.EstadoDataGridViewTextBoxColumn.ToolTipText = "Estado de Conservacion"
-        Me.EstadoDataGridViewTextBoxColumn.Width = 30
+        Me.EstadoDataGridViewTextBoxColumn.Width = 26
         '
         'AñoDataGridViewTextBoxColumn
         '
         Me.AñoDataGridViewTextBoxColumn.DataPropertyName = "Año"
-        DataGridViewCellStyle73.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle73.Format = "N0"
-        Me.AñoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle73
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.Format = "N0"
+        Me.AñoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle8
         Me.AñoDataGridViewTextBoxColumn.HeaderText = "Año"
         Me.AñoDataGridViewTextBoxColumn.Name = "AñoDataGridViewTextBoxColumn"
         Me.AñoDataGridViewTextBoxColumn.ReadOnly = True
         Me.AñoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.AñoDataGridViewTextBoxColumn.ToolTipText = "Año de Construccion"
-        Me.AñoDataGridViewTextBoxColumn.Width = 38
+        Me.AñoDataGridViewTextBoxColumn.Width = 34
         '
         'ClasificacionDataGridViewTextBoxColumn
         '
         Me.ClasificacionDataGridViewTextBoxColumn.DataPropertyName = "Clasificacion"
-        DataGridViewCellStyle74.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle74.Format = "N0"
-        Me.ClasificacionDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle74
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.Format = "N0"
+        Me.ClasificacionDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle9
         Me.ClasificacionDataGridViewTextBoxColumn.HeaderText = "C"
         Me.ClasificacionDataGridViewTextBoxColumn.Name = "ClasificacionDataGridViewTextBoxColumn"
         Me.ClasificacionDataGridViewTextBoxColumn.ReadOnly = True
         Me.ClasificacionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.ClasificacionDataGridViewTextBoxColumn.ToolTipText = "Clasificación del predio"
-        Me.ClasificacionDataGridViewTextBoxColumn.Width = 24
+        Me.ClasificacionDataGridViewTextBoxColumn.Width = 20
         '
         'CategoriasDataGridViewTextBoxColumn
         '
         Me.CategoriasDataGridViewTextBoxColumn.DataPropertyName = "Categorias"
-        DataGridViewCellStyle75.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.CategoriasDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle75
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.CategoriasDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle10
         Me.CategoriasDataGridViewTextBoxColumn.HeaderText = "Categorias"
         Me.CategoriasDataGridViewTextBoxColumn.Name = "CategoriasDataGridViewTextBoxColumn"
         Me.CategoriasDataGridViewTextBoxColumn.ReadOnly = True
         Me.CategoriasDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.CategoriasDataGridViewTextBoxColumn.Width = 72
+        Me.CategoriasDataGridViewTextBoxColumn.Width = 68
         '
         'ValorUnitarioDataGridViewTextBoxColumn
         '
@@ -879,7 +934,7 @@ Partial Class SimulatorForm
         Me.ValorUnitarioDataGridViewTextBoxColumn.ReadOnly = True
         Me.ValorUnitarioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.ValorUnitarioDataGridViewTextBoxColumn.ToolTipText = "Valor Unitario"
-        Me.ValorUnitarioDataGridViewTextBoxColumn.Width = 32
+        Me.ValorUnitarioDataGridViewTextBoxColumn.Width = 28
         '
         'IncrementoDataGridViewTextBoxColumn
         '
@@ -889,7 +944,7 @@ Partial Class SimulatorForm
         Me.IncrementoDataGridViewTextBoxColumn.ReadOnly = True
         Me.IncrementoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.IncrementoDataGridViewTextBoxColumn.ToolTipText = "5% Incremento a partir del Quinto Piso"
-        Me.IncrementoDataGridViewTextBoxColumn.Width = 50
+        Me.IncrementoDataGridViewTextBoxColumn.Width = 46
         '
         'ValorDepreciacionDataGridViewTextBoxColumn
         '
@@ -899,7 +954,7 @@ Partial Class SimulatorForm
         Me.ValorDepreciacionDataGridViewTextBoxColumn.ReadOnly = True
         Me.ValorDepreciacionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.ValorDepreciacionDataGridViewTextBoxColumn.ToolTipText = "Depreciación"
-        Me.ValorDepreciacionDataGridViewTextBoxColumn.Width = 32
+        Me.ValorDepreciacionDataGridViewTextBoxColumn.Width = 28
         '
         'ValorUnitarioDepreciadoDataGridViewTextBoxColumn
         '
@@ -909,20 +964,20 @@ Partial Class SimulatorForm
         Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.ReadOnly = True
         Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.ToolTipText = "Valor Unitario Depreciado"
-        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.Width = 40
+        Me.ValorUnitarioDepreciadoDataGridViewTextBoxColumn.Width = 36
         '
         'AreaDataGridViewTextBoxColumn
         '
         Me.AreaDataGridViewTextBoxColumn.DataPropertyName = "AreaConstruida"
-        DataGridViewCellStyle76.Format = "#,###,###,##0.00 m²"
-        DataGridViewCellStyle76.NullValue = Nothing
-        Me.AreaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle76
+        DataGridViewCellStyle11.Format = "#,###,###,##0.00 m²"
+        DataGridViewCellStyle11.NullValue = Nothing
+        Me.AreaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle11
         Me.AreaDataGridViewTextBoxColumn.HeaderText = "Area"
         Me.AreaDataGridViewTextBoxColumn.Name = "AreaDataGridViewTextBoxColumn"
         Me.AreaDataGridViewTextBoxColumn.ReadOnly = True
         Me.AreaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.AreaDataGridViewTextBoxColumn.ToolTipText = "Area Construida"
-        Me.AreaDataGridViewTextBoxColumn.Width = 40
+        Me.AreaDataGridViewTextBoxColumn.Width = 36
         '
         'AreaConstruidaValorDataGridViewTextBoxColumn
         '
@@ -932,20 +987,20 @@ Partial Class SimulatorForm
         Me.AreaConstruidaValorDataGridViewTextBoxColumn.ReadOnly = True
         Me.AreaConstruidaValorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.AreaConstruidaValorDataGridViewTextBoxColumn.ToolTipText = "Valor Area Construida"
-        Me.AreaConstruidaValorDataGridViewTextBoxColumn.Width = 37
+        Me.AreaConstruidaValorDataGridViewTextBoxColumn.Width = 33
         '
         'PorcConstruccionComunDataGridViewTextBoxColumn
         '
         Me.PorcConstruccionComunDataGridViewTextBoxColumn.DataPropertyName = "AreaConstruidaComunPorcentaje"
-        DataGridViewCellStyle77.Format = "N4"
-        DataGridViewCellStyle77.NullValue = Nothing
-        Me.PorcConstruccionComunDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle77
+        DataGridViewCellStyle12.Format = "N4"
+        DataGridViewCellStyle12.NullValue = Nothing
+        Me.PorcConstruccionComunDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle12
         Me.PorcConstruccionComunDataGridViewTextBoxColumn.HeaderText = "% Comun"
         Me.PorcConstruccionComunDataGridViewTextBoxColumn.Name = "PorcConstruccionComunDataGridViewTextBoxColumn"
         Me.PorcConstruccionComunDataGridViewTextBoxColumn.ReadOnly = True
         Me.PorcConstruccionComunDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.PorcConstruccionComunDataGridViewTextBoxColumn.ToolTipText = "Porcentaje de area común"
-        Me.PorcConstruccionComunDataGridViewTextBoxColumn.Width = 66
+        Me.PorcConstruccionComunDataGridViewTextBoxColumn.Width = 62
         '
         'ValorCinbstruccionComunDataGridViewTextBoxColumn
         '
@@ -955,7 +1010,7 @@ Partial Class SimulatorForm
         Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.ReadOnly = True
         Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.ToolTipText = "Valor de area construida común"
-        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.Width = 44
+        Me.ValorCinbstruccionComunDataGridViewTextBoxColumn.Width = 40
         '
         'ValorConstruccionDataGridViewTextBoxColumn
         '
@@ -965,42 +1020,42 @@ Partial Class SimulatorForm
         Me.ValorConstruccionDataGridViewTextBoxColumn.ReadOnly = True
         Me.ValorConstruccionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.ValorConstruccionDataGridViewTextBoxColumn.ToolTipText = "Valor total de la construcción"
-        Me.ValorConstruccionDataGridViewTextBoxColumn.Width = 35
+        Me.ValorConstruccionDataGridViewTextBoxColumn.Width = 31
         '
         'TerrenoAreaExclusivaTextBox
         '
         Me.TerrenoAreaExclusivaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PrediosBindingSource, "TerrenoAreaExclusiva", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "N2"))
         Me.TerrenoAreaExclusivaTextBox.Location = New System.Drawing.Point(93, 21)
         Me.TerrenoAreaExclusivaTextBox.Name = "TerrenoAreaExclusivaTextBox"
-        Me.TerrenoAreaExclusivaTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.TerrenoAreaExclusivaTextBox.Size = New System.Drawing.Size(80, 22)
         Me.TerrenoAreaExclusivaTextBox.TabIndex = 1
         Me.TerrenoAreaExclusivaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TerrenoAreaComunTextBox
         '
         Me.TerrenoAreaComunTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PrediosBindingSource, "TerrenoAreaComun", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "N2"))
-        Me.TerrenoAreaComunTextBox.Location = New System.Drawing.Point(278, 21)
+        Me.TerrenoAreaComunTextBox.Location = New System.Drawing.Point(258, 21)
         Me.TerrenoAreaComunTextBox.Name = "TerrenoAreaComunTextBox"
-        Me.TerrenoAreaComunTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.TerrenoAreaComunTextBox.Size = New System.Drawing.Size(80, 22)
         Me.TerrenoAreaComunTextBox.TabIndex = 3
         Me.TerrenoAreaComunTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TerrenoAreaTotalTextBox
         '
         Me.TerrenoAreaTotalTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PrediosBindingSource, "TerrenoAreaTotal", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "#,###,###,###,##0.00 m²"))
-        Me.TerrenoAreaTotalTextBox.Location = New System.Drawing.Point(450, 21)
+        Me.TerrenoAreaTotalTextBox.Location = New System.Drawing.Point(410, 21)
         Me.TerrenoAreaTotalTextBox.Name = "TerrenoAreaTotalTextBox"
         Me.TerrenoAreaTotalTextBox.ReadOnly = True
-        Me.TerrenoAreaTotalTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.TerrenoAreaTotalTextBox.Size = New System.Drawing.Size(80, 22)
         Me.TerrenoAreaTotalTextBox.TabIndex = 5
         Me.TerrenoAreaTotalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'ArancelTextBox
         '
         Me.ArancelTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PrediosBindingSource, "Arancel", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "C2"))
-        Me.ArancelTextBox.Location = New System.Drawing.Point(610, 21)
+        Me.ArancelTextBox.Location = New System.Drawing.Point(550, 21)
         Me.ArancelTextBox.Name = "ArancelTextBox"
-        Me.ArancelTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.ArancelTextBox.Size = New System.Drawing.Size(80, 22)
         Me.ArancelTextBox.TabIndex = 7
         Me.ArancelTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1041,9 +1096,9 @@ Partial Class SimulatorForm
         Me.DetPredioGB.Controls.Add(Me.ValorizacionPredioGb)
         Me.DetPredioGB.Controls.Add(Me.DatosPredioGb)
         Me.DetPredioGB.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DetPredioGB.Location = New System.Drawing.Point(5, 143)
+        Me.DetPredioGB.Location = New System.Drawing.Point(0, 130)
         Me.DetPredioGB.Name = "DetPredioGB"
-        Me.DetPredioGB.Size = New System.Drawing.Size(906, 441)
+        Me.DetPredioGB.Size = New System.Drawing.Size(789, 424)
         Me.DetPredioGB.TabIndex = 2
         Me.DetPredioGB.TabStop = False
         Me.DetPredioGB.Text = "Detalles del Predio"
@@ -1056,7 +1111,7 @@ Partial Class SimulatorForm
         Me.ConstIfpTabs.Location = New System.Drawing.Point(3, 71)
         Me.ConstIfpTabs.Name = "ConstIfpTabs"
         Me.ConstIfpTabs.SelectedIndex = 0
-        Me.ConstIfpTabs.Size = New System.Drawing.Size(900, 264)
+        Me.ConstIfpTabs.Size = New System.Drawing.Size(783, 247)
         Me.ConstIfpTabs.TabIndex = 24
         '
         'ConstruccionesTab
@@ -1066,7 +1121,7 @@ Partial Class SimulatorForm
         Me.ConstruccionesTab.Location = New System.Drawing.Point(4, 22)
         Me.ConstruccionesTab.Name = "ConstruccionesTab"
         Me.ConstruccionesTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.ConstruccionesTab.Size = New System.Drawing.Size(892, 238)
+        Me.ConstruccionesTab.Size = New System.Drawing.Size(775, 221)
         Me.ConstruccionesTab.TabIndex = 0
         Me.ConstruccionesTab.Text = "TabPage1"
         Me.ConstruccionesTab.UseVisualStyleBackColor = True
@@ -1078,7 +1133,7 @@ Partial Class SimulatorForm
         Me.ConstrucciuonesPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ConstrucciuonesPanel.Location = New System.Drawing.Point(3, 3)
         Me.ConstrucciuonesPanel.Name = "ConstrucciuonesPanel"
-        Me.ConstrucciuonesPanel.Size = New System.Drawing.Size(886, 168)
+        Me.ConstrucciuonesPanel.Size = New System.Drawing.Size(769, 151)
         Me.ConstrucciuonesPanel.TabIndex = 1
         '
         'ConstruccionesBindingNavigator
@@ -1089,14 +1144,14 @@ Partial Class SimulatorForm
         Me.ConstruccionesBindingNavigator.DeleteItem = Me.ToolStripButton2
         Me.ConstruccionesBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ConstruccionesBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.ToolStripButton1, Me.ToolStripButton2})
-        Me.ConstruccionesBindingNavigator.Location = New System.Drawing.Point(0, 143)
+        Me.ConstruccionesBindingNavigator.Location = New System.Drawing.Point(0, 126)
         Me.ConstruccionesBindingNavigator.MoveFirstItem = Me.ToolStripButton3
         Me.ConstruccionesBindingNavigator.MoveLastItem = Me.ToolStripButton6
         Me.ConstruccionesBindingNavigator.MoveNextItem = Me.ToolStripButton5
         Me.ConstruccionesBindingNavigator.MovePreviousItem = Me.ToolStripButton4
         Me.ConstruccionesBindingNavigator.Name = "ConstruccionesBindingNavigator"
         Me.ConstruccionesBindingNavigator.PositionItem = Me.ToolStripTextBox1
-        Me.ConstruccionesBindingNavigator.Size = New System.Drawing.Size(886, 25)
+        Me.ConstruccionesBindingNavigator.Size = New System.Drawing.Size(769, 25)
         Me.ConstruccionesBindingNavigator.TabIndex = 1
         Me.ConstruccionesBindingNavigator.Text = "BindingNavigator2"
         '
@@ -1187,8 +1242,6 @@ Partial Class SimulatorForm
         '
         'DetallesConstruccionGb
         '
-        Me.DetallesConstruccionGb.Controls.Add(ValorLabel)
-        Me.DetallesConstruccionGb.Controls.Add(Me.ValorTextBox)
         Me.DetallesConstruccionGb.Controls.Add(MesLabel1)
         Me.DetallesConstruccionGb.Controls.Add(AreaConstruidaComunPorcentajeLabel)
         Me.DetallesConstruccionGb.Controls.Add(Me.MesComboBox)
@@ -1218,22 +1271,12 @@ Partial Class SimulatorForm
         Me.DetallesConstruccionGb.Controls.Add(NivelLabel)
         Me.DetallesConstruccionGb.Controls.Add(Me.NivelTextBox)
         Me.DetallesConstruccionGb.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.DetallesConstruccionGb.Location = New System.Drawing.Point(3, 171)
+        Me.DetallesConstruccionGb.Location = New System.Drawing.Point(3, 154)
         Me.DetallesConstruccionGb.Name = "DetallesConstruccionGb"
-        Me.DetallesConstruccionGb.Size = New System.Drawing.Size(886, 64)
+        Me.DetallesConstruccionGb.Size = New System.Drawing.Size(769, 64)
         Me.DetallesConstruccionGb.TabIndex = 1
         Me.DetallesConstruccionGb.TabStop = False
         Me.DetallesConstruccionGb.Text = "Detalles de la Construccion"
-        '
-        'ValorTextBox
-        '
-        Me.ValorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConstruccionesBindingSource, "Valor", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "C2"))
-        Me.ValorTextBox.Location = New System.Drawing.Point(769, 34)
-        Me.ValorTextBox.Name = "ValorTextBox"
-        Me.ValorTextBox.ReadOnly = True
-        Me.ValorTextBox.Size = New System.Drawing.Size(100, 22)
-        Me.ValorTextBox.TabIndex = 29
-        Me.ValorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'MesComboBox
         '
@@ -1273,6 +1316,7 @@ Partial Class SimulatorForm
         Me.CiesTextBox.Name = "CiesTextBox"
         Me.CiesTextBox.Size = New System.Drawing.Size(29, 22)
         Me.CiesTextBox.TabIndex = 23
+        Me.CiesTextBox.Tag = "IES"
         Me.CiesTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'CbTextBox
@@ -1284,6 +1328,7 @@ Partial Class SimulatorForm
         Me.CbTextBox.Name = "CbTextBox"
         Me.CbTextBox.Size = New System.Drawing.Size(28, 22)
         Me.CbTextBox.TabIndex = 21
+        Me.CbTextBox.Tag = "B"
         Me.CbTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'CrTextBox
@@ -1295,6 +1340,7 @@ Partial Class SimulatorForm
         Me.CrTextBox.Name = "CrTextBox"
         Me.CrTextBox.Size = New System.Drawing.Size(28, 22)
         Me.CrTextBox.TabIndex = 19
+        Me.CrTextBox.Tag = "R"
         Me.CrTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'CpvTextBox
@@ -1306,6 +1352,7 @@ Partial Class SimulatorForm
         Me.CpvTextBox.Name = "CpvTextBox"
         Me.CpvTextBox.Size = New System.Drawing.Size(28, 22)
         Me.CpvTextBox.TabIndex = 17
+        Me.CpvTextBox.Tag = "PV"
         Me.CpvTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'CpTextBox
@@ -1317,6 +1364,7 @@ Partial Class SimulatorForm
         Me.CpTextBox.Name = "CpTextBox"
         Me.CpTextBox.Size = New System.Drawing.Size(28, 22)
         Me.CpTextBox.TabIndex = 15
+        Me.CpTextBox.Tag = "P"
         Me.CpTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'CtTextBox
@@ -1328,6 +1376,7 @@ Partial Class SimulatorForm
         Me.CtTextBox.Name = "CtTextBox"
         Me.CtTextBox.Size = New System.Drawing.Size(28, 22)
         Me.CtTextBox.TabIndex = 13
+        Me.CtTextBox.Tag = "T"
         Me.CtTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'CmcTextBox
@@ -1339,6 +1388,7 @@ Partial Class SimulatorForm
         Me.CmcTextBox.Name = "CmcTextBox"
         Me.CmcTextBox.Size = New System.Drawing.Size(28, 22)
         Me.CmcTextBox.TabIndex = 11
+        Me.CmcTextBox.Tag = "MC"
         Me.CmcTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'EstadoComboBox
@@ -1385,7 +1435,7 @@ Partial Class SimulatorForm
         Me.IfpTab.Location = New System.Drawing.Point(4, 22)
         Me.IfpTab.Name = "IfpTab"
         Me.IfpTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.IfpTab.Size = New System.Drawing.Size(892, 238)
+        Me.IfpTab.Size = New System.Drawing.Size(775, 223)
         Me.IfpTab.TabIndex = 1
         Me.IfpTab.Text = "TabPage2"
         Me.IfpTab.UseVisualStyleBackColor = True
@@ -1436,9 +1486,9 @@ Partial Class SimulatorForm
         Me.TadosTerrenoGb.Controls.Add(ArancelLabel)
         Me.TadosTerrenoGb.Controls.Add(Me.ArancelTextBox)
         Me.TadosTerrenoGb.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TadosTerrenoGb.Location = New System.Drawing.Point(3, 335)
+        Me.TadosTerrenoGb.Location = New System.Drawing.Point(3, 318)
         Me.TadosTerrenoGb.Name = "TadosTerrenoGb"
-        Me.TadosTerrenoGb.Size = New System.Drawing.Size(900, 52)
+        Me.TadosTerrenoGb.Size = New System.Drawing.Size(783, 52)
         Me.TadosTerrenoGb.TabIndex = 2
         Me.TadosTerrenoGb.TabStop = False
         Me.TadosTerrenoGb.Text = "Terreno"
@@ -1446,10 +1496,10 @@ Partial Class SimulatorForm
         'TerrenoValorTextBox1
         '
         Me.TerrenoValorTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PrediosBindingSource, "TerrenoValor", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "C2"))
-        Me.TerrenoValorTextBox1.Location = New System.Drawing.Point(758, 21)
+        Me.TerrenoValorTextBox1.Location = New System.Drawing.Point(678, 21)
         Me.TerrenoValorTextBox1.Name = "TerrenoValorTextBox1"
         Me.TerrenoValorTextBox1.ReadOnly = True
-        Me.TerrenoValorTextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.TerrenoValorTextBox1.Size = New System.Drawing.Size(80, 22)
         Me.TerrenoValorTextBox1.TabIndex = 9
         Me.TerrenoValorTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1462,9 +1512,9 @@ Partial Class SimulatorForm
         Me.ValorizacionPredioGb.Controls.Add(AvaluoLabel)
         Me.ValorizacionPredioGb.Controls.Add(Me.AvaluoTextBox)
         Me.ValorizacionPredioGb.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ValorizacionPredioGb.Location = New System.Drawing.Point(3, 387)
+        Me.ValorizacionPredioGb.Location = New System.Drawing.Point(3, 370)
         Me.ValorizacionPredioGb.Name = "ValorizacionPredioGb"
-        Me.ValorizacionPredioGb.Size = New System.Drawing.Size(900, 51)
+        Me.ValorizacionPredioGb.Size = New System.Drawing.Size(783, 51)
         Me.ValorizacionPredioGb.TabIndex = 3
         Me.ValorizacionPredioGb.TabStop = False
         Me.ValorizacionPredioGb.Text = "Valorización Predio"
@@ -1478,7 +1528,7 @@ Partial Class SimulatorForm
         Me.DatosPredioGb.Dock = System.Windows.Forms.DockStyle.Top
         Me.DatosPredioGb.Location = New System.Drawing.Point(3, 18)
         Me.DatosPredioGb.Name = "DatosPredioGb"
-        Me.DatosPredioGb.Size = New System.Drawing.Size(900, 53)
+        Me.DatosPredioGb.Size = New System.Drawing.Size(783, 53)
         Me.DatosPredioGb.TabIndex = 0
         Me.DatosPredioGb.TabStop = False
         '
@@ -1492,7 +1542,7 @@ Partial Class SimulatorForm
         Me.ClasificacionComboBox.FormattingEnabled = True
         Me.ClasificacionComboBox.Location = New System.Drawing.Point(401, 21)
         Me.ClasificacionComboBox.Name = "ClasificacionComboBox"
-        Me.ClasificacionComboBox.Size = New System.Drawing.Size(490, 21)
+        Me.ClasificacionComboBox.Size = New System.Drawing.Size(373, 21)
         Me.ClasificacionComboBox.TabIndex = 3
         '
         'IfpVusBindingSource
@@ -1500,15 +1550,509 @@ Partial Class SimulatorForm
         Me.IfpVusBindingSource.DataMember = "IfpVus"
         Me.IfpVusBindingSource.DataSource = Me.IfpsBindingSource
         '
+        'SplitContainer1
+        '
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel2
+        Me.SplitContainer1.IsSplitterFixed = True
+        Me.SplitContainer1.Location = New System.Drawing.Point(5, 5)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Panel1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.MainTs)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.BackColor = System.Drawing.Color.White
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Panel2)
+        Me.SplitContainer1.Panel2.Padding = New System.Windows.Forms.Padding(10)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1149, 579)
+        Me.SplitContainer1.SplitterDistance = 789
+        Me.SplitContainer1.TabIndex = 24
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.DetPredioGB)
+        Me.Panel1.Controls.Add(Me.ResumenGB)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 25)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(789, 554)
+        Me.Panel1.TabIndex = 0
+        '
+        'Panel2
+        '
+        Me.Panel2.AutoScroll = True
+        Me.Panel2.Controls.Add(Me.Label9)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.labelDCI)
+        Me.Panel2.Controls.Add(Me.labelVCI)
+        Me.Panel2.Controls.Add(Me.LabelTituloCategoria)
+        Me.Panel2.Controls.Add(Me.labelECI)
+        Me.Panel2.Controls.Add(Me.labelECA)
+        Me.Panel2.Controls.Add(Me.labelVCG)
+        Me.Panel2.Controls.Add(Me.labelVCA)
+        Me.Panel2.Controls.Add(Me.labelVCH)
+        Me.Panel2.Controls.Add(Me.labelDCA)
+        Me.Panel2.Controls.Add(Me.labelVCE)
+        Me.Panel2.Controls.Add(Me.labelECB)
+        Me.Panel2.Controls.Add(Me.labelVCF)
+        Me.Panel2.Controls.Add(Me.labelDCB)
+        Me.Panel2.Controls.Add(Me.labelVCD)
+        Me.Panel2.Controls.Add(Me.labelVCC)
+        Me.Panel2.Controls.Add(Me.labelECG)
+        Me.Panel2.Controls.Add(Me.labelDCC)
+        Me.Panel2.Controls.Add(Me.labelECH)
+        Me.Panel2.Controls.Add(Me.labelECC)
+        Me.Panel2.Controls.Add(Me.labelECF)
+        Me.Panel2.Controls.Add(Me.labelVCB)
+        Me.Panel2.Controls.Add(Me.labelECE)
+        Me.Panel2.Controls.Add(Me.labelECD)
+        Me.Panel2.Controls.Add(Me.labelDCD)
+        Me.Panel2.Controls.Add(Me.LabelDCH)
+        Me.Panel2.Controls.Add(Me.labelDCE)
+        Me.Panel2.Controls.Add(Me.labelDCG)
+        Me.Panel2.Controls.Add(Me.labelDCF)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(10, 10)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(336, 559)
+        Me.Panel2.TabIndex = 0
+        '
+        'Label9
+        '
+        Me.Label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label9.Location = New System.Drawing.Point(2, 492)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(332, 2)
+        Me.Label9.TabIndex = 35
+        '
+        'Label8
+        '
+        Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label8.Location = New System.Drawing.Point(2, 434)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(332, 2)
+        Me.Label8.TabIndex = 34
+        '
+        'Label7
+        '
+        Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label7.Location = New System.Drawing.Point(2, 376)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(332, 2)
+        Me.Label7.TabIndex = 33
+        '
+        'Label6
+        '
+        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label6.Location = New System.Drawing.Point(2, 318)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(332, 2)
+        Me.Label6.TabIndex = 32
+        '
+        'Label5
+        '
+        Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label5.Location = New System.Drawing.Point(2, 260)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(332, 2)
+        Me.Label5.TabIndex = 31
+        '
+        'Label4
+        '
+        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label4.Location = New System.Drawing.Point(2, 202)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(332, 2)
+        Me.Label4.TabIndex = 30
+        '
+        'Label3
+        '
+        Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label3.Location = New System.Drawing.Point(2, 145)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(332, 2)
+        Me.Label3.TabIndex = 29
+        '
+        'Label2
+        '
+        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label2.Location = New System.Drawing.Point(2, 86)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(332, 2)
+        Me.Label2.TabIndex = 28
+        '
+        'Label1
+        '
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label1.Location = New System.Drawing.Point(4, 28)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(332, 2)
+        Me.Label1.TabIndex = 27
+        '
+        'labelDCI
+        '
+        Me.labelDCI.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.labelDCI.Location = New System.Drawing.Point(68, 494)
+        Me.labelDCI.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelDCI.Name = "labelDCI"
+        Me.labelDCI.Size = New System.Drawing.Size(268, 58)
+        Me.labelDCI.TabIndex = 26
+        Me.labelDCI.Text = "AIRE ACONDICIONADO, ILUMINACIÓN ESPECIAL, VENTILACIÓN FORZADA, SIST. HIDRONEUMÁTI" &
+    "CO, AGUA CALIENTE Y FRÍA, INTERCOMUNICADOR, ALARMAS, ASCENSOR, SISTEMA BOMBEO DE" &
+    " AGUA Y DESAGÜE.(5) TELÉFONO."
+        Me.labelDCI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'labelVCI
+        '
+        Me.labelVCI.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelVCI.ForeColor = System.Drawing.Color.Red
+        Me.labelVCI.Location = New System.Drawing.Point(0, 523)
+        Me.labelVCI.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelVCI.Name = "labelVCI"
+        Me.labelVCI.Size = New System.Drawing.Size(62, 29)
+        Me.labelVCI.TabIndex = 25
+        Me.labelVCI.Text = "0.00"
+        Me.labelVCI.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'LabelTituloCategoria
+        '
+        Me.LabelTituloCategoria.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTituloCategoria.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.LabelTituloCategoria.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.LabelTituloCategoria.Location = New System.Drawing.Point(0, 0)
+        Me.LabelTituloCategoria.Margin = New System.Windows.Forms.Padding(0)
+        Me.LabelTituloCategoria.Name = "LabelTituloCategoria"
+        Me.LabelTituloCategoria.Size = New System.Drawing.Size(336, 28)
+        Me.LabelTituloCategoria.TabIndex = 0
+        Me.LabelTituloCategoria.Text = "MUROS Y COLUMNAS"
+        Me.LabelTituloCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'labelECI
+        '
+        Me.labelECI.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
+        Me.labelECI.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.labelECI.Location = New System.Drawing.Point(0, 494)
+        Me.labelECI.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelECI.Name = "labelECI"
+        Me.labelECI.Size = New System.Drawing.Size(62, 29)
+        Me.labelECI.TabIndex = 24
+        Me.labelECI.Text = "I"
+        Me.labelECI.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'labelECA
+        '
+        Me.labelECA.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
+        Me.labelECA.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.labelECA.Location = New System.Drawing.Point(0, 30)
+        Me.labelECA.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelECA.Name = "labelECA"
+        Me.labelECA.Size = New System.Drawing.Size(62, 29)
+        Me.labelECA.TabIndex = 0
+        Me.labelECA.Text = "A"
+        Me.labelECA.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'labelVCG
+        '
+        Me.labelVCG.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelVCG.ForeColor = System.Drawing.Color.Red
+        Me.labelVCG.Location = New System.Drawing.Point(0, 407)
+        Me.labelVCG.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelVCG.Name = "labelVCG"
+        Me.labelVCG.Size = New System.Drawing.Size(62, 29)
+        Me.labelVCG.TabIndex = 23
+        Me.labelVCG.Text = "0.00"
+        Me.labelVCG.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'labelVCA
+        '
+        Me.labelVCA.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelVCA.ForeColor = System.Drawing.Color.Red
+        Me.labelVCA.Location = New System.Drawing.Point(0, 59)
+        Me.labelVCA.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelVCA.Name = "labelVCA"
+        Me.labelVCA.Size = New System.Drawing.Size(62, 29)
+        Me.labelVCA.TabIndex = 2
+        Me.labelVCA.Text = "0.00"
+        Me.labelVCA.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'labelVCH
+        '
+        Me.labelVCH.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelVCH.ForeColor = System.Drawing.Color.Red
+        Me.labelVCH.Location = New System.Drawing.Point(0, 465)
+        Me.labelVCH.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelVCH.Name = "labelVCH"
+        Me.labelVCH.Size = New System.Drawing.Size(62, 29)
+        Me.labelVCH.TabIndex = 22
+        Me.labelVCH.Text = "0.00"
+        Me.labelVCH.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'labelDCA
+        '
+        Me.labelDCA.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.labelDCA.Location = New System.Drawing.Point(68, 30)
+        Me.labelDCA.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelDCA.Name = "labelDCA"
+        Me.labelDCA.Size = New System.Drawing.Size(268, 58)
+        Me.labelDCA.TabIndex = 1
+        Me.labelDCA.Text = "AIRE ACONDICIONADO, ILUMINACIÓN ESPECIAL, VENTILACIÓN FORZADA, SIST. HIDRONEUMÁTI" &
+    "CO, AGUA CALIENTE Y FRÍA, INTERCOMUNICADOR, ALARMAS, ASCENSOR, SISTEMA BOMBEO DE" &
+    " AGUA Y DESAGÜE.(5) TELÉFONO."
+        Me.labelDCA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'labelVCE
+        '
+        Me.labelVCE.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelVCE.ForeColor = System.Drawing.Color.Red
+        Me.labelVCE.Location = New System.Drawing.Point(0, 291)
+        Me.labelVCE.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelVCE.Name = "labelVCE"
+        Me.labelVCE.Size = New System.Drawing.Size(62, 29)
+        Me.labelVCE.TabIndex = 21
+        Me.labelVCE.Text = "0.00"
+        Me.labelVCE.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'labelECB
+        '
+        Me.labelECB.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
+        Me.labelECB.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.labelECB.Location = New System.Drawing.Point(0, 88)
+        Me.labelECB.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelECB.Name = "labelECB"
+        Me.labelECB.Size = New System.Drawing.Size(62, 29)
+        Me.labelECB.TabIndex = 12
+        Me.labelECB.Text = "B"
+        Me.labelECB.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'labelVCF
+        '
+        Me.labelVCF.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelVCF.ForeColor = System.Drawing.Color.Red
+        Me.labelVCF.Location = New System.Drawing.Point(0, 349)
+        Me.labelVCF.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelVCF.Name = "labelVCF"
+        Me.labelVCF.Size = New System.Drawing.Size(62, 29)
+        Me.labelVCF.TabIndex = 20
+        Me.labelVCF.Text = "0.00"
+        Me.labelVCF.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'labelDCB
+        '
+        Me.labelDCB.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.labelDCB.Location = New System.Drawing.Point(68, 88)
+        Me.labelDCB.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelDCB.Name = "labelDCB"
+        Me.labelDCB.Size = New System.Drawing.Size(268, 58)
+        Me.labelDCB.TabIndex = 3
+        Me.labelDCB.Text = "AIRE ACONDICIONADO, ILUMINACIÓN ESPECIAL, VENTILACIÓN FORZADA, SIST. HIDRONEUMÁTI" &
+    "CO, AGUA CALIENTE Y FRÍA, INTERCOMUNICADOR, ALARMAS, ASCENSOR, SISTEMA BOMBEO DE" &
+    " AGUA Y DESAGÜE.(5) TELÉFONO."
+        Me.labelDCB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'labelVCD
+        '
+        Me.labelVCD.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelVCD.ForeColor = System.Drawing.Color.Red
+        Me.labelVCD.Location = New System.Drawing.Point(0, 233)
+        Me.labelVCD.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelVCD.Name = "labelVCD"
+        Me.labelVCD.Size = New System.Drawing.Size(62, 29)
+        Me.labelVCD.TabIndex = 18
+        Me.labelVCD.Text = "0.00"
+        Me.labelVCD.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'labelVCC
+        '
+        Me.labelVCC.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelVCC.ForeColor = System.Drawing.Color.Red
+        Me.labelVCC.Location = New System.Drawing.Point(0, 175)
+        Me.labelVCC.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelVCC.Name = "labelVCC"
+        Me.labelVCC.Size = New System.Drawing.Size(62, 29)
+        Me.labelVCC.TabIndex = 19
+        Me.labelVCC.Text = "0.00"
+        Me.labelVCC.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'labelECG
+        '
+        Me.labelECG.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
+        Me.labelECG.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.labelECG.Location = New System.Drawing.Point(0, 378)
+        Me.labelECG.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelECG.Name = "labelECG"
+        Me.labelECG.Size = New System.Drawing.Size(62, 29)
+        Me.labelECG.TabIndex = 17
+        Me.labelECG.Text = "G"
+        Me.labelECG.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'labelDCC
+        '
+        Me.labelDCC.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.labelDCC.Location = New System.Drawing.Point(68, 146)
+        Me.labelDCC.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelDCC.Name = "labelDCC"
+        Me.labelDCC.Size = New System.Drawing.Size(268, 58)
+        Me.labelDCC.TabIndex = 4
+        Me.labelDCC.Text = "AIRE ACONDICIONADO, ILUMINACIÓN ESPECIAL, VENTILACIÓN FORZADA, SIST. HIDRONEUMÁTI" &
+    "CO, AGUA CALIENTE Y FRÍA, INTERCOMUNICADOR, ALARMAS, ASCENSOR, SISTEMA BOMBEO DE" &
+    " AGUA Y DESAGÜE.(5) TELÉFONO."
+        Me.labelDCC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'labelECH
+        '
+        Me.labelECH.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
+        Me.labelECH.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.labelECH.Location = New System.Drawing.Point(0, 436)
+        Me.labelECH.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelECH.Name = "labelECH"
+        Me.labelECH.Size = New System.Drawing.Size(62, 29)
+        Me.labelECH.TabIndex = 16
+        Me.labelECH.Text = "H"
+        Me.labelECH.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'labelECC
+        '
+        Me.labelECC.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
+        Me.labelECC.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.labelECC.Location = New System.Drawing.Point(0, 146)
+        Me.labelECC.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelECC.Name = "labelECC"
+        Me.labelECC.Size = New System.Drawing.Size(62, 29)
+        Me.labelECC.TabIndex = 10
+        Me.labelECC.Text = "C"
+        Me.labelECC.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'labelECF
+        '
+        Me.labelECF.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
+        Me.labelECF.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.labelECF.Location = New System.Drawing.Point(0, 320)
+        Me.labelECF.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelECF.Name = "labelECF"
+        Me.labelECF.Size = New System.Drawing.Size(62, 29)
+        Me.labelECF.TabIndex = 15
+        Me.labelECF.Text = "F"
+        Me.labelECF.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'labelVCB
+        '
+        Me.labelVCB.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelVCB.ForeColor = System.Drawing.Color.Red
+        Me.labelVCB.Location = New System.Drawing.Point(0, 117)
+        Me.labelVCB.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelVCB.Name = "labelVCB"
+        Me.labelVCB.Size = New System.Drawing.Size(62, 29)
+        Me.labelVCB.TabIndex = 11
+        Me.labelVCB.Text = "0.00"
+        Me.labelVCB.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'labelECE
+        '
+        Me.labelECE.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
+        Me.labelECE.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.labelECE.Location = New System.Drawing.Point(0, 262)
+        Me.labelECE.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelECE.Name = "labelECE"
+        Me.labelECE.Size = New System.Drawing.Size(62, 29)
+        Me.labelECE.TabIndex = 14
+        Me.labelECE.Text = "E"
+        Me.labelECE.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'labelECD
+        '
+        Me.labelECD.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
+        Me.labelECD.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.labelECD.Location = New System.Drawing.Point(0, 204)
+        Me.labelECD.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelECD.Name = "labelECD"
+        Me.labelECD.Size = New System.Drawing.Size(62, 29)
+        Me.labelECD.TabIndex = 13
+        Me.labelECD.Text = "D"
+        Me.labelECD.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'labelDCD
+        '
+        Me.labelDCD.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.labelDCD.Location = New System.Drawing.Point(68, 204)
+        Me.labelDCD.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelDCD.Name = "labelDCD"
+        Me.labelDCD.Size = New System.Drawing.Size(268, 58)
+        Me.labelDCD.TabIndex = 5
+        Me.labelDCD.Text = "AIRE ACONDICIONADO, ILUMINACIÓN ESPECIAL, VENTILACIÓN FORZADA, SIST. HIDRONEUMÁTI" &
+    "CO, AGUA CALIENTE Y FRÍA, INTERCOMUNICADOR, ALARMAS, ASCENSOR, SISTEMA BOMBEO DE" &
+    " AGUA Y DESAGÜE.(5) TELÉFONO."
+        Me.labelDCD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LabelDCH
+        '
+        Me.LabelDCH.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.LabelDCH.Location = New System.Drawing.Point(68, 436)
+        Me.LabelDCH.Margin = New System.Windows.Forms.Padding(0)
+        Me.LabelDCH.Name = "LabelDCH"
+        Me.LabelDCH.Size = New System.Drawing.Size(268, 58)
+        Me.LabelDCH.TabIndex = 9
+        Me.LabelDCH.Text = "AIRE ACONDICIONADO, ILUMINACIÓN ESPECIAL, VENTILACIÓN FORZADA, SIST. HIDRONEUMÁTI" &
+    "CO, AGUA CALIENTE Y FRÍA, INTERCOMUNICADOR, ALARMAS, ASCENSOR, SISTEMA BOMBEO DE" &
+    " AGUA Y DESAGÜE.(5) TELÉFONO."
+        Me.LabelDCH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'labelDCE
+        '
+        Me.labelDCE.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.labelDCE.Location = New System.Drawing.Point(68, 262)
+        Me.labelDCE.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelDCE.Name = "labelDCE"
+        Me.labelDCE.Size = New System.Drawing.Size(268, 58)
+        Me.labelDCE.TabIndex = 6
+        Me.labelDCE.Text = "AIRE ACONDICIONADO, ILUMINACIÓN ESPECIAL, VENTILACIÓN FORZADA, SIST. HIDRONEUMÁTI" &
+    "CO, AGUA CALIENTE Y FRÍA, INTERCOMUNICADOR, ALARMAS, ASCENSOR, SISTEMA BOMBEO DE" &
+    " AGUA Y DESAGÜE.(5) TELÉFONO."
+        Me.labelDCE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'labelDCG
+        '
+        Me.labelDCG.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.labelDCG.Location = New System.Drawing.Point(68, 378)
+        Me.labelDCG.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelDCG.Name = "labelDCG"
+        Me.labelDCG.Size = New System.Drawing.Size(268, 58)
+        Me.labelDCG.TabIndex = 8
+        Me.labelDCG.Text = "AIRE ACONDICIONADO, ILUMINACIÓN ESPECIAL, VENTILACIÓN FORZADA, SIST. HIDRONEUMÁTI" &
+    "CO, AGUA CALIENTE Y FRÍA, INTERCOMUNICADOR, ALARMAS, ASCENSOR, SISTEMA BOMBEO DE" &
+    " AGUA Y DESAGÜE.(5) TELÉFONO."
+        Me.labelDCG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'labelDCF
+        '
+        Me.labelDCF.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.labelDCF.Location = New System.Drawing.Point(68, 320)
+        Me.labelDCF.Margin = New System.Windows.Forms.Padding(0)
+        Me.labelDCF.Name = "labelDCF"
+        Me.labelDCF.Size = New System.Drawing.Size(268, 58)
+        Me.labelDCF.TabIndex = 7
+        Me.labelDCF.Text = "AIRE ACONDICIONADO, ILUMINACIÓN ESPECIAL, VENTILACIÓN FORZADA, SIST. HIDRONEUMÁTI" &
+    "CO, AGUA CALIENTE Y FRÍA, INTERCOMUNICADOR, ALARMAS, ASCENSOR, SISTEMA BOMBEO DE" &
+    " AGUA Y DESAGÜE.(5) TELÉFONO."
+        Me.labelDCF.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'SimulatorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(916, 589)
-        Me.Controls.Add(Me.DetPredioGB)
-        Me.Controls.Add(Me.ResumenGB)
-        Me.Controls.Add(Me.MainTs)
+        Me.ClientSize = New System.Drawing.Size(1159, 589)
+        Me.Controls.Add(Me.SplitContainer1)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "SimulatorForm"
         Me.Padding = New System.Windows.Forms.Padding(5)
@@ -1547,8 +2091,14 @@ Partial Class SimulatorForm
         Me.DatosPredioGb.ResumeLayout(False)
         Me.DatosPredioGb.PerformLayout()
         CType(Me.IfpVusBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.PerformLayout()
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -1621,7 +2171,6 @@ Partial Class SimulatorForm
     Friend WithEvents AreaConstruidaComunPorcentajeTextBox As TextBox
     Friend WithEvents AreaConstruidaTextBox As TextBox
     Friend WithEvents MesComboBox As ComboBox
-    Friend WithEvents ValorTextBox As TextBox
     Friend WithEvents TerrenoValorTextBox1 As TextBox
     Friend WithEvents NivelDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MaterialDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -1651,4 +2200,45 @@ Partial Class SimulatorForm
     Friend WithEvents IfpDenoBindingSource As BindingSource
     Friend WithEvents IfpDenoComboBox As ComboBox
     Friend WithEvents IfpVusBindingSource As BindingSource
+    Friend WithEvents SplitContainer1 As SplitContainer
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents SinDetalleCheckBox As CheckBox
+    Friend WithEvents labelECA As Label
+    Friend WithEvents labelVCA As Label
+    Friend WithEvents LabelTituloCategoria As Label
+    Friend WithEvents labelDCI As Label
+    Friend WithEvents labelVCI As Label
+    Friend WithEvents labelECI As Label
+    Friend WithEvents labelVCG As Label
+    Friend WithEvents labelVCH As Label
+    Friend WithEvents labelVCE As Label
+    Friend WithEvents labelVCF As Label
+    Friend WithEvents labelVCC As Label
+    Friend WithEvents labelVCD As Label
+    Friend WithEvents labelECG As Label
+    Friend WithEvents labelECH As Label
+    Friend WithEvents labelECF As Label
+    Friend WithEvents labelECE As Label
+    Friend WithEvents labelECD As Label
+    Friend WithEvents labelECB As Label
+    Friend WithEvents labelVCB As Label
+    Friend WithEvents labelECC As Label
+    Friend WithEvents LabelDCH As Label
+    Friend WithEvents labelDCG As Label
+    Friend WithEvents labelDCF As Label
+    Friend WithEvents labelDCE As Label
+    Friend WithEvents labelDCD As Label
+    Friend WithEvents labelDCC As Label
+    Friend WithEvents labelDCB As Label
+    Friend WithEvents labelDCA As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class

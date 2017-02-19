@@ -7,7 +7,7 @@ Namespace Entidades
 
         Sub New()
             MyBase.New("Datos")
-            Database.SetInitializer(Of Contexto)(Nothing)
+            Database.SetInitializer (Of Contexto)(Nothing)
             Configuration.LazyLoadingEnabled = False
         End Sub
         Property Uits As DbSet(Of Uit)
@@ -18,9 +18,10 @@ Namespace Entidades
         Property Ifps As DbSet(Of Ifp)
         Property IfpVus As DbSet(Of IfpVu)
         Property Fos As DbSet(Of Fo)
+        Property CategoriasDesc As DbSet(Of CategoriaDesc)
         Protected Overrides Sub OnModelCreating(modelBuilder As DbModelBuilder)
             If modelBuilder Is Nothing Then Return
-            modelBuilder.Conventions.Remove(Of PluralizingTableNameConvention)()
+            modelBuilder.Conventions.Remove (Of PluralizingTableNameConvention)()
         End Sub
     End Class
 End Namespace

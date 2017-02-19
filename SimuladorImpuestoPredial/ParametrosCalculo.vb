@@ -11,6 +11,7 @@ Public Module ParametrosCalculo
     Private _ifpDenominaciones As ReadOnlyCollection(Of IfpDeno)
     Private _año As Integer
     Private _fo As Decimal?
+    Private _categoriasDesc As IReadOnlyList(Of CategoriaDesc)
     Public ReadOnly ClasificacionPredioDictionary As New ReadOnlyDictionary(Of Integer, String) _
         (New Dictionary(Of Integer, String) From {
             {1, "Casa habitación, departamentos para viviendas incluidas las ubicadas en edificios"},
@@ -66,6 +67,12 @@ Public Module ParametrosCalculo
         End If
         Return _categorias
     End Function
+    Function GetCategoriasDesc() As IReadOnlyList(Of CategoriaDesc)
+        If _categoriasDesc Is Nothing Then
+            _categoriasDesc = New List(Of CategoriaDesc)(Contexto.CategoriasDesc.ToList)
+        End If
+        Return _categoriasDesc
+    End Function
     Private Function GetDepreciaciones() As ReadOnlyCollection(Of Depreciacion)
         If _depreciaciones Is Nothing Then
             _depreciaciones = New ReadOnlyCollection(Of Depreciacion)((From d In Contexto.Depreciaciones).ToList)
@@ -93,14 +100,14 @@ Public Module ParametrosCalculo
             añoActual = Año
             mesActual = 12
         End If
-        Return DateDiff(DateInterval.Month, New Date(añoConst, mes, 1), New DateTime(añoActual, mesActual, 1)) / 12
+        Return DateDiff(DateInterval.Month, New Date(añoConst, mes, 1), New DateTime(añoActual, mesActual, 1))/12
     End Function
     Function GetDepreciacion(antiguedad As Decimal, clasificacion As Integer, estado As Integer, material As Integer) _
         As Decimal
-        Dim ga As Integer = Math.Min(Math.Max(Math.Ceiling(antiguedad / 5) * 5, 5), 55)
+        Dim ga As Integer = Math.Min(Math.Max(Math.Ceiling(antiguedad/5)*5, 5), 55)
         Return (
             From d In GetDepreciaciones()
-            Where d.Antiguedad = ga And
+                Where d.Antiguedad = ga And
                       d.Clasificacion = clasificacion And
                       d.Estado = estado And
                       d.Material = material).FirstOrDefault?.Porcentaje
