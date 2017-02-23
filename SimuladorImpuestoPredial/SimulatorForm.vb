@@ -5,6 +5,7 @@ Public Class SimulatorForm
     Private ReadOnly _impuestoPredial As New ImpuestoPredial()
     Private _enlazandoControles As Boolean
     Private _catActual As String = "MC"
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Text &= " " & My.Application.Info.Version.ToString
         For Each item In GetUits().Keys
@@ -31,14 +32,17 @@ Public Class SimulatorForm
         'detallarCategoria(_catActual)
         SplitContainer1.Panel2Collapsed = True
     End Sub
+
     Private Sub PrediosBindingSource_ListChanged(sender As Object, e As ListChangedEventArgs) _
         Handles PrediosBindingSource.ListChanged
         DetPredioGB.Enabled = PrediosBindingSource.Current IsNot Nothing
     End Sub
+
     Private Sub ConstruccionesBindingSource_ListChanged(sender As Object, e As ListChangedEventArgs) _
         Handles ConstruccionesBindingSource.ListChanged
         DetallesConstruccionGb.Enabled = ConstruccionesBindingSource.Current IsNot Nothing
     End Sub
+
     Private Sub PasarElFocoAlSiguienteTextAlLlegarAlMaxLenght(sender As Object, e As EventArgs) _
         Handles CmcTextBox.TextChanged, CtTextBox.TextChanged, CpTextBox.TextChanged, CpvTextBox.TextChanged,
                 CrTextBox.TextChanged, CbTextBox.TextChanged, CiesTextBox.TextChanged
@@ -48,6 +52,7 @@ Public Class SimulatorForm
             SendKeys.Send("{TAB}")
         End If
     End Sub
+
     Private Sub SelTextOnEnter(sender As Object, e As EventArgs) _
         Handles CmcTextBox.Enter,
                 CtTextBox.Enter,
@@ -64,14 +69,17 @@ Public Class SimulatorForm
         _catActual = txt.Tag
         DetallarCategoria(_catActual)
     End Sub
+
     Private Sub PrediosBindingSource_CurrentChanged(sender As Object, e As EventArgs) _
         Handles PrediosBindingSource.CurrentChanged
         _enlazandoControles = True
     End Sub
+
     Private Sub PrediosBindingSource_BindingComplete(sender As Object, e As BindingCompleteEventArgs) _
         Handles PrediosBindingSource.BindingComplete
         _enlazandoControles = False
     End Sub
+
     Private Sub DetallarCategoria(cat As String)
         Dim titulo = ""
         If Not TitulosCategorias.TryGetValue(cat, titulo) Then
@@ -91,16 +99,20 @@ Public Class SimulatorForm
         Next
         Panel2.ResumeLayout()
     End Sub
+
     Private Shared ReadOnly TitulosCategorias As New Dictionary(Of String, String) From
         {{"MC", "Muros y Columnas"}, {"T", "Techos"}, {"P", "Pisos"}, {"PV", "Puertas y Ventanas"},
         {"R", "Revestimientos"}, {"B", "Baños"}, {"IES", "Instalaciones Electricas y Sanitarias"}}
+
     Private Sub SinDetalleCheckBox_CheckedChanged(sender As Object, e As EventArgs) _
         Handles SinDetalleCheckBox.CheckedChanged
         BaseImponibleTextBox.ReadOnly = Not SinDetalleCheckBox.Checked
     End Sub
+
     Private Sub ConstruccionesTab_Enter(sender As Object, e As EventArgs) Handles ConstruccionesTab.Enter
         SplitContainer1.Panel2Collapsed = False
     End Sub
+
     Private Sub ConstruccionesTab_Leave(sender As Object, e As EventArgs) Handles ConstruccionesTab.Leave
         SplitContainer1.Panel2Collapsed = True
     End Sub

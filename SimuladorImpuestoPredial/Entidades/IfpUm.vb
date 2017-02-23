@@ -6,6 +6,7 @@ Namespace Entidades
     Public Class IfpUM
         <Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)>
         Property IdUm As Integer
+
         Property Desc As String
         Property Abb As String
         Overridable Property Ifps As BindingList(Of Ifp)

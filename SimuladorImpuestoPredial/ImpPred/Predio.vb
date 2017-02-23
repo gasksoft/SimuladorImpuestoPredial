@@ -8,6 +8,7 @@ Namespace ImpPred
         Private _terrenoAreaExclusiva As Decimal
         Private _terrenoAreaComun As Decimal
         Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
+
         Sub New()
             AddHandler Construcciones.AddingNew,
                 Sub(sender As Object, e As AddingNewEventArgs)
@@ -24,7 +25,9 @@ Namespace ImpPred
             AddHandler ObrasComplementarias.ListChanged,
                 Sub() RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(ObrasComplementariasValor)))
         End Sub
+
         Property Direccion As String
+
         Property Clasificacion As Integer
             Get
                 Return _clasificacion
@@ -34,6 +37,7 @@ Namespace ImpPred
                 RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(Clasificacion)))
             End Set
         End Property
+
         Property Arancel As Decimal
             Get
                 Return _arancel
@@ -43,6 +47,7 @@ Namespace ImpPred
                 RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(Arancel)))
             End Set
         End Property
+
         Property TerrenoAreaExclusiva As Decimal
             Get
                 Return _terrenoAreaExclusiva
@@ -52,6 +57,7 @@ Namespace ImpPred
                 RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(TerrenoAreaExclusiva)))
             End Set
         End Property
+
         Property TerrenoAreaComun As Decimal
             Get
                 Return _terrenoAreaComun
@@ -61,31 +67,37 @@ Namespace ImpPred
                 RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(TerrenoAreaComun)))
             End Set
         End Property
+
         ReadOnly Property TerrenoAreaTotal As Decimal
             Get
                 Return TerrenoAreaComun + TerrenoAreaExclusiva
             End Get
         End Property
+
         ReadOnly Property TerrenoValor As Decimal
             Get
                 Return TerrenoAreaTotal*Arancel
             End Get
         End Property
+
         ReadOnly Property ConstruccionesValor As Decimal
             Get
                 Return Construcciones.Sum(Function(c) c.Valor)
             End Get
         End Property
+
         ReadOnly Property ObrasComplementariasValor As Decimal
             Get
                 Return ObrasComplementarias.Sum(Function(c) c.Valor)
             End Get
         End Property
+
         ReadOnly Property Avaluo As Decimal
             Get
                 Return TerrenoValor + ConstruccionesValor + ObrasComplementariasValor
             End Get
         End Property
+
         ReadOnly Property Construcciones As New BindingList(Of Construccion)
         ReadOnly Property ObrasComplementarias As New BindingList(Of ObraComplementaria)
     End Class

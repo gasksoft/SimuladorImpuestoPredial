@@ -1,8 +1,8 @@
-﻿Structure InformacionComplementaria
-    Property TelefonoFijo As String
-    Property Anexo As String
-    Property Fax As String
-    Property TelefonoMovil1 As String
-    Property TelefonoMovilvil2 As String
-    Property CorreoElectronico As String
+﻿Public Structure InformacionComplementaria
+    Property Telefono1 As String
+    Property Telefono2 As String
+    Property Telefono3 As String
+    Property CorreoElectronico1 As String
+    Property CorreoElectronico2 As String
+    Property CorreoElectronico3 As String
 End Structure

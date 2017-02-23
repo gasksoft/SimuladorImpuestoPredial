@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Reflection
+﻿Imports System.Reflection
 Imports System.Runtime.InteropServices
 
 ' La información general de un ensamblado se controla mediante el siguiente 
@@ -8,17 +7,17 @@ Imports System.Runtime.InteropServices
 
 ' Revisar los valores de los atributos del ensamblado
 
-<Assembly: AssemblyTitle("SimuImpPred.Data")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Microsoft")> 
-<Assembly: AssemblyProduct("SimuImpPred.Data")> 
-<Assembly: AssemblyCopyright("Copyright © Microsoft 2017")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyTitle("SimuImpPred.Data")>
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("Microsoft")>
+<Assembly: AssemblyProduct("SimuImpPred.Data")>
+<Assembly: AssemblyCopyright("Copyright © Microsoft 2017")>
+<Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-<Assembly: Guid("057dbc9e-e667-4eb3-ad44-ab2a6ad38832")> 
+<Assembly: Guid("057dbc9e-e667-4eb3-ad44-ab2a6ad38832")>
 
 ' La información de versión de un ensamblado consta de los cuatro valores siguientes:
 '
@@ -31,5 +30,5 @@ Imports System.Runtime.InteropServices
 ' mediante el carácter '*', como se muestra a continuación:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> 
+<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyFileVersion("1.0.0.0")>

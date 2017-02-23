@@ -1,4 +1,4 @@
-﻿Structure Direccion
+﻿Public Structure Direccion
     Property ConjuntoUrbano As String
     Property Via As String
     Property Numero As String

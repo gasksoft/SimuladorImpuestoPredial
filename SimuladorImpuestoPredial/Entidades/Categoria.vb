@@ -5,8 +5,10 @@ Namespace Entidades
     Public Class Categoria
         <Key, Column(Order := 0)>
         Property Año As Integer
+
         <Key, Column(Order := 1)>
         Property Cat As String
+
         Public Property Vies As Decimal?
         Public Property Vb As Decimal?
         Public Property Vr As Decimal?

@@ -8,10 +8,12 @@ Namespace ImpPred
         Private _sinDetalle As Boolean = False
         Private _baseImponible As Decimal
         Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
+
         Sub New()
             AddHandler Predios.ListChanged,
                 Sub() RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(BaseImponible)))
         End Sub
+
         Property BaseImponible As Decimal
             Get
                 Return If(SinDetalle, _baseImponible, Predios.Sum(Function(p) p.Avaluo))
@@ -21,6 +23,7 @@ Namespace ImpPred
                 RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(BaseImponible)))
             End Set
         End Property
+
         Property Exonerado As Boolean
             Get
                 Return _exonerado
@@ -30,6 +33,7 @@ Namespace ImpPred
                 RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(Exonerado)))
             End Set
         End Property
+
         Property SinDetalle As Boolean
             Get
                 Return _sinDetalle
@@ -39,6 +43,7 @@ Namespace ImpPred
                 RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(NameOf(SinDetalle)))
             End Set
         End Property
+
         ReadOnly Property BaseImponibleDeducida As Decimal
             Get
                 If Exonerado Then
@@ -48,6 +53,7 @@ Namespace ImpPred
                 End If
             End Get
         End Property
+
         ReadOnly Property Insoluto As Decimal
             Get
                 Dim bi = BaseImponibleDeducida
@@ -64,6 +70,7 @@ Namespace ImpPred
                 Return Math.Max(0.006*u, ins)
             End Get
         End Property
+
         ReadOnly Property Predios As New BindingList(Of Predio)
     End Class
 End Namespace

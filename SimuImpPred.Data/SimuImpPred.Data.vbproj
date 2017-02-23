@@ -86,6 +86,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categoria.vb" />
+    <Compile Include="CategoriaDesc.vb" />
+    <Compile Include="Contexto.vb" />
+    <Compile Include="Depreciacion.vb" />
+    <Compile Include="Fo.vb" />
+    <Compile Include="Ifp.vb" />
+    <Compile Include="IfpDeno.vb" />
+    <Compile Include="IfpUm.vb" />
+    <Compile Include="IfpVu.vb" />
+    <Compile Include="ParameterProvider.vb" />
+    <Compile Include="Uit.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

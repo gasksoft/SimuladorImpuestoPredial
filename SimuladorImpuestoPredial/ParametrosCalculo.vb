@@ -12,6 +12,7 @@ Public Module ParametrosCalculo
     Private _año As Integer
     Private _fo As Decimal?
     Private _categoriasDesc As IReadOnlyList(Of CategoriaDesc)
+
     Public ReadOnly ClasificacionPredioDictionary As New ReadOnlyDictionary(Of Integer, String) _
         (New Dictionary(Of Integer, String) From {
             {1, "Casa habitación, departamentos para viviendas incluidas las ubicadas en edificios"},
@@ -19,12 +20,14 @@ Public Module ParametrosCalculo
             {3, "Edificios – oficinas"},
             {4, "Edificaciones de salud, cines, industrias, edificaciones de uso educativo, talleres"}}
          )
+
     Public ReadOnly MaterialPredominanteDictionary As New ReadOnlyDictionary(Of Integer, String) _
         (New Dictionary(Of Integer, String) From {
             {1, "Concreto"},
             {2, "Ladrillo"},
             {3, "Adobe"}}
          )
+
     Public ReadOnly EstadoConservacionDictionary As New ReadOnlyDictionary(Of Integer, String) _
         (New Dictionary(Of Integer, String) From {
             {1, "Muy Bueno"},
@@ -32,6 +35,7 @@ Public Module ParametrosCalculo
             {3, "Regular"},
             {4, "Malo"}}
          )
+
     Function GetUits() As ReadOnlyDictionary(Of Integer, Decimal)
         If _uits Is Nothing Then
             _uits = New ReadOnlyDictionary(Of Integer, Decimal)(
@@ -41,6 +45,7 @@ Public Module ParametrosCalculo
         End If
         Return _uits
     End Function
+
     Property Año As Integer
         Get
             Return _año
@@ -54,10 +59,12 @@ Public Module ParametrosCalculo
             End If
         End Set
     End Property
+
     Function GetUit() As Decimal
         If Not _uit.HasValue Then _uit = GetUits(Año)
         Return _uit
     End Function
+
     Function GetCategorias() As ReadOnlyDictionary(Of String, Categoria)
         If _categorias Is Nothing Then
             _categorias = New ReadOnlyDictionary(Of String, Categoria) _
@@ -67,18 +74,21 @@ Public Module ParametrosCalculo
         End If
         Return _categorias
     End Function
+
     Function GetCategoriasDesc() As IReadOnlyList(Of CategoriaDesc)
         If _categoriasDesc Is Nothing Then
             _categoriasDesc = New List(Of CategoriaDesc)(Contexto.CategoriasDesc.ToList)
         End If
         Return _categoriasDesc
     End Function
+
     Private Function GetDepreciaciones() As ReadOnlyCollection(Of Depreciacion)
         If _depreciaciones Is Nothing Then
             _depreciaciones = New ReadOnlyCollection(Of Depreciacion)((From d In Contexto.Depreciaciones).ToList)
         End If
         Return _depreciaciones
     End Function
+
     Function GetIfpDenominaciones() As ReadOnlyCollection(Of IfpDeno)
         If _ifpDenominaciones Is Nothing Then
             _ifpDenominaciones =
@@ -87,12 +97,14 @@ Public Module ParametrosCalculo
         End If
         Return _ifpDenominaciones
     End Function
+
     Function GetFactorOficializacion() As Decimal
         If Not _fo.HasValue Then
             _fo = (From f In Contexto.Fos Where f.Año = _año).FirstOrDefault?.Valor
         End If
         Return _fo
     End Function
+
     Function GetAntiguedad(añoConst As Integer, mes As Integer)
         Dim añoActual = Year(Now)
         Dim mesActual = Month(Now)
@@ -100,14 +112,15 @@ Public Module ParametrosCalculo
             añoActual = Año
             mesActual = 12
         End If
-        Return DateDiff(DateInterval.Month, New Date(añoConst, mes, 1), New DateTime(añoActual, mesActual, 1))/12
+        Return DateDiff(DateInterval.Month, New Date(añoConst, mes, 1), New DateTime(añoActual, mesActual, 1)) / 12
     End Function
+
     Function GetDepreciacion(antiguedad As Decimal, clasificacion As Integer, estado As Integer, material As Integer) _
         As Decimal
-        Dim ga As Integer = Math.Min(Math.Max(Math.Ceiling(antiguedad/5)*5, 5), 55)
+        Dim ga As Integer = Math.Min(Math.Max(Math.Ceiling(antiguedad / 5) * 5, 5), 55)
         Return (
             From d In GetDepreciaciones()
-                Where d.Antiguedad = ga And
+            Where d.Antiguedad = ga And
                       d.Clasificacion = clasificacion And
                       d.Estado = estado And
                       d.Material = material).FirstOrDefault?.Porcentaje
