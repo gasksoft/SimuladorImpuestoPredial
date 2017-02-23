@@ -4,18 +4,18 @@ Imports System.ComponentModel.DataAnnotations.Schema
 
 Public Class Ifp
     <Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)>
-    Property IdIfp As Integer
+    Public Property IdIfp As Integer
 
-    Property Desc As String
-    Property IdUm As Integer
-    Property IdIfpDeno As Integer
-    Property IdDescComp As Integer
+    Public Property Desc As String
+    Public Property IdUm As Integer
+    Public Property IdIfpDeno As Integer
+    Public Property IdDescComp As Integer
 
     <ForeignKey(NameOf(IdIfpDeno))>
-    Overridable Property IfpDeno As IfpDeno
+    Public Overridable Property IfpDeno As IfpDeno
 
     <ForeignKey(NameOf(IdUm))>
-    Overridable Property IfpUm As IfpUm
+    Public Overridable Property IfpUm As IfpUm
 
-    Overridable Property IfpVus As BindingList(Of IfpVu)
+    Public Overridable Property IfpVus As BindingList(Of IfpVu)
 End Class

@@ -94,6 +94,12 @@ Public Class Construccion
         End Set
     End Property
 
+    Public ReadOnly Property Categorias As String
+        Get
+            Return $"{Cmc}{Ct}{Cp}{Cpv}{Cr}{Cb}{Cies}"
+        End Get
+    End Property
+
     Public Property AreaConstruida As Decimal
         Get
             Return _areaConstruida

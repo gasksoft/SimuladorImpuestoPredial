@@ -5,6 +5,6 @@
     Renaming the file extension or editing the content of this file may   
     cause the file to be unrecognizable by the program.
 -->
-<GenericObjectDataSource DisplayName="IfpDeno" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>SimuladorImpuestoPredial.Entidades.IfpDeno, SimuladorImpuestoPredial, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bba3523d611a3fd9</TypeInfo>
+<GenericObjectDataSource DisplayName="HojaResumen" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+   <TypeInfo>SimuImpPred.ObjectModel.HojaResumen, SimuImpPred.ObjectModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

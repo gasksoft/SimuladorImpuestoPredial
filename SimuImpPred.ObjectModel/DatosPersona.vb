@@ -1,5 +1,5 @@
-﻿Public Structure DatosPersona
-    Property ApeNombRasSoc As String
-    Property TipoDocIdent As Integer
-    Property NumDocIdent As String
-End Structure
+﻿Public Class DatosPersona
+    Public Property ApeNombRazSoc As String
+    Public Property TipoDocIdent As Integer
+    Public Property NumDocIdent As String
+End Class

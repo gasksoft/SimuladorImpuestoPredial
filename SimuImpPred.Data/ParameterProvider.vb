@@ -27,10 +27,10 @@
     End Function
 
     Public Shared Function GetIfps(año As Integer) As Dictionary(Of Integer, Decimal)
-        Return (From iv In Contexto.IfpVus Where iv.Año = año).ToDictionary(Function(x) x.IdIfp, Function(x) x.Valor)
+        Return (From iv In Contexto.IfpVus Where iv.Año = año).ToDictionary(Function(v) v.IdIfp, Function(v) v.Valor)
     End Function
 
-    Public Shared Function GetFos() As List(Of Fo)
-        Return Contexto.Fos.ToList
+    Public Shared Function GetFo(año As Integer) As Decimal
+        Return Contexto.Fos.Where(Function(x) x.Año = año).FirstOrDefault?.Valor
     End Function
 End Class

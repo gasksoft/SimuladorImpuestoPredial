@@ -9,6 +9,7 @@ Public Class HojaResumen
 
     Sub New()
         Predios = New BindingList(Of Predio)
+        _parametrosCalculo = New ParametrosCalculo
         AddHandler Predios.ListChanged,
             Sub(sender, args)
                 Select Case args.ListChangedType
@@ -20,9 +21,9 @@ Public Class HojaResumen
     End Sub
 
     Public Property CodContribuyente As String
-    Public Property DatosContrib As DatosPersona
-    Public Property DatosConyuge As DatosPersona
-    Public Property DatosRepLegal As DatosPersona
+    Public Property DatosContrib As New DatosPersona
+    Public Property DatosConyuge As New DatosPersona
+    Public Property DatosRepLegal As New DatosPersona
     Public Property BaseLegal As String
     Public Property NroExpAdm As String
     Public Property FechaExpAdm As Date?
