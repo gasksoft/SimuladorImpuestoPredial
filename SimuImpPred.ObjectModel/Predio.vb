@@ -1,6 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.Runtime.CompilerServices
-
+<Serializable>
 Public MustInherit Class Predio
     Implements INotifyPropertyChanged
 

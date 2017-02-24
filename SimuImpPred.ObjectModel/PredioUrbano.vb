@@ -1,4 +1,5 @@
-﻿Public Class PredioUrbano
+﻿<Serializable>
+Public Class PredioUrbano
     Inherits Predio
     Private _areaTerrenoPropio As Decimal
     Private _areaTerrenoComun As Decimal

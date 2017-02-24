@@ -2,6 +2,7 @@
 Imports System.Runtime.CompilerServices
 Imports SimuImpPred.Data
 
+<Serializable>
 Public Class ParametrosCalculo
     Implements INotifyPropertyChanged
     Private _año As Integer = Year(Now)

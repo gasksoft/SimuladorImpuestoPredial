@@ -1,5 +1,5 @@
 Imports System.ComponentModel
-
+<Serializable>
 Public Class PredioRural
     Inherits Predio
 

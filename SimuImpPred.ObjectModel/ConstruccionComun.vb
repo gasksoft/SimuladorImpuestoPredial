@@ -1,3 +1,4 @@
+<Serializable>
 Public Class ConstruccionComun
     Inherits Construccion
     Private _porcPartPredio As Decimal

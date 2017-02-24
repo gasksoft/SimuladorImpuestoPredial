@@ -53,7 +53,6 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim CodContribuyenteLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
@@ -84,9 +83,8 @@ Partial Class MainForm
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolStripContainer = New System.Windows.Forms.ToolStripContainer()
-        Me.CodContribuyenteTextBox = New System.Windows.Forms.TextBox()
         Me.HojaResumenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        CodContribuyenteLabel = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.StatusStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.MenuStrip.SuspendLayout()
@@ -96,15 +94,6 @@ Partial Class MainForm
         Me.ToolStripContainer.SuspendLayout()
         CType(Me.HojaResumenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'CodContribuyenteLabel
-        '
-        CodContribuyenteLabel.AutoSize = True
-        CodContribuyenteLabel.Location = New System.Drawing.Point(49, 34)
-        CodContribuyenteLabel.Name = "CodContribuyenteLabel"
-        CodContribuyenteLabel.Size = New System.Drawing.Size(97, 13)
-        CodContribuyenteLabel.TabIndex = 6
-        CodContribuyenteLabel.Text = "Cod Contribuyente:"
         '
         'StatusStrip
         '
@@ -312,8 +301,7 @@ Partial Class MainForm
         '
         'ToolStripContainer.ContentPanel
         '
-        Me.ToolStripContainer.ContentPanel.Controls.Add(CodContribuyenteLabel)
-        Me.ToolStripContainer.ContentPanel.Controls.Add(Me.CodContribuyenteTextBox)
+        Me.ToolStripContainer.ContentPanel.Controls.Add(Me.Button1)
         Me.ToolStripContainer.ContentPanel.Size = New System.Drawing.Size(900, 328)
         Me.ToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ToolStripContainer.Location = New System.Drawing.Point(0, 0)
@@ -327,17 +315,18 @@ Partial Class MainForm
         Me.ToolStripContainer.TopToolStripPanel.Controls.Add(Me.MenuStrip)
         Me.ToolStripContainer.TopToolStripPanel.Controls.Add(Me.ToolStrip)
         '
-        'CodContribuyenteTextBox
-        '
-        Me.CodContribuyenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "CodContribuyente", True))
-        Me.CodContribuyenteTextBox.Location = New System.Drawing.Point(152, 31)
-        Me.CodContribuyenteTextBox.Name = "CodContribuyenteTextBox"
-        Me.CodContribuyenteTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.CodContribuyenteTextBox.TabIndex = 7
-        '
         'HojaResumenBindingSource
         '
         Me.HojaResumenBindingSource.DataSource = GetType(SimuImpPred.ObjectModel.HojaResumen)
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(94, 41)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'MainForm
         '
@@ -356,7 +345,6 @@ Partial Class MainForm
         Me.ToolStripContainer.BottomToolStripPanel.ResumeLayout(False)
         Me.ToolStripContainer.BottomToolStripPanel.PerformLayout()
         Me.ToolStripContainer.ContentPanel.ResumeLayout(False)
-        Me.ToolStripContainer.ContentPanel.PerformLayout()
         Me.ToolStripContainer.TopToolStripPanel.ResumeLayout(False)
         Me.ToolStripContainer.TopToolStripPanel.PerformLayout()
         Me.ToolStripContainer.ResumeLayout(False)
@@ -366,6 +354,5 @@ Partial Class MainForm
 
     End Sub
     Friend WithEvents HojaResumenBindingSource As BindingSource
-    Friend WithEvents CodContribuyenteTextBox As TextBox
-
+    Friend WithEvents Button1 As Button
 End Class

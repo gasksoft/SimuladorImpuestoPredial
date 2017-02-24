@@ -1,10 +1,15 @@
 ﻿
+Imports System.IO
+Imports System.Runtime.Serialization.Formatters.Binary
+Imports System.Runtime.Serialization.Formatters.Soap
 Imports SimuImpPred.ObjectModel
 
 Public Class MainForm
     Dim _hojaResumen As New HojaResumen
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         _hojaResumen = New HojaResumen
+        _hojaResumen.DatosContrib = New DatosPersona With {.ApeNombRazSoc = "klark", .NumDocIdent = "41243340", .TipoDocIdent = 1}
+
         HojaResumenBindingSource.DataSource = _hojaResumen
     End Sub
 
@@ -44,5 +49,21 @@ Public Class MainForm
 
         Dim fileName As String = saveFileDialog.FileName
         ' TODO: agregue código aquí para guardar el contenido actual del formulario en un archivo.
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim dcdlg As New DatosDelContribuyenteDlg
+        dcdlg.HojaResumen = _hojaResumen.clone
+        If dcdlg.ShowDialog(Me) = DialogResult.OK Then
+            _hojaResumen = dcdlg.HojaResumen
+            Validate()
+        End If
+    End Sub
+
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+        Dim stream = File.Open("d:\prueba.dj", FileMode.Create)
+        Dim formatter As New binaryFormatter
+        formatter.Serialize(stream, _hojaResumen)
+        stream.Close()
     End Sub
 End Class

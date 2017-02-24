@@ -1,5 +1,5 @@
 Imports SimuImpPred.Data
-
+<Serializable>
 Public Class OtraInstalacion
     Inherits Instalacion
     Private _ifp As Ifp

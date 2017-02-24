@@ -1,5 +1,5 @@
 ﻿Imports SimuImpPred.Data
-
+<Serializable>
 Public Class Construccion
     Inherits Instalacion
     Private Shared ReadOnly Cats As String() = New String() {"mc", "t", "p", "pv", "r", "b", "ies"}

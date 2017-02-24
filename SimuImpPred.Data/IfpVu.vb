@@ -1,6 +1,6 @@
 Imports System.ComponentModel.DataAnnotations
 Imports System.ComponentModel.DataAnnotations.Schema
-
+<Serializable>
 Public Class IfpVu
     <Key, Column(Order:=0)>
     Public Property IdIfp As Integer

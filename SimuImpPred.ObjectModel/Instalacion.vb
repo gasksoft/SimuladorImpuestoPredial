@@ -1,6 +1,6 @@
 Imports System.ComponentModel
 Imports System.Runtime.CompilerServices
-
+<Serializable>
 Public MustInherit Class Instalacion
     Implements INotifyPropertyChanged
     Private _mes As Integer
