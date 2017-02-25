@@ -54,6 +54,11 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
+        Dim BaseImponibleLabel As System.Windows.Forms.Label
+        Dim ImpuestoAnualLabel As System.Windows.Forms.Label
+        Dim CuotaTrimestralLabel As System.Windows.Forms.Label
+        Dim PresuntoLabel As System.Windows.Forms.Label
+        Dim CondicionEspecialContribuyenteLabel As System.Windows.Forms.Label
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip = New System.Windows.Forms.ToolStrip()
@@ -83,8 +88,19 @@ Partial Class MainForm
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolStripContainer = New System.Windows.Forms.ToolStripContainer()
-        Me.HojaResumenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.BaseImponibleTextBox = New System.Windows.Forms.TextBox()
+        Me.ImpuestoAnualTextBox = New System.Windows.Forms.TextBox()
+        Me.CuotaTrimestralTextBox = New System.Windows.Forms.TextBox()
+        Me.PresuntoCheckBox = New System.Windows.Forms.CheckBox()
+        Me.HojaResumenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CondicionEspecialContribuyenteComboBox = New System.Windows.Forms.ComboBox()
+        BaseImponibleLabel = New System.Windows.Forms.Label()
+        ImpuestoAnualLabel = New System.Windows.Forms.Label()
+        CuotaTrimestralLabel = New System.Windows.Forms.Label()
+        PresuntoLabel = New System.Windows.Forms.Label()
+        CondicionEspecialContribuyenteLabel = New System.Windows.Forms.Label()
         Me.StatusStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.MenuStrip.SuspendLayout()
@@ -301,6 +317,17 @@ Partial Class MainForm
         '
         'ToolStripContainer.ContentPanel
         '
+        Me.ToolStripContainer.ContentPanel.Controls.Add(CondicionEspecialContribuyenteLabel)
+        Me.ToolStripContainer.ContentPanel.Controls.Add(Me.CondicionEspecialContribuyenteComboBox)
+        Me.ToolStripContainer.ContentPanel.Controls.Add(PresuntoLabel)
+        Me.ToolStripContainer.ContentPanel.Controls.Add(Me.PresuntoCheckBox)
+        Me.ToolStripContainer.ContentPanel.Controls.Add(CuotaTrimestralLabel)
+        Me.ToolStripContainer.ContentPanel.Controls.Add(Me.CuotaTrimestralTextBox)
+        Me.ToolStripContainer.ContentPanel.Controls.Add(ImpuestoAnualLabel)
+        Me.ToolStripContainer.ContentPanel.Controls.Add(Me.ImpuestoAnualTextBox)
+        Me.ToolStripContainer.ContentPanel.Controls.Add(BaseImponibleLabel)
+        Me.ToolStripContainer.ContentPanel.Controls.Add(Me.BaseImponibleTextBox)
+        Me.ToolStripContainer.ContentPanel.Controls.Add(Me.Button2)
         Me.ToolStripContainer.ContentPanel.Controls.Add(Me.Button1)
         Me.ToolStripContainer.ContentPanel.Size = New System.Drawing.Size(900, 328)
         Me.ToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
@@ -315,18 +342,119 @@ Partial Class MainForm
         Me.ToolStripContainer.TopToolStripPanel.Controls.Add(Me.MenuStrip)
         Me.ToolStripContainer.TopToolStripPanel.Controls.Add(Me.ToolStrip)
         '
-        'HojaResumenBindingSource
+        'Button2
         '
-        Me.HojaResumenBindingSource.DataSource = GetType(SimuImpPred.ObjectModel.HojaResumen)
+        Me.Button2.Location = New System.Drawing.Point(503, 45)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(94, 41)
+        Me.Button1.Location = New System.Drawing.Point(503, 15)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'BaseImponibleLabel
+        '
+        BaseImponibleLabel.AutoSize = True
+        BaseImponibleLabel.Location = New System.Drawing.Point(100, 88)
+        BaseImponibleLabel.Name = "BaseImponibleLabel"
+        BaseImponibleLabel.Size = New System.Drawing.Size(82, 13)
+        BaseImponibleLabel.TabIndex = 2
+        BaseImponibleLabel.Text = "Base Imponible:"
+        '
+        'BaseImponibleTextBox
+        '
+        Me.BaseImponibleTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "BaseImponible", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "N2"))
+        Me.BaseImponibleTextBox.Location = New System.Drawing.Point(188, 85)
+        Me.BaseImponibleTextBox.Name = "BaseImponibleTextBox"
+        Me.BaseImponibleTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.BaseImponibleTextBox.TabIndex = 3
+        Me.BaseImponibleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'ImpuestoAnualLabel
+        '
+        ImpuestoAnualLabel.AutoSize = True
+        ImpuestoAnualLabel.Location = New System.Drawing.Point(99, 114)
+        ImpuestoAnualLabel.Name = "ImpuestoAnualLabel"
+        ImpuestoAnualLabel.Size = New System.Drawing.Size(83, 13)
+        ImpuestoAnualLabel.TabIndex = 4
+        ImpuestoAnualLabel.Text = "Impuesto Anual:"
+        '
+        'ImpuestoAnualTextBox
+        '
+        Me.ImpuestoAnualTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "ImpuestoAnual", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
+        Me.ImpuestoAnualTextBox.Location = New System.Drawing.Point(188, 111)
+        Me.ImpuestoAnualTextBox.Name = "ImpuestoAnualTextBox"
+        Me.ImpuestoAnualTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.ImpuestoAnualTextBox.TabIndex = 5
+        Me.ImpuestoAnualTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'CuotaTrimestralLabel
+        '
+        CuotaTrimestralLabel.AutoSize = True
+        CuotaTrimestralLabel.Location = New System.Drawing.Point(96, 140)
+        CuotaTrimestralLabel.Name = "CuotaTrimestralLabel"
+        CuotaTrimestralLabel.Size = New System.Drawing.Size(86, 13)
+        CuotaTrimestralLabel.TabIndex = 6
+        CuotaTrimestralLabel.Text = "Cuota Trimestral:"
+        '
+        'CuotaTrimestralTextBox
+        '
+        Me.CuotaTrimestralTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "CuotaTrimestral", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
+        Me.CuotaTrimestralTextBox.Location = New System.Drawing.Point(188, 137)
+        Me.CuotaTrimestralTextBox.Name = "CuotaTrimestralTextBox"
+        Me.CuotaTrimestralTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.CuotaTrimestralTextBox.TabIndex = 7
+        Me.CuotaTrimestralTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'PresuntoLabel
+        '
+        PresuntoLabel.AutoSize = True
+        PresuntoLabel.Location = New System.Drawing.Point(425, 131)
+        PresuntoLabel.Name = "PresuntoLabel"
+        PresuntoLabel.Size = New System.Drawing.Size(52, 13)
+        PresuntoLabel.TabIndex = 8
+        PresuntoLabel.Text = "Presunto:"
+        '
+        'PresuntoCheckBox
+        '
+        Me.PresuntoCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.HojaResumenBindingSource, "Presunto", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.PresuntoCheckBox.Location = New System.Drawing.Point(483, 126)
+        Me.PresuntoCheckBox.Name = "PresuntoCheckBox"
+        Me.PresuntoCheckBox.Size = New System.Drawing.Size(104, 24)
+        Me.PresuntoCheckBox.TabIndex = 9
+        Me.PresuntoCheckBox.Text = "CheckBox1"
+        Me.PresuntoCheckBox.UseVisualStyleBackColor = True
+        '
+        'HojaResumenBindingSource
+        '
+        Me.HojaResumenBindingSource.DataSource = GetType(SimuImpPred.ObjectModel.HojaResumen)
+        '
+        'CondicionEspecialContribuyenteLabel
+        '
+        CondicionEspecialContribuyenteLabel.AutoSize = True
+        CondicionEspecialContribuyenteLabel.Location = New System.Drawing.Point(51, 20)
+        CondicionEspecialContribuyenteLabel.Name = "CondicionEspecialContribuyenteLabel"
+        CondicionEspecialContribuyenteLabel.Size = New System.Drawing.Size(168, 13)
+        CondicionEspecialContribuyenteLabel.TabIndex = 10
+        CondicionEspecialContribuyenteLabel.Text = "Condicion Especial Contribuyente:"
+        '
+        'CondicionEspecialContribuyenteComboBox
+        '
+        Me.CondicionEspecialContribuyenteComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.HojaResumenBindingSource, "CondicionEspecialContribuyente", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.CondicionEspecialContribuyenteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CondicionEspecialContribuyenteComboBox.FormattingEnabled = True
+        Me.CondicionEspecialContribuyenteComboBox.Location = New System.Drawing.Point(51, 36)
+        Me.CondicionEspecialContribuyenteComboBox.Name = "CondicionEspecialContribuyenteComboBox"
+        Me.CondicionEspecialContribuyenteComboBox.Size = New System.Drawing.Size(322, 21)
+        Me.CondicionEspecialContribuyenteComboBox.TabIndex = 11
         '
         'MainForm
         '
@@ -345,6 +473,7 @@ Partial Class MainForm
         Me.ToolStripContainer.BottomToolStripPanel.ResumeLayout(False)
         Me.ToolStripContainer.BottomToolStripPanel.PerformLayout()
         Me.ToolStripContainer.ContentPanel.ResumeLayout(False)
+        Me.ToolStripContainer.ContentPanel.PerformLayout()
         Me.ToolStripContainer.TopToolStripPanel.ResumeLayout(False)
         Me.ToolStripContainer.TopToolStripPanel.PerformLayout()
         Me.ToolStripContainer.ResumeLayout(False)
@@ -355,4 +484,10 @@ Partial Class MainForm
     End Sub
     Friend WithEvents HojaResumenBindingSource As BindingSource
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents CuotaTrimestralTextBox As TextBox
+    Friend WithEvents ImpuestoAnualTextBox As TextBox
+    Friend WithEvents BaseImponibleTextBox As TextBox
+    Friend WithEvents PresuntoCheckBox As CheckBox
+    Friend WithEvents CondicionEspecialContribuyenteComboBox As ComboBox
 End Class

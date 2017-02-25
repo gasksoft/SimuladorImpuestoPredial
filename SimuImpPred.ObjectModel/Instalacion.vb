@@ -58,6 +58,7 @@ Public MustInherit Class Instalacion
     Public MustOverride ReadOnly Property ValorUnitario As Decimal
     Protected MustOverride ReadOnly Property ValorUnitarioIncrementado As Decimal
 
+    <NonSerialized>
     Public ReadOnly Property Antiguedad As Decimal
         Get
             Dim fc As Date = If(Predio?.HojaResumen?.ParametrosCalculo.FechaCalculo, Now)

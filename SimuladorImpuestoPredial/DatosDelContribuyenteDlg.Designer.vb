@@ -41,7 +41,6 @@ Partial Class DatosDelContribuyenteDlg
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
-        Me.HojaResumenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CodContribuyenteTextBox = New System.Windows.Forms.TextBox()
         Me.ApeNombRazSocTextBox = New System.Windows.Forms.TextBox()
         Me.NumDocIdentTextBox = New System.Windows.Forms.TextBox()
@@ -63,6 +62,7 @@ Partial Class DatosDelContribuyenteDlg
         Me.NroExpAdmTextBox = New System.Windows.Forms.TextBox()
         Me.BaseLegalTextBox = New System.Windows.Forms.TextBox()
         Me.CondicionEspecialContribuyenteComboBox = New System.Windows.Forms.ComboBox()
+        Me.HojaResumenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CodContribuyenteLabel = New System.Windows.Forms.Label()
         ApeNombRazSocLabel = New System.Windows.Forms.Label()
         NumDocIdentLabel = New System.Windows.Forms.Label()
@@ -79,12 +79,12 @@ Partial Class DatosDelContribuyenteDlg
         NroResAlcaldiaLabel = New System.Windows.Forms.Label()
         SueldoPensionistaLabel = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.HojaResumenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.SueldoPensionistaNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HojaResumenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CodContribuyenteLabel
@@ -265,10 +265,6 @@ Partial Class DatosDelContribuyenteDlg
         Me.Cancel_Button.Size = New System.Drawing.Size(67, 23)
         Me.Cancel_Button.TabIndex = 1
         Me.Cancel_Button.Text = "Cancelar"
-        '
-        'HojaResumenBindingSource
-        '
-        Me.HojaResumenBindingSource.DataSource = GetType(SimuImpPred.ObjectModel.HojaResumen)
         '
         'CodContribuyenteTextBox
         '
@@ -512,6 +508,10 @@ Partial Class DatosDelContribuyenteDlg
         Me.CondicionEspecialContribuyenteComboBox.Size = New System.Drawing.Size(322, 21)
         Me.CondicionEspecialContribuyenteComboBox.TabIndex = 1
         '
+        'HojaResumenBindingSource
+        '
+        Me.HojaResumenBindingSource.DataSource = GetType(SimuImpPred.ObjectModel.HojaResumen)
+        '
         'DatosDelContribuyenteDlg
         '
         Me.AcceptButton = Me.OK_Button
@@ -532,7 +532,6 @@ Partial Class DatosDelContribuyenteDlg
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Datos del Contribuyente"
         Me.TableLayoutPanel1.ResumeLayout(False)
-        CType(Me.HojaResumenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -542,6 +541,7 @@ Partial Class DatosDelContribuyenteDlg
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.SueldoPensionistaNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HojaResumenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

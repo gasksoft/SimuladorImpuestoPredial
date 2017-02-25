@@ -21,7 +21,7 @@ Public MustInherit Class Predio
     Private Sub EnlazarListChanged(sender As Object, e As ListChangedEventArgs)
         Select Case e.ListChangedType
             Case ListChangedType.ItemAdded
-                DirectCast(sender, BindingList(Of Instalacion))(e.NewIndex).Predio = Me
+                sender(e.NewIndex).Predio = Me
         End Select
         OnPropertyChanged(NameOf(ValorAutoavaluo))
     End Sub

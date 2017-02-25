@@ -1,6 +1,4 @@
-﻿Imports SimuImpPred.ObjectModel
-
-<Serializable>
+﻿<Serializable>
 Public Class DatosPersona
     Implements ICloneable
 
@@ -9,10 +7,6 @@ Public Class DatosPersona
     Public Property NumDocIdent As String
 
     Public Function Clone() As Object Implements ICloneable.Clone
-        Dim clon As New DatosPersona
-        clon.ApeNombRazSoc = ApeNombRazSoc
-        clon.TipoDocIdent = TipoDocIdent
-        clon.NumDocIdent = NumDocIdent
-        Return clon
+        Return MemberwiseClone()
     End Function
 End Class

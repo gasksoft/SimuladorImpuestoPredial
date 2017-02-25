@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>SimuImpPred.Gui.My.MyApplication</StartupObject>
     <RootNamespace>SimuImpPred.Gui</RootNamespace>
-    <AssemblyName>SimuladorImpuestoPredial</AssemblyName>
+    <AssemblyName>SimuImpPred.Gui</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -47,7 +47,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>SimuladorImpuestoPredial.xml</DocumentationFile>
+    <DocumentationFile>SimuImpPred.Gui.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <Prefer32Bit>true</Prefer32Bit>
     <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
@@ -59,7 +59,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>SimuladorImpuestoPredial.xml</DocumentationFile>
+    <DocumentationFile>SimuImpPred.Gui.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <Prefer32Bit>false</Prefer32Bit>
     <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
@@ -86,7 +86,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\x86\Debug\</OutputPath>
-    <DocumentationFile>SimuladorImpuestoPredial.xml</DocumentationFile>
+    <DocumentationFile>SimuImpPred.Gui.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -96,7 +96,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\x86\Release\</OutputPath>
-    <DocumentationFile>SimuladorImpuestoPredial.xml</DocumentationFile>
+    <DocumentationFile>SimuImpPred.Gui.xml</DocumentationFile>
     <Optimize>true</Optimize>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DebugType>pdbonly</DebugType>
@@ -168,6 +168,18 @@
     <Compile Include="DatosDelContribuyenteDlg.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DomicilioFiscalDlg.Designer.vb">
+      <DependentUpon>DomicilioFiscalDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DomicilioFiscalDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditStringListDlg.Designer.vb">
+      <DependentUpon>EditStringListDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditStringListDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
@@ -194,6 +206,12 @@
     <EmbeddedResource Include="DatosDelContribuyenteDlg.resx">
       <DependentUpon>DatosDelContribuyenteDlg.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DomicilioFiscalDlg.resx">
+      <DependentUpon>DomicilioFiscalDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditStringListDlg.resx">
+      <DependentUpon>EditStringListDlg.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -206,7 +224,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="datos.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="x64\SQLite.Interop.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -219,6 +237,7 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\SimuImpPred.Data.UDep.datasource" />
     <None Include="My Project\DataSources\SimuImpPred.ObjectModel.DatosPersona.datasource" />
     <None Include="My Project\DataSources\SimuImpPred.ObjectModel.HojaResumen.datasource" />
     <None Include="My Project\Settings.settings">
@@ -254,6 +273,10 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SimuImpPred.Data\SimuImpPred.Data.vbproj">
+      <Project>{6a96178f-5647-4508-a609-1961c1b66d1a}</Project>
+      <Name>SimuImpPred.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SimuImpPred.ObjectModel\SimuImpPred.ObjectModel.vbproj">
       <Project>{1097ae76-0ccc-4576-8148-4cfe98655e43}</Project>
       <Name>SimuImpPred.ObjectModel</Name>

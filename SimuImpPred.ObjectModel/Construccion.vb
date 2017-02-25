@@ -116,7 +116,7 @@ Public Class Construccion
                 Function(c)
                     Dim cat As Categoria = Nothing
                     Dim catBd = Predio?.HojaResumen?.ParametrosCalculo?.Categorias
-                    If Not catBd.TryGetValue(CallByName(Me, $"C{c}", CallType.Get), cat) Then
+                    If Not catBd.TryGetValue(If(CallByName(Me, $"C{c}", CallType.Get), "Z"), cat) Then
                         Return 0
                     End If
                     Return If(CallByName(cat, $"V{c}", CallType.Get), 0)

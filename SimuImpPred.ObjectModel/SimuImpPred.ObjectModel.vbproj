@@ -65,8 +65,7 @@
     <Compile Include="DatosPersona.vb" />
     <Compile Include="HojaResumen.vb" />
     <Compile Include="Direccion.vb" />
-    <Compile Include="DomicilioFiscal.vb" />
-    <Compile Include="InformacionComplementaria.vb" />
+    <Compile Include="Domicilio.vb" />
     <Compile Include="Instalacion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

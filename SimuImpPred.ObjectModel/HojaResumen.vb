@@ -6,8 +6,11 @@ Public Class HojaResumen
     Implements INotifyPropertyChanged
     Implements ICloneable
 
+    <NonSerialized>
     Private _parametrosCalculo As ParametrosCalculo
-    Private _condicionEspecialContribuyente As Integer
+    Private _condicionEspecialContribuyente As Integer = 1
+    Private _baseImponible As Decimal
+    Private _presunto As Boolean
 
     Sub New()
         Predios = New BindingList(Of Predio)
@@ -32,10 +35,8 @@ Public Class HojaResumen
     Public Property NroResAlcaldia As String
     Public Property FechaResAlcaldia As Date?
     Public Property SueldoPensionista As Decimal?
-    Public Property DomicilioFiscal As New DomicilioFiscal
-    Public Property InformacionComplementaria As New InformacionComplementaria
+    Public Property DomicilioFiscal As New Domicilio
     Public ReadOnly Property Predios As BindingList(Of Predio)
-
     Public Property ParametrosCalculo As ParametrosCalculo
         Get
             Return _parametrosCalculo
@@ -56,10 +57,25 @@ Public Class HojaResumen
         End Set
     End Property
 
-    Public ReadOnly Property BaseImponible As Decimal
+    Public Property Presunto As Boolean
         Get
+            Return _presunto
+        End Get
+        Set
+            _presunto = Value
+            OnPropertyChanged()
+        End Set
+    End Property
+
+    Public Property BaseImponible As Decimal
+        Get
+            If Presunto Then Return _baseImponible
             Return Predios.Sum(Function(p) p.AutoavaluoAfecto)
         End Get
+        Set
+            _baseImponible = Value
+            OnPropertyChanged()
+        End Set
     End Property
 
     Public ReadOnly Property ImpuestoAnual As Decimal
@@ -95,29 +111,20 @@ Public Class HojaResumen
 #End Region
 
 #Region "Implementacion de ICloneable"
+
     Public Function Clone() As Object Implements ICloneable.Clone
-        Dim clon As New HojaResumen
-        clon.BaseLegal = BaseLegal
-        clon.CodContribuyente = CodContribuyente
-        clon.CondicionEspecialContribuyente = CondicionEspecialContribuyente
-        clon.DatosContrib = DatosContrib.clone
-        clon.DatosConyuge = DatosConyuge.clone
-        clon.DatosRepLegal = DatosRepLegal.clone
-        clon.DomicilioFiscal = DomicilioFiscal.clone
-        clon.FechaExpAdm = FechaExpAdm
-        clon.FechaResAlcaldia = FechaResAlcaldia
-        clon.InformacionComplementaria = InformacionComplementaria.clone
-        clon.NroExpAdm = NroExpAdm
-        clon.NroResAlcaldia = NroResAlcaldia
+        Dim clon = MemberwiseClone()
+        clon.DatosContrib = DatosContrib.Clone
+        clon.DatosConyuge = DatosConyuge.Clone
+        clon.DatosRepLegal = DatosRepLegal.Clone
+        clon.DomicilioFiscal = DomicilioFiscal.Clone
         clon.ParametrosCalculo = ParametrosCalculo
-        For Each p In Predios
-            'TODO: Clonar los predios
-            clon.Predios.Add(p)
-        Next
-        clon.SueldoPensionista = SueldoPensionista
+        'For Each p In Predios
+        '    'TODO: Clonar los predios
+        '    clon.Predios.Add(p)
+        'Next
         Return clon
     End Function
 
 #End Region
-
 End Class

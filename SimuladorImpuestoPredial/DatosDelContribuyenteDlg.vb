@@ -15,16 +15,16 @@ Public Class DatosDelContribuyenteDlg
     End Sub
 
     Private Sub DatosDelContribuyenteDlg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TipoDocIdentComboBox.DataSource = TipoDocumentoIdentidad.ToList
-        TipoDocIdentComboBox1.DataSource = TipoDocumentoIdentidad.ToList
-        TipoDocIdentComboBox2.DataSource = TipoDocumentoIdentidad.ToList
+        TipoDocIdentComboBox.DataSource = TipoDocumentoIdentidadDic.ToList
+        TipoDocIdentComboBox1.DataSource = TipoDocumentoIdentidadDic.ToList
+        TipoDocIdentComboBox2.DataSource = TipoDocumentoIdentidadDic.ToList
         TipoDocIdentComboBox.DisplayMember = "Value"
         TipoDocIdentComboBox1.DisplayMember = "Value"
         TipoDocIdentComboBox2.DisplayMember = "Value"
         TipoDocIdentComboBox.ValueMember = "Key"
         TipoDocIdentComboBox1.ValueMember = "Key"
         TipoDocIdentComboBox2.ValueMember = "Key"
-        CondicionEspecialContribuyenteComboBox.DataSource = CondicionEspecialContribuyente.ToList
+        CondicionEspecialContribuyenteComboBox.DataSource = CondicionEspecialContribuyenteDic.ToList
         CondicionEspecialContribuyenteComboBox.ValueMember = "Key"
         CondicionEspecialContribuyenteComboBox.DisplayMember = "Value"
 

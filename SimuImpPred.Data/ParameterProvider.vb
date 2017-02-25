@@ -33,4 +33,8 @@
     Public Shared Function GetFo(año As Integer) As Decimal
         Return Contexto.Fos.Where(Function(x) x.Año = año).FirstOrDefault?.Valor
     End Function
+
+    Public Shared Function GetDepartamentos() As List(Of UDep)
+        Return Contexto.Departamentos.Include("Provincias.Distritos").ToList
+    End Function
 End Class
