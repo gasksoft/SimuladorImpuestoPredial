@@ -4,10 +4,10 @@ Imports System.ComponentModel.DataAnnotations.Schema
 
 <Serializable>
 Public Class UProv
-    <Key, Column(Order:=0)>
+    <Key, Column(Order := 0)>
     Public Property CodDep As String
 
-    <Key, Column(Order:=1)>
+    <Key, Column(Order := 1)>
     Public Property CodProv As String
 
     Public Property Prov As String

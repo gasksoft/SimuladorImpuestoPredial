@@ -29,7 +29,7 @@ Public Class DomicilioFiscalDlg
     Private Sub BtnEditTelefonos_Click(sender As Object, e As EventArgs) Handles BtnEditTelefonos.Click
         Dim dlg As New EditStringListDlg
         dlg.Valor = TelefonosTextBox.Text
-        dlg.Text = "Telefonos"
+        dlg.Text = $"Telefonos"
         If dlg.ShowDialog(Me) = DialogResult.OK Then
             TelefonosTextBox.Text = dlg.Valor
         End If
@@ -38,7 +38,7 @@ Public Class DomicilioFiscalDlg
     Private Sub BtnEditCorreos_Click(sender As Object, e As EventArgs) Handles BtnEditCorreos.Click
         Dim dlg As New EditStringListDlg
         dlg.Valor = CorreosElectronicosTextBox.Text
-        dlg.Text = "Correos Electronicos"
+        dlg.Text = $"Correos Electronicos"
         If dlg.ShowDialog(Me) = DialogResult.OK Then
             CorreosElectronicosTextBox.Text = dlg.Valor
         End If

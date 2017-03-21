@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel.DataAnnotations
 Imports System.ComponentModel.DataAnnotations.Schema
+
 <Serializable>
 Public Class Categoria
     <Key, Column(Order := 0)>

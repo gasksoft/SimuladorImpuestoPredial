@@ -6,7 +6,7 @@ Public Class Contexto
 
     Sub New()
         MyBase.New("Datos")
-        Database.SetInitializer(Of Contexto)(Nothing)
+        Database.SetInitializer (Of Contexto)(Nothing)
         Configuration.LazyLoadingEnabled = False
     End Sub
 
@@ -23,6 +23,6 @@ Public Class Contexto
 
     Protected Overrides Sub OnModelCreating(modelBuilder As DbModelBuilder)
         If modelBuilder Is Nothing Then Return
-        modelBuilder.Conventions.Remove(Of PluralizingTableNameConvention)()
+        modelBuilder.Conventions.Remove (Of PluralizingTableNameConvention)()
     End Sub
 End Class

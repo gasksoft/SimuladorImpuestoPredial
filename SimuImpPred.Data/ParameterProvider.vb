@@ -9,6 +9,10 @@
             ToDictionary((Function(u) u.Año), (Function(u) u.Valor))
     End Function
 
+    Public Shared Function GetAños() As List(Of Integer)
+        Return (From u In Contexto.Uits Order By u.Año Descending Take 10 Select u.Año).ToList
+    End Function
+
     Public Shared Function GetCategorias(año As Integer) As Dictionary(Of String, Categoria)
         Return (From c In Contexto.Categorias Where c.Año = año).
             ToDictionary(Function(c) c.Cat)

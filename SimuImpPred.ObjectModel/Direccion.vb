@@ -1,7 +1,5 @@
 ﻿<Serializable>
 Public Class Direccion
-    Implements ICloneable
-
     Public Property TipoHabilitacion As Integer = 1
     Public Property Habilitacion As String
     Public Property TipoVia As Integer = 1
@@ -14,7 +12,7 @@ Public Class Direccion
     Public Property Mz As String
     Public Property Lote As String
 
-    Public Function Clone() As Object Implements ICloneable.Clone
-        Return MemberwiseClone()
+    Public Overrides Function ToString() As String
+        Return "Hola"
     End Function
 End Class

@@ -1,6 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports System.ComponentModel.DataAnnotations
 Imports System.ComponentModel.DataAnnotations.Schema
+
 <Serializable>
 Public Class Ifp
     <Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)>

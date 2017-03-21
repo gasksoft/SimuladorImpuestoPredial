@@ -3,13 +3,13 @@ Imports System.ComponentModel.DataAnnotations.Schema
 
 <Serializable>
 Public Class UDis
-    <Key, Column(Order:=0)>
+    <Key, Column(Order := 0)>
     Public Property CodDep As String
 
-    <Key, Column(Order:=1)>
+    <Key, Column(Order := 1)>
     Public Property CodProv As String
 
-    <Key, Column(Order:=2)>
+    <Key, Column(Order := 2)>
     Public Property CodDis As String
 
     Public Property Dis As String
