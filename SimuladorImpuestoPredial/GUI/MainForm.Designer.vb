@@ -40,7 +40,6 @@
             Me.MtSaveHr = New MetroFramework.Controls.MetroTile()
             Me.MtOpenHr = New MetroFramework.Controls.MetroTile()
             Me.MlGoBack = New MetroFramework.Controls.MetroLink()
-            Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
             Me.MetroPanel1 = New MetroFramework.Controls.MetroPanel()
             Me.MetroTile1 = New MetroFramework.Controls.MetroTile()
             CType(Me.ParametrosCalculoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,9 +56,9 @@
             Me.MpContainer.HorizontalScrollbarBarColor = True
             Me.MpContainer.HorizontalScrollbarHighlightOnWheel = False
             Me.MpContainer.HorizontalScrollbarSize = 10
-            Me.MpContainer.Location = New System.Drawing.Point(23, 130)
+            Me.MpContainer.Location = New System.Drawing.Point(23, 133)
             Me.MpContainer.Name = "MpContainer"
-            Me.MpContainer.Size = New System.Drawing.Size(994, 607)
+            Me.MpContainer.Size = New System.Drawing.Size(1154, 544)
             Me.MpContainer.TabIndex = 2
             Me.MpContainer.VerticalScrollbarBarColor = True
             Me.MpContainer.VerticalScrollbarHighlightOnWheel = False
@@ -100,7 +99,7 @@
             Me.MpParametros.HorizontalScrollbarBarColor = True
             Me.MpParametros.HorizontalScrollbarHighlightOnWheel = False
             Me.MpParametros.HorizontalScrollbarSize = 10
-            Me.MpParametros.Location = New System.Drawing.Point(720, 39)
+            Me.MpParametros.Location = New System.Drawing.Point(880, 45)
             Me.MpParametros.Name = "MpParametros"
             Me.MpParametros.Size = New System.Drawing.Size(297, 85)
             Me.MpParametros.TabIndex = 4
@@ -172,13 +171,12 @@
             '
             Me.MtPrintHr.ActiveControl = Nothing
             Me.MtPrintHr.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.MtPrintHr.Location = New System.Drawing.Point(399, 3)
+            Me.MtPrintHr.Location = New System.Drawing.Point(375, 3)
             Me.MtPrintHr.Name = "MtPrintHr"
             Me.MtPrintHr.Size = New System.Drawing.Size(93, 61)
             Me.MtPrintHr.TabIndex = 9
             Me.MtPrintHr.Text = "&Imprimir"
             Me.MtPrintHr.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.MtPrintHr.TileImage = Global.SimuImpPred.Gui.My.Resources.Resources.Print
             Me.MtPrintHr.TileImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.MtPrintHr.UseSelectable = True
             Me.MtPrintHr.UseTileImage = True
@@ -187,13 +185,12 @@
             '
             Me.MtSaveAsHr.ActiveControl = Nothing
             Me.MtSaveAsHr.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.MtSaveAsHr.Location = New System.Drawing.Point(300, 3)
+            Me.MtSaveAsHr.Location = New System.Drawing.Point(282, 3)
             Me.MtSaveAsHr.Name = "MtSaveAsHr"
             Me.MtSaveAsHr.Size = New System.Drawing.Size(93, 61)
             Me.MtSaveAsHr.TabIndex = 7
             Me.MtSaveAsHr.Text = "Guardar &Como"
             Me.MtSaveAsHr.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.MtSaveAsHr.TileImage = Global.SimuImpPred.Gui.My.Resources.Resources.SaveAs
             Me.MtSaveAsHr.TileImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.MtSaveAsHr.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
             Me.MtSaveAsHr.UseSelectable = True
@@ -210,7 +207,6 @@
             Me.MtNewHr.TabIndex = 8
             Me.MtNewHr.Text = "&Nuevo"
             Me.MtNewHr.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.MtNewHr.TileImage = Global.SimuImpPred.Gui.My.Resources.Resources.NewHr
             Me.MtNewHr.TileImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.MtNewHr.UseSelectable = True
             Me.MtNewHr.UseTileImage = True
@@ -219,13 +215,12 @@
             '
             Me.MtSaveHr.ActiveControl = Nothing
             Me.MtSaveHr.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.MtSaveHr.Location = New System.Drawing.Point(201, 3)
+            Me.MtSaveHr.Location = New System.Drawing.Point(189, 3)
             Me.MtSaveHr.Name = "MtSaveHr"
             Me.MtSaveHr.Size = New System.Drawing.Size(93, 61)
             Me.MtSaveHr.TabIndex = 6
             Me.MtSaveHr.Text = "&Guardar"
             Me.MtSaveHr.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.MtSaveHr.TileImage = Global.SimuImpPred.Gui.My.Resources.Resources.Save
             Me.MtSaveHr.TileImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.MtSaveHr.UseSelectable = True
             Me.MtSaveHr.UseTileImage = True
@@ -234,13 +229,12 @@
             '
             Me.MtOpenHr.ActiveControl = Nothing
             Me.MtOpenHr.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.MtOpenHr.Location = New System.Drawing.Point(102, 3)
+            Me.MtOpenHr.Location = New System.Drawing.Point(96, 3)
             Me.MtOpenHr.Name = "MtOpenHr"
             Me.MtOpenHr.Size = New System.Drawing.Size(93, 61)
             Me.MtOpenHr.TabIndex = 5
             Me.MtOpenHr.Text = "&Abrir"
             Me.MtOpenHr.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.MtOpenHr.TileImage = Global.SimuImpPred.Gui.My.Resources.Resources.Open
             Me.MtOpenHr.TileImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.MtOpenHr.UseSelectable = True
             Me.MtOpenHr.UseTileImage = True
@@ -250,26 +244,15 @@
             Me.MlGoBack.Cursor = System.Windows.Forms.Cursors.Hand
             Me.MlGoBack.FontSize = MetroFramework.MetroLinkSize.Tall
             Me.MlGoBack.FontWeight = MetroFramework.MetroLinkWeight.Regular
-            Me.MlGoBack.Image = Global.SimuImpPred.Gui.My.Resources.Resources.Atras
             Me.MlGoBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
             Me.MlGoBack.ImageSize = 32
             Me.MlGoBack.Location = New System.Drawing.Point(23, 12)
             Me.MlGoBack.Name = "MlGoBack"
-            Me.MlGoBack.Size = New System.Drawing.Size(34, 39)
+            Me.MlGoBack.Size = New System.Drawing.Size(127, 39)
             Me.MlGoBack.TabIndex = 0
+            Me.MlGoBack.Text = "Regresar..."
             Me.MlGoBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.MlGoBack.UseSelectable = True
-            '
-            'MetroLabel1
-            '
-            Me.MetroLabel1.AutoSize = True
-            Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
-            Me.MetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular
-            Me.MetroLabel1.Location = New System.Drawing.Point(65, 16)
-            Me.MetroLabel1.Name = "MetroLabel1"
-            Me.MetroLabel1.Size = New System.Drawing.Size(146, 25)
-            Me.MetroLabel1.TabIndex = 10
-            Me.MetroLabel1.Text = "Impuesto Predial"
             '
             'MetroPanel1
             '
@@ -284,9 +267,9 @@
             Me.MetroPanel1.HorizontalScrollbarBarColor = True
             Me.MetroPanel1.HorizontalScrollbarHighlightOnWheel = False
             Me.MetroPanel1.HorizontalScrollbarSize = 10
-            Me.MetroPanel1.Location = New System.Drawing.Point(23, 57)
+            Me.MetroPanel1.Location = New System.Drawing.Point(23, 63)
             Me.MetroPanel1.Name = "MetroPanel1"
-            Me.MetroPanel1.Size = New System.Drawing.Size(594, 67)
+            Me.MetroPanel1.Size = New System.Drawing.Size(564, 67)
             Me.MetroPanel1.TabIndex = 11
             Me.MetroPanel1.VerticalScrollbarBarColor = True
             Me.MetroPanel1.VerticalScrollbarHighlightOnWheel = False
@@ -296,13 +279,12 @@
             '
             Me.MetroTile1.ActiveControl = Nothing
             Me.MetroTile1.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.MetroTile1.Location = New System.Drawing.Point(498, 3)
+            Me.MetroTile1.Location = New System.Drawing.Point(468, 3)
             Me.MetroTile1.Name = "MetroTile1"
             Me.MetroTile1.Size = New System.Drawing.Size(93, 61)
             Me.MetroTile1.TabIndex = 12
             Me.MetroTile1.Text = "Ace&rca de..."
             Me.MetroTile1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.MetroTile1.TileImage = Global.SimuImpPred.Gui.My.Resources.Resources.Questions
             Me.MetroTile1.TileImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.MetroTile1.UseSelectable = True
             Me.MetroTile1.UseTileImage = True
@@ -311,17 +293,15 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(1040, 760)
+            Me.ClientSize = New System.Drawing.Size(1200, 700)
             Me.Controls.Add(Me.MetroPanel1)
-            Me.Controls.Add(Me.MetroLabel1)
             Me.Controls.Add(Me.MpContainer)
             Me.Controls.Add(Me.MlGoBack)
             Me.Controls.Add(Me.MpParametros)
-            Me.DisplayHeader = False
-            Me.MinimumSize = New System.Drawing.Size(1024, 760)
+            Me.MinimumSize = New System.Drawing.Size(1200, 700)
             Me.Name = "MainForm"
-            Me.Padding = New System.Windows.Forms.Padding(20, 30, 20, 20)
             Me.Text = "   Impuesto Predial"
+            Me.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center
             CType(Me.ParametrosCalculoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MpParametros.ResumeLayout(False)
             Me.MtParametrosCalculo2.ResumeLayout(False)
@@ -348,7 +328,6 @@
         Friend WithEvents MtSaveAsHr As MetroFramework.Controls.MetroTile
         Friend WithEvents MtNewHr As MetroFramework.Controls.MetroTile
         Friend WithEvents MtPrintHr As MetroFramework.Controls.MetroTile
-        Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
         Friend WithEvents MetroPanel1 As MetroFramework.Controls.MetroPanel
         Friend WithEvents MetroTile1 As MetroFramework.Controls.MetroTile
     End Class

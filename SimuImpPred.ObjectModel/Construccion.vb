@@ -48,11 +48,9 @@ Public Class Construccion
         End Get
     End Property
 
-    Public Property PorcPartPredio As Decimal
-
     Public ReadOnly Property ValorAreaConstruidaComun As Decimal
         Get
-            Return ValorUnitarioIncrementado * AreaConstruida
+            Return ValorUnitarioDepreciado * AreaConstruida
         End Get
     End Property
 

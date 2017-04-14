@@ -6,7 +6,6 @@ Public Class OtraInstalacion
 
     Public Property Ifp As Ifp
     Public Property Cantidad As Decimal
-    Public Property PorcPartPredio As Decimal
 
     Public ReadOnly Property Cod As String
         Get

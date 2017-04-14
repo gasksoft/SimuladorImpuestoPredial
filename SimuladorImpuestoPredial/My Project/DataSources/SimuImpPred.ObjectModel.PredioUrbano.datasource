@@ -12,7 +12,7 @@
          <PropertyUISetting Name="Anexo">
             <ControlSettings>
                <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
-                  <BindableControlInfo Name="Label" Type="System.Windows.Forms.Label" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+                  <BindableControlInfo Name="MetroLabel" Type="MetroFramework.Controls.MetroLabel" AssemblyName="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a" AssemblyCodeBase="file:///D:/Usuario/2016-2/Source/Repos/SimuladorImpuestoPredial/SimuladorImpuestoPredial/bin/Debug/MetroFramework.dll" Frameworks=".NETFramework,Version=v2.0;.NETFramework,Version=v3.0;.NETFramework,Version=v3.5;.NETFramework,Version=v4.0;.NETFramework,Version=v4.5;.NETFramework,Version=v4.5.1;.NETFramework,Version=v4.5.2;.NETFramework,Version=v4.6;.NETFramework,Version=v4.6.1" />
                </ControlSetting>
             </ControlSettings>
          </PropertyUISetting>

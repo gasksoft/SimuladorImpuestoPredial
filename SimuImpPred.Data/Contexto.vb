@@ -20,6 +20,7 @@ Public Class Contexto
     Property Fos As DbSet(Of Fo)
     Property CategoriasDesc As DbSet(Of CategoriaDesc)
     Property Departamentos As DbSet(Of UDep)
+    Property UsosGrupos As DbSet(Of UsoGrupo)
 
     Protected Overrides Sub OnModelCreating(modelBuilder As DbModelBuilder)
         If modelBuilder Is Nothing Then Return

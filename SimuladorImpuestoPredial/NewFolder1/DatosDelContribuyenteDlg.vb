@@ -1,4 +1,5 @@
-﻿Imports SimuImpPred.ObjectModel
+﻿Imports SimuImpPred.Common
+Imports SimuImpPred.ObjectModel
 
 Public Class DatosDelContribuyenteDlg
     Public Property HojaResumen As HojaResumen
@@ -16,16 +17,16 @@ Public Class DatosDelContribuyenteDlg
     End Sub
 
     Private Sub DatosDelContribuyenteDlg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TipoDocIdentComboBox.DataSource = TipoDocumentoIdentidadDic.ToList
-        TipoDocIdentComboBox1.DataSource = TipoDocumentoIdentidadDic.ToList
-        TipoDocIdentComboBox2.DataSource = TipoDocumentoIdentidadDic.ToList
+        TipoDocIdentComboBox.DataSource = Codificadores.TipoDocumentoIdentidadDic.ToList
+        TipoDocIdentComboBox1.DataSource = Codificadores.TipoDocumentoIdentidadDic.ToList
+        TipoDocIdentComboBox2.DataSource = Codificadores.TipoDocumentoIdentidadDic.ToList
         TipoDocIdentComboBox.DisplayMember = "Value"
         TipoDocIdentComboBox1.DisplayMember = "Value"
         TipoDocIdentComboBox2.DisplayMember = "Value"
         TipoDocIdentComboBox.ValueMember = "Key"
         TipoDocIdentComboBox1.ValueMember = "Key"
         TipoDocIdentComboBox2.ValueMember = "Key"
-        CondicionEspecialContribuyenteComboBox.DataSource = CondicionEspecialContribuyenteDic.ToList
+        CondicionEspecialContribuyenteComboBox.DataSource = Codificadores.CondicionEspecialContribuyenteDic.ToList
         CondicionEspecialContribuyenteComboBox.ValueMember = "Key"
         CondicionEspecialContribuyenteComboBox.DisplayMember = "Value"
 

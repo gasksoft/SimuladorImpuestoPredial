@@ -137,16 +137,16 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.SQLite, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.Core.1.0.104.0\lib\net451\System.Data.SQLite.dll</HintPath>
+    <Reference Include="System.Data.SQLite, Version=1.0.105.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.105.0\lib\net451\System.Data.SQLite.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Data.SQLite.EF6, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.104.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.105.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.105.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Data.SQLite.Linq, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.104.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.105.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.105.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Deployment" />
@@ -173,25 +173,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Codificadores.vb" />
-    <Compile Include="DatosDelContribuyenteDlg.Designer.vb">
-      <DependentUpon>DatosDelContribuyenteDlg.vb</DependentUpon>
-    </Compile>
-    <Compile Include="DatosDelContribuyenteDlg.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DomicilioFiscalDlg.Designer.vb">
-      <DependentUpon>DomicilioFiscalDlg.vb</DependentUpon>
-    </Compile>
-    <Compile Include="DomicilioFiscalDlg.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditStringListDlg.Designer.vb">
-      <DependentUpon>EditStringListDlg.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EditStringListDlg.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="GUI\ChangeYearDlg.Designer.vb">
       <DependentUpon>ChangeYearDlg.vb</DependentUpon>
     </Compile>
@@ -204,10 +185,34 @@
     <Compile Include="GUI\DashBoardUc.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="GUI\EditPredioUc.Designer.vb">
+      <DependentUpon>EditPredioUc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EditPredioUc.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\EditPredioUrbanoUc.Designer.vb">
+      <DependentUpon>EditPredioUrbanoUc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EditPredioUrbanoUc.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="GUI\MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
     <Compile Include="GUI\MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DireccionUc.Designer.vb">
+      <DependentUpon>DireccionUc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DireccionUc.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -225,30 +230,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PuDlg.Designer.vb">
-      <DependentUpon>PuDlg.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PuDlg.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DatosDelContribuyenteDlg.resx">
-      <DependentUpon>DatosDelContribuyenteDlg.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DomicilioFiscalDlg.resx">
-      <DependentUpon>DomicilioFiscalDlg.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditStringListDlg.resx">
-      <DependentUpon>EditStringListDlg.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ChangeYearDlg.resx">
       <DependentUpon>ChangeYearDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DashBoardUc.resx">
       <DependentUpon>DashBoardUc.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EditPredioUc.resx">
+      <DependentUpon>EditPredioUc.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DireccionUc.resx">
+      <DependentUpon>DireccionUc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -257,14 +256,12 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="PuDlg.resx">
-      <DependentUpon>PuDlg.vb</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="datos.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\clipboard_64.png" />
     <Content Include="Resources\edit-128.png" />
     <Content Include="Resources\home-48.png" />
     <Content Include="Resources\ic_delete_48px-64.png" />
@@ -292,11 +289,14 @@
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
     <None Include="My Project\DataSources\SimuImpPred.Data.UDep.datasource" />
+    <None Include="My Project\DataSources\SimuImpPred.Data.UsoGrupo.datasource" />
     <None Include="My Project\DataSources\SimuImpPred.ObjectModel.Construccion.datasource" />
     <None Include="My Project\DataSources\SimuImpPred.ObjectModel.DatosPersona.datasource" />
+    <None Include="My Project\DataSources\SimuImpPred.ObjectModel.Direccion.datasource" />
     <None Include="My Project\DataSources\SimuImpPred.ObjectModel.HojaResumen.datasource" />
     <None Include="My Project\DataSources\SimuImpPred.ObjectModel.OtraInstalacion.datasource" />
     <None Include="My Project\DataSources\SimuImpPred.ObjectModel.ParametrosCalculo.datasource" />
+    <None Include="My Project\DataSources\SimuImpPred.ObjectModel.Predio.datasource" />
     <None Include="My Project\DataSources\SimuImpPred.ObjectModel.PredioUrbano.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -332,6 +332,10 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SimuImpPred.Common\SimuImpPred.Common.vbproj">
+      <Project>{5BE5C683-45D6-4554-9796-DEDC84B1EA35}</Project>
+      <Name>SimuImpPred.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SimuImpPred.Data\SimuImpPred.Data.vbproj">
       <Project>{6a96178f-5647-4508-a609-1961c1b66d1a}</Project>
       <Name>SimuImpPred.Data</Name>
@@ -343,12 +347,12 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
-  <Import Project="..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.0\build\net451\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.105.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.105.0\build\net451\System.Data.SQLite.Core.targets'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

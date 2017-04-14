@@ -1,4 +1,5 @@
 ﻿Imports MetroFramework.Controls
+Imports SimuImpPred.Common
 Imports SimuImpPred.Gui.My.Resources
 Imports SimuImpPred.ObjectModel
 
@@ -33,11 +34,11 @@ Namespace GUI
             End Set
         End Property
 
-        Public ReadOnly Property Hr As HojaResumen
-            Get
-                Return HojaResumen.Instancia
-            End Get
-        End Property
+        'Public ReadOnly Property Hr As HojaResumen
+        '    Get
+        '        Return HojaResumen.Instancia
+        '    End Get
+        'End Property
 
         Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
             'HojaResumen.Instancia.Predios.Add(New PredioUrbano With {.AreaTerrenoPropio = 1000, .Arancel = 180})
@@ -64,6 +65,7 @@ Namespace GUI
             HojaResumen.SetInstance(New HojaResumen)
             _dashBoardUc.Enlazar()
             _filename = ""
+            GoToBack.PerformClick()
         End Sub
 
         Private Sub MtOpenHr_Click(sender As Object, e As EventArgs) Handles MtOpenHr.Click
@@ -74,11 +76,12 @@ Namespace GUI
 #If DEBUG Then
                 Dim aa = Now
 #End If
-                HojaResumen.SetInstance(Common.DescomprimeYDeseria(Of HojaResumen)(_filename))
+                HojaResumen.SetInstance(Funciones.DescomprimeYDeseria(Of HojaResumen)(_filename))
                 _dashBoardUc.Enlazar()
 #If DEBUG Then
                 MsgBox((Now - aa).ToString)
 #End If
+                GoToBack.PerformClick()
             End If
         End Sub
 
@@ -88,7 +91,7 @@ Namespace GUI
                 Exit Sub
             End If
             If Not Validate() Then Return
-            Common.SeriaYComprime(HojaResumen.Instancia, _filename)
+            Funciones.SeriaYComprime(HojaResumen.Instancia, _filename)
             Validate()
         End Sub
 

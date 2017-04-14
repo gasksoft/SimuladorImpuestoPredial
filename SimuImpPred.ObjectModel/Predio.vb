@@ -6,7 +6,6 @@ Public MustInherit Class Predio
         Contratantes = New List(Of DatosPersona)
         Construcciones = New BindingList(Of Construccion)
         OtrasInstalaciones = New BindingList(Of OtraInstalacion)
-        UbicacionPredio = New Direccion
         EscucharEventosEnInstalaciones()
     End Sub
 
@@ -17,7 +16,7 @@ Public MustInherit Class Predio
 
     Private Sub OnListChanged(sender As Object, e As ListChangedEventArgs)
         If e.ListChangedType = ListChangedType.ItemAdded Then
-            sender(e.NewIndex).ClasificacionPredio = ClasificacionPredio
+            sender(e.NewIndex).Predio = Me
         End If
     End Sub
 
@@ -28,14 +27,16 @@ Public MustInherit Class Predio
     End Property
     Public MustOverride ReadOnly Property Tipo As String
     Public Property CodigoPredio As String
-    Public ReadOnly Property UbicacionPredio As Direccion
+    Public Property UbicacionPredio As New Direccion
     Public Property CondProp As Integer
     Public Property PorcProp As Decimal = 100
     Public Property NumCoprop As Integer
     Public Property TipoPredio As Integer
     Public Property EstadoConstruccion As Integer
     Public Property ClasificacionPredio As Integer = 1
-    Public Property CodUso As String
+    Public Property CodUsoGrupo As Integer = 1
+    Public Property CodUsoSubGrupo As Integer = 1
+    Public Property CodUso As Integer = 1
     Public Property TipoContrato As Integer
     Public Property FechaContrato As Date
     Public ReadOnly Property Contratantes As List(Of DatosPersona)

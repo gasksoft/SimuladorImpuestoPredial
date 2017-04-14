@@ -1,4 +1,5 @@
-﻿Imports SimuImpPred.ObjectModel
+﻿Imports SimuImpPred.Common
+Imports SimuImpPred.ObjectModel
 
 Public Class DomicilioFiscalDlg
     Public Property HojaResumen As HojaResumen
@@ -14,9 +15,9 @@ Public Class DomicilioFiscalDlg
     End Sub
 
     Private Sub DomicilioFiscalDlg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UDepBindingSource.DataSource = DepartamentosList
-        TipoHabilitacionComboBox.DataSource = TipoHabilitacionDic.ToList
-        TipoViaComboBox.DataSource = TipoViaDic.ToList
+        UDepBindingSource.DataSource = Codificadores.DepartamentosList
+        TipoHabilitacionComboBox.DataSource = Codificadores.TipoHabilitacionDic.ToList
+        TipoViaComboBox.DataSource = Codificadores.TipoViaDic.ToList
         TipoHabilitacionComboBox.DisplayMember = "value"
         TipoHabilitacionComboBox.ValueMember = "Key"
         TipoViaComboBox.DisplayMember = "value"

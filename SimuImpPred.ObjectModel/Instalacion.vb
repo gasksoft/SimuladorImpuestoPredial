@@ -1,5 +1,10 @@
+
+Imports System.Xml.Serialization
+
 <Serializable>
 Public MustInherit Class Instalacion
+    <XmlIgnore>
+    Public Property Predio As Predio
     Public Property Mes As Integer = Month(Now)
     Public Property Año As Integer = Year(Now)
 
@@ -11,7 +16,12 @@ Public MustInherit Class Instalacion
 
     Public Property Mep As Integer = 1
     Public Property Ec As Integer = 1
-    Public Property ClasificacionPredio As Integer
+    Public ReadOnly Property ClasificacionPredio As Integer
+        Get
+            If Predio Is Nothing Then Return 1
+            Return Predio.ClasificacionPredio
+        End Get
+    End Property
     Public MustOverride ReadOnly Property ValorUnitario As Decimal
     Protected MustOverride ReadOnly Property ValorUnitarioIncrementado As Decimal
 
@@ -50,5 +60,6 @@ Public MustInherit Class Instalacion
         End Get
     End Property
 
+    Public Property PorcPartPredio As Decimal = 100
     Public MustOverride ReadOnly Property Valor As Decimal
 End Class

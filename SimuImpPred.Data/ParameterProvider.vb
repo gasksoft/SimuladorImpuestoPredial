@@ -41,4 +41,8 @@
     Public Shared Function GetDepartamentos() As List(Of UDep)
         Return Contexto.Departamentos.Include("Provincias.Distritos").ToList
     End Function
+
+    Public Shared Function GetGruposUsos() As List(Of UsoGrupo)
+        Return Contexto.UsosGrupos.Include("SubGrupos.Usos").ToList
+    End Function
 End Class

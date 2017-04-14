@@ -22,7 +22,7 @@ Public Class HojaResumen
     Public Property Predios As BindingList(Of Predio) = New BindingList(Of Predio)
 
     <DefaultValue(True)>
-    Public Property Presunto As Boolean = True
+    Public Property Presunto As Boolean = False
 
     Public Property BaseImponible As Decimal
         Get

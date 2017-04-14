@@ -61,7 +61,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common.vb" />
     <Compile Include="Colindante.vb" />
     <Compile Include="Construccion.vb" />
     <Compile Include="DatosPersona.vb" />
@@ -112,6 +111,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SimuImpPred.Common\SimuImpPred.Common.vbproj">
+      <Project>{5be5c683-45d6-4554-9796-dedc84b1ea35}</Project>
+      <Name>SimuImpPred.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SimuImpPred.Data\SimuImpPred.Data.vbproj">
       <Project>{6a96178f-5647-4508-a609-1961c1b66d1a}</Project>
       <Name>SimuImpPred.Data</Name>

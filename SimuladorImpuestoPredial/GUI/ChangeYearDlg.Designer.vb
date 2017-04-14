@@ -42,7 +42,7 @@ Namespace GUI
             Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
             Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
             Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-            Me.TableLayoutPanel1.Location = New System.Drawing.Point(110, 227)
+            Me.TableLayoutPanel1.Location = New System.Drawing.Point(161, 152)
             Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
             Me.TableLayoutPanel1.RowCount = 1
             Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -75,7 +75,7 @@ Namespace GUI
             Me.MetroComboBox1.FormattingEnabled = True
             Me.MetroComboBox1.ItemHeight = 23
             Me.MetroComboBox1.Items.AddRange(New Object() {"2017", "2016", "2015"})
-            Me.MetroComboBox1.Location = New System.Drawing.Point(162, 182)
+            Me.MetroComboBox1.Location = New System.Drawing.Point(91, 22)
             Me.MetroComboBox1.Name = "MetroComboBox1"
             Me.MetroComboBox1.PromptText = "Año"
             Me.MetroComboBox1.Size = New System.Drawing.Size(86, 29)
@@ -86,11 +86,11 @@ Namespace GUI
             '
             Me.MetroLabel1.Location = New System.Drawing.Point(23, 60)
             Me.MetroLabel1.Name = "MetroLabel1"
-            Me.MetroLabel1.Size = New System.Drawing.Size(225, 119)
+            Me.MetroLabel1.Size = New System.Drawing.Size(284, 82)
             Me.MetroLabel1.TabIndex = 2
-            Me.MetroLabel1.Text = "Seleccione el año de cálculo que desea utilizar. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "En base a este se utilizarán l" &
-    "as tablas de valores unitarios, depreciación y obras complementarias respectivas" &
-    " para la sierra"
+            Me.MetroLabel1.Text = "Seleccione el año de cálculo que desea utilizar. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Se van a utilizar las tablas d" &
+    "e valores unitarios, depreciación y obras complementarias correspondientes a est" &
+    "e año:"
             Me.MetroLabel1.WrapToLine = True
             '
             'ChangeYearDlg
@@ -99,7 +99,7 @@ Namespace GUI
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.CancelButton = Me.Cancel_Button
-            Me.ClientSize = New System.Drawing.Size(268, 268)
+            Me.ClientSize = New System.Drawing.Size(319, 193)
             Me.Controls.Add(Me.MetroLabel1)
             Me.Controls.Add(Me.MetroComboBox1)
             Me.Controls.Add(Me.TableLayoutPanel1)

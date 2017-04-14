@@ -42,12 +42,13 @@ Namespace GUI
             Dim MetroLabel12 As MetroFramework.Controls.MetroLabel
             Dim MetroLabel13 As MetroFramework.Controls.MetroLabel
             Dim MetroLabel14 As MetroFramework.Controls.MetroLabel
-            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.MlImpuestoTrimestralL = New MetroFramework.Controls.MetroLabel()
             Me.MlImpuestoTrimestral = New MetroFramework.Controls.MetroLabel()
             Me.HojaResumenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -68,6 +69,7 @@ Namespace GUI
             Me.MetroTextBox8 = New MetroFramework.Controls.MetroTextBox()
             Me.MetroTabControl1 = New MetroFramework.Controls.MetroTabControl()
             Me.MetroTabPage1 = New MetroFramework.Controls.MetroTabPage()
+            Me.MetroLabel16 = New MetroFramework.Controls.MetroLabel()
             Me.Label1 = New System.Windows.Forms.Label()
             Me.MetroTextBox9 = New MetroFramework.Controls.MetroTextBox()
             Me.MetroTextBox10 = New MetroFramework.Controls.MetroTextBox()
@@ -75,18 +77,18 @@ Namespace GUI
             Me.Label3 = New System.Windows.Forms.Label()
             Me.PrediosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
             Me.MgPredios = New MetroFramework.Controls.MetroGrid()
-            Me.AnexoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.DescPredioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.AutoavaluoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.MetroLabel15 = New MetroFramework.Controls.MetroLabel()
             Me.MetroTile1 = New MetroFramework.Controls.MetroTile()
             Me.MetroTile2 = New MetroFramework.Controls.MetroTile()
-            Me.MetroTile3 = New MetroFramework.Controls.MetroTile()
+            Me.MtAddPu = New MetroFramework.Controls.MetroTile()
             Me.MetroTile4 = New MetroFramework.Controls.MetroTile()
             Me.MtEditPredio = New MetroFramework.Controls.MetroTile()
             Me.MtDeletePredio = New MetroFramework.Controls.MetroTile()
             Me.MetroTabControl2 = New MetroFramework.Controls.MetroTabControl()
             Me.MetroTabPage2 = New MetroFramework.Controls.MetroTabPage()
+            Me.AnexoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.DescPredioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.AutoavaluoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
             MetroLabel3 = New MetroFramework.Controls.MetroLabel()
             CondicionEspecialContribuyenteLabel = New MetroFramework.Controls.MetroLabel()
             DeduccionLabel = New MetroFramework.Controls.MetroLabel()
@@ -349,7 +351,6 @@ Namespace GUI
             Me.MetroTextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "BaseImponibleTotal", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
             Me.MetroTextBox2.DisplayIcon = True
             Me.MetroTextBox2.FontSize = MetroFramework.MetroTextBoxSize.Medium
-            Me.MetroTextBox2.Icon = Global.SimuImpPred.Gui.My.Resources.Resources.monedas
             Me.MetroTextBox2.Lines = New String() {"9,999,999,999.99"}
             Me.MetroTextBox2.Location = New System.Drawing.Point(178, 131)
             Me.MetroTextBox2.MaxLength = 32767
@@ -371,15 +372,13 @@ Namespace GUI
             '
             'PresuntoMetroToggle
             '
-            Me.PresuntoMetroToggle.Checked = True
-            Me.PresuntoMetroToggle.CheckState = System.Windows.Forms.CheckState.Checked
             Me.PresuntoMetroToggle.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.HojaResumenBindingSource, "Presunto", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
             Me.PresuntoMetroToggle.DisplayStatus = False
             Me.PresuntoMetroToggle.Location = New System.Drawing.Point(77, 17)
             Me.PresuntoMetroToggle.Name = "PresuntoMetroToggle"
             Me.PresuntoMetroToggle.Size = New System.Drawing.Size(70, 24)
             Me.PresuntoMetroToggle.TabIndex = 15
-            Me.PresuntoMetroToggle.Text = "On"
+            Me.PresuntoMetroToggle.Text = "Off"
             Me.PresuntoMetroToggle.UseSelectable = True
             '
             'MetroTextBox1
@@ -399,7 +398,6 @@ Namespace GUI
             Me.MetroTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "Deduccion", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "C2"))
             Me.MetroTextBox1.DisplayIcon = True
             Me.MetroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium
-            Me.MetroTextBox1.Icon = Global.SimuImpPred.Gui.My.Resources.Resources.monedas
             Me.MetroTextBox1.Lines = New String() {"9,999,999,999.99"}
             Me.MetroTextBox1.Location = New System.Drawing.Point(178, 99)
             Me.MetroTextBox1.MaxLength = 32767
@@ -436,7 +434,6 @@ Namespace GUI
             Me.BaseImponibleTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "BaseImponible", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, Nothing, "N2"))
             Me.BaseImponibleTextBox.DisplayIcon = True
             Me.BaseImponibleTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium
-            Me.BaseImponibleTextBox.Icon = Global.SimuImpPred.Gui.My.Resources.Resources.monedas
             Me.BaseImponibleTextBox.Lines = New String() {"9,999,999,999.99"}
             Me.BaseImponibleTextBox.Location = New System.Drawing.Point(178, 67)
             Me.BaseImponibleTextBox.MaxLength = 32767
@@ -464,7 +461,7 @@ Namespace GUI
             Me.CondicionEspecialContribuyenteComboBox.ItemHeight = 23
             Me.CondicionEspecialContribuyenteComboBox.Location = New System.Drawing.Point(366, 17)
             Me.CondicionEspecialContribuyenteComboBox.Name = "CondicionEspecialContribuyenteComboBox"
-            Me.CondicionEspecialContribuyenteComboBox.Size = New System.Drawing.Size(702, 29)
+            Me.CondicionEspecialContribuyenteComboBox.Size = New System.Drawing.Size(780, 29)
             Me.CondicionEspecialContribuyenteComboBox.TabIndex = 18
             Me.CondicionEspecialContribuyenteComboBox.UseSelectable = True
             '
@@ -484,7 +481,6 @@ Namespace GUI
             Me.MetroTextBox3.CustomButton.Visible = False
             Me.MetroTextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "BaseImponibleTramo1", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
             Me.MetroTextBox3.DisplayIcon = True
-            Me.MetroTextBox3.Icon = Global.SimuImpPred.Gui.My.Resources.Resources.monedas
             Me.MetroTextBox3.Lines = New String() {"9,999,999,999.99"}
             Me.MetroTextBox3.Location = New System.Drawing.Point(75, 23)
             Me.MetroTextBox3.MaxLength = 32767
@@ -520,7 +516,6 @@ Namespace GUI
             Me.MetroTextBox4.CustomButton.Visible = False
             Me.MetroTextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "BaseImponibleTramo2", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
             Me.MetroTextBox4.DisplayIcon = True
-            Me.MetroTextBox4.Icon = Global.SimuImpPred.Gui.My.Resources.Resources.monedas
             Me.MetroTextBox4.Lines = New String() {"9,999,999,999.99"}
             Me.MetroTextBox4.Location = New System.Drawing.Point(75, 55)
             Me.MetroTextBox4.MaxLength = 32767
@@ -556,7 +551,6 @@ Namespace GUI
             Me.MetroTextBox5.CustomButton.Visible = False
             Me.MetroTextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "BaseImponibleTramo3", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
             Me.MetroTextBox5.DisplayIcon = True
-            Me.MetroTextBox5.Icon = Global.SimuImpPred.Gui.My.Resources.Resources.monedas
             Me.MetroTextBox5.Lines = New String() {"9,999,999,999.99"}
             Me.MetroTextBox5.Location = New System.Drawing.Point(75, 87)
             Me.MetroTextBox5.MaxLength = 32767
@@ -592,7 +586,6 @@ Namespace GUI
             Me.MetroTextBox6.CustomButton.Visible = False
             Me.MetroTextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "ImpuestoTramo3", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
             Me.MetroTextBox6.DisplayIcon = True
-            Me.MetroTextBox6.Icon = Global.SimuImpPred.Gui.My.Resources.Resources.monedas
             Me.MetroTextBox6.Lines = New String() {"999,999.99"}
             Me.MetroTextBox6.Location = New System.Drawing.Point(286, 87)
             Me.MetroTextBox6.MaxLength = 32767
@@ -628,7 +621,6 @@ Namespace GUI
             Me.MetroTextBox7.CustomButton.Visible = False
             Me.MetroTextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "ImpuestoTramo2", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
             Me.MetroTextBox7.DisplayIcon = True
-            Me.MetroTextBox7.Icon = Global.SimuImpPred.Gui.My.Resources.Resources.monedas
             Me.MetroTextBox7.Lines = New String() {"999,999.99"}
             Me.MetroTextBox7.Location = New System.Drawing.Point(286, 55)
             Me.MetroTextBox7.MaxLength = 32767
@@ -664,7 +656,6 @@ Namespace GUI
             Me.MetroTextBox8.CustomButton.Visible = False
             Me.MetroTextBox8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "ImpuestoTramo1", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
             Me.MetroTextBox8.DisplayIcon = True
-            Me.MetroTextBox8.Icon = Global.SimuImpPred.Gui.My.Resources.Resources.monedas
             Me.MetroTextBox8.Lines = New String() {"999,999.99"}
             Me.MetroTextBox8.Location = New System.Drawing.Point(286, 23)
             Me.MetroTextBox8.MaxLength = 32767
@@ -686,16 +677,19 @@ Namespace GUI
             '
             'MetroTabControl1
             '
+            Me.MetroTabControl1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
             Me.MetroTabControl1.Controls.Add(Me.MetroTabPage1)
             Me.MetroTabControl1.Location = New System.Drawing.Point(15, 259)
             Me.MetroTabControl1.Name = "MetroTabControl1"
             Me.MetroTabControl1.SelectedIndex = 0
-            Me.MetroTabControl1.Size = New System.Drawing.Size(437, 208)
+            Me.MetroTabControl1.Size = New System.Drawing.Size(437, 273)
             Me.MetroTabControl1.TabIndex = 36
             Me.MetroTabControl1.UseSelectable = True
             '
             'MetroTabPage1
             '
+            Me.MetroTabPage1.Controls.Add(Me.MetroLabel16)
             Me.MetroTabPage1.Controls.Add(Me.Label1)
             Me.MetroTabPage1.Controls.Add(MetroLabel14)
             Me.MetroTabPage1.Controls.Add(Me.MetroTextBox9)
@@ -720,12 +714,25 @@ Namespace GUI
             Me.MetroTabPage1.HorizontalScrollbarSize = 10
             Me.MetroTabPage1.Location = New System.Drawing.Point(4, 38)
             Me.MetroTabPage1.Name = "MetroTabPage1"
-            Me.MetroTabPage1.Size = New System.Drawing.Size(429, 166)
+            Me.MetroTabPage1.Size = New System.Drawing.Size(429, 231)
             Me.MetroTabPage1.TabIndex = 0
             Me.MetroTabPage1.Text = "Detalles del cálculo del Impuesto Predial"
             Me.MetroTabPage1.VerticalScrollbarBarColor = True
             Me.MetroTabPage1.VerticalScrollbarHighlightOnWheel = False
             Me.MetroTabPage1.VerticalScrollbarSize = 10
+            '
+            'MetroLabel16
+            '
+            Me.MetroLabel16.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.MetroLabel16.FontSize = MetroFramework.MetroLabelSize.Small
+            Me.MetroLabel16.Location = New System.Drawing.Point(0, 167)
+            Me.MetroLabel16.Name = "MetroLabel16"
+            Me.MetroLabel16.Size = New System.Drawing.Size(429, 64)
+            Me.MetroLabel16.TabIndex = 40
+            Me.MetroLabel16.Text = "Nota:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "  Tramo 1: Hasta 15 UIT - Alicuota 0.2% " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "  Tramo 2: Más de 15 UIT y Hasta" &
+    " 60 UIT - Alicuota 0.6% " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "  Tramo 3: Más de 60 UIT - Alicuota 1.0% " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
             '
             'Label1
             '
@@ -752,7 +759,6 @@ Namespace GUI
             Me.MetroTextBox9.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "BaseImponibleTotal", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
             Me.MetroTextBox9.DisplayIcon = True
             Me.MetroTextBox9.FontWeight = MetroFramework.MetroTextBoxWeight.Bold
-            Me.MetroTextBox9.Icon = Global.SimuImpPred.Gui.My.Resources.Resources.monedas
             Me.MetroTextBox9.Lines = New String() {"9,999,999,999.99"}
             Me.MetroTextBox9.Location = New System.Drawing.Point(75, 122)
             Me.MetroTextBox9.MaxLength = 32767
@@ -789,7 +795,6 @@ Namespace GUI
             Me.MetroTextBox10.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HojaResumenBindingSource, "Impuesto", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
             Me.MetroTextBox10.DisplayIcon = True
             Me.MetroTextBox10.FontWeight = MetroFramework.MetroTextBoxWeight.Bold
-            Me.MetroTextBox10.Icon = Global.SimuImpPred.Gui.My.Resources.Resources.monedas
             Me.MetroTextBox10.Lines = New String() {"S/9,999,999.99"}
             Me.MetroTextBox10.Location = New System.Drawing.Point(286, 122)
             Me.MetroTextBox10.MaxLength = 32767
@@ -816,7 +821,7 @@ Namespace GUI
             Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.Label2.Location = New System.Drawing.Point(8, 55)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(1060, 3)
+            Me.Label2.Size = New System.Drawing.Size(1138, 3)
             Me.Label2.TabIndex = 38
             '
             'Label3
@@ -826,7 +831,7 @@ Namespace GUI
             Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.Label3.Location = New System.Drawing.Point(470, 67)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(3, 441)
+            Me.Label3.Size = New System.Drawing.Size(3, 454)
             Me.Label3.TabIndex = 39
             '
             'PrediosBindingSource
@@ -844,90 +849,54 @@ Namespace GUI
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.MgPredios.AutoGenerateColumns = False
-            Me.MgPredios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
             Me.MgPredios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.MgPredios.BorderStyle = System.Windows.Forms.BorderStyle.None
-            Me.MgPredios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
             Me.MgPredios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-            DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-            DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-            DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-            DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-            DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.MgPredios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+            DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.MgPredios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
             Me.MgPredios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.MgPredios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.AnexoDataGridViewTextBoxColumn, Me.DescPredioDataGridViewTextBoxColumn, Me.AutoavaluoDataGridViewTextBoxColumn})
             Me.MgPredios.DataSource = Me.PrediosBindingSource
-            DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-            DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
-            DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-            DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-            DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.MgPredios.DefaultCellStyle = DataGridViewCellStyle5
+            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+            DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
+            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.MgPredios.DefaultCellStyle = DataGridViewCellStyle12
             Me.MgPredios.EnableHeadersVisualStyles = False
             Me.MgPredios.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-            Me.MgPredios.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.MgPredios.Location = New System.Drawing.Point(0, 134)
             Me.MgPredios.MultiSelect = False
             Me.MgPredios.Name = "MgPredios"
             Me.MgPredios.ReadOnly = True
             Me.MgPredios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-            DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-            DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-            DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-            DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-            DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.MgPredios.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+            DataGridViewCellStyle13.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+            DataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+            DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.MgPredios.RowHeadersDefaultCellStyle = DataGridViewCellStyle13
             Me.MgPredios.RowHeadersWidth = 18
             Me.MgPredios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+            DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MgPredios.RowsDefaultCellStyle = DataGridViewCellStyle14
             Me.MgPredios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.MgPredios.ShowCellErrors = False
             Me.MgPredios.ShowCellToolTips = False
             Me.MgPredios.ShowEditingIcon = False
             Me.MgPredios.ShowRowErrors = False
-            Me.MgPredios.Size = New System.Drawing.Size(581, 286)
+            Me.MgPredios.Size = New System.Drawing.Size(659, 299)
             Me.MgPredios.TabIndex = 40
-            '
-            'AnexoDataGridViewTextBoxColumn
-            '
-            Me.AnexoDataGridViewTextBoxColumn.DataPropertyName = "Anexo"
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-            Me.AnexoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
-            Me.AnexoDataGridViewTextBoxColumn.HeaderText = "Anexo"
-            Me.AnexoDataGridViewTextBoxColumn.Name = "AnexoDataGridViewTextBoxColumn"
-            Me.AnexoDataGridViewTextBoxColumn.ReadOnly = True
-            Me.AnexoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-            Me.AnexoDataGridViewTextBoxColumn.Width = 45
-            '
-            'DescPredioDataGridViewTextBoxColumn
-            '
-            Me.DescPredioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-            Me.DescPredioDataGridViewTextBoxColumn.DataPropertyName = "DescPredio"
-            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
-            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.DescPredioDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
-            Me.DescPredioDataGridViewTextBoxColumn.HeaderText = "DescPredio"
-            Me.DescPredioDataGridViewTextBoxColumn.Name = "DescPredioDataGridViewTextBoxColumn"
-            Me.DescPredioDataGridViewTextBoxColumn.ReadOnly = True
-            Me.DescPredioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-            '
-            'AutoavaluoDataGridViewTextBoxColumn
-            '
-            Me.AutoavaluoDataGridViewTextBoxColumn.DataPropertyName = "Autoavaluo"
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-            DataGridViewCellStyle4.Format = "C2"
-            Me.AutoavaluoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
-            Me.AutoavaluoDataGridViewTextBoxColumn.HeaderText = "Autoavaluo"
-            Me.AutoavaluoDataGridViewTextBoxColumn.Name = "AutoavaluoDataGridViewTextBoxColumn"
-            Me.AutoavaluoDataGridViewTextBoxColumn.ReadOnly = True
-            Me.AutoavaluoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-            Me.AutoavaluoDataGridViewTextBoxColumn.Width = 150
             '
             'MetroLabel15
             '
@@ -944,13 +913,12 @@ Namespace GUI
             Me.MetroTile1.ActiveControl = Nothing
             Me.MetroTile1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.MetroTile1.Location = New System.Drawing.Point(373, 3)
+            Me.MetroTile1.Location = New System.Drawing.Point(548, 3)
             Me.MetroTile1.Name = "MetroTile1"
-            Me.MetroTile1.Size = New System.Drawing.Size(205, 106)
+            Me.MetroTile1.Size = New System.Drawing.Size(108, 106)
             Me.MetroTile1.TabIndex = 42
             Me.MetroTile1.Text = "Datos del" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Contribuyente"
             Me.MetroTile1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.MetroTile1.TileImage = Global.SimuImpPred.Gui.My.Resources.Resources.user
             Me.MetroTile1.TileImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.MetroTile1.UseSelectable = True
             Me.MetroTile1.UseTileImage = True
@@ -958,41 +926,38 @@ Namespace GUI
             'MetroTile2
             '
             Me.MetroTile2.ActiveControl = Nothing
-            Me.MetroTile2.Location = New System.Drawing.Point(291, 3)
+            Me.MetroTile2.Location = New System.Drawing.Point(439, 3)
             Me.MetroTile2.Name = "MetroTile2"
-            Me.MetroTile2.Size = New System.Drawing.Size(76, 106)
+            Me.MetroTile2.Size = New System.Drawing.Size(109, 106)
             Me.MetroTile2.TabIndex = 43
             Me.MetroTile2.Text = "Domicilio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Fiscal"
             Me.MetroTile2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.MetroTile2.TileImage = Global.SimuImpPred.Gui.My.Resources.Resources.home_48
             Me.MetroTile2.TileImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.MetroTile2.UseSelectable = True
             Me.MetroTile2.UseTileImage = True
             '
-            'MetroTile3
+            'MtAddPu
             '
-            Me.MetroTile3.ActiveControl = Nothing
-            Me.MetroTile3.Location = New System.Drawing.Point(3, 3)
-            Me.MetroTile3.Name = "MetroTile3"
-            Me.MetroTile3.Size = New System.Drawing.Size(66, 106)
-            Me.MetroTile3.TabIndex = 45
-            Me.MetroTile3.Text = "Agregar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Predio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Urbano"
-            Me.MetroTile3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.MetroTile3.TileImage = Global.SimuImpPred.Gui.My.Resources.Resources.NewPu
-            Me.MetroTile3.TileImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.MetroTile3.UseSelectable = True
-            Me.MetroTile3.UseTileImage = True
+            Me.MtAddPu.ActiveControl = Nothing
+            Me.MtAddPu.Location = New System.Drawing.Point(221, 3)
+            Me.MtAddPu.Name = "MtAddPu"
+            Me.MtAddPu.Size = New System.Drawing.Size(109, 106)
+            Me.MtAddPu.TabIndex = 45
+            Me.MtAddPu.Text = "Agregar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Predio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Urbano"
+            Me.MtAddPu.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+            Me.MtAddPu.TileImageAlign = System.Drawing.ContentAlignment.TopCenter
+            Me.MtAddPu.UseSelectable = True
+            Me.MtAddPu.UseTileImage = True
             '
             'MetroTile4
             '
             Me.MetroTile4.ActiveControl = Nothing
-            Me.MetroTile4.Location = New System.Drawing.Point(75, 3)
+            Me.MetroTile4.Location = New System.Drawing.Point(330, 3)
             Me.MetroTile4.Name = "MetroTile4"
-            Me.MetroTile4.Size = New System.Drawing.Size(66, 106)
+            Me.MetroTile4.Size = New System.Drawing.Size(109, 106)
             Me.MetroTile4.TabIndex = 46
             Me.MetroTile4.Text = "Agregar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Predio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Rustico"
             Me.MetroTile4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.MetroTile4.TileImage = Global.SimuImpPred.Gui.My.Resources.Resources.NewPr
             Me.MetroTile4.TileImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.MetroTile4.UseSelectable = True
             Me.MetroTile4.UseTileImage = True
@@ -1001,13 +966,12 @@ Namespace GUI
             '
             Me.MtEditPredio.ActiveControl = Nothing
             Me.MtEditPredio.Enabled = False
-            Me.MtEditPredio.Location = New System.Drawing.Point(147, 3)
+            Me.MtEditPredio.Location = New System.Drawing.Point(3, 3)
             Me.MtEditPredio.Name = "MtEditPredio"
-            Me.MtEditPredio.Size = New System.Drawing.Size(66, 106)
+            Me.MtEditPredio.Size = New System.Drawing.Size(109, 106)
             Me.MtEditPredio.TabIndex = 47
             Me.MtEditPredio.Text = "Editar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Predio"
             Me.MtEditPredio.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.MtEditPredio.TileImage = Global.SimuImpPred.Gui.My.Resources.Resources.edit_128
             Me.MtEditPredio.TileImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.MtEditPredio.UseSelectable = True
             Me.MtEditPredio.UseTileImage = True
@@ -1016,13 +980,12 @@ Namespace GUI
             '
             Me.MtDeletePredio.ActiveControl = Nothing
             Me.MtDeletePredio.Enabled = False
-            Me.MtDeletePredio.Location = New System.Drawing.Point(219, 3)
+            Me.MtDeletePredio.Location = New System.Drawing.Point(112, 3)
             Me.MtDeletePredio.Name = "MtDeletePredio"
-            Me.MtDeletePredio.Size = New System.Drawing.Size(66, 106)
+            Me.MtDeletePredio.Size = New System.Drawing.Size(109, 106)
             Me.MtDeletePredio.TabIndex = 48
             Me.MtDeletePredio.Text = "Quitar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Predio"
             Me.MtDeletePredio.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.MtDeletePredio.TileImage = Global.SimuImpPred.Gui.My.Resources.Resources.ic_delete_48px_64
             Me.MtDeletePredio.TileImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.MtDeletePredio.UseSelectable = True
             Me.MtDeletePredio.UseTileImage = True
@@ -1036,7 +999,7 @@ Namespace GUI
             Me.MetroTabControl2.Location = New System.Drawing.Point(479, 61)
             Me.MetroTabControl2.Name = "MetroTabControl2"
             Me.MetroTabControl2.SelectedIndex = 0
-            Me.MetroTabControl2.Size = New System.Drawing.Size(589, 462)
+            Me.MetroTabControl2.Size = New System.Drawing.Size(667, 475)
             Me.MetroTabControl2.TabIndex = 49
             Me.MetroTabControl2.UseSelectable = True
             '
@@ -1045,7 +1008,7 @@ Namespace GUI
             Me.MetroTabPage2.Controls.Add(Me.MgPredios)
             Me.MetroTabPage2.Controls.Add(Me.MtDeletePredio)
             Me.MetroTabPage2.Controls.Add(Me.MtEditPredio)
-            Me.MetroTabPage2.Controls.Add(Me.MetroTile3)
+            Me.MetroTabPage2.Controls.Add(Me.MtAddPu)
             Me.MetroTabPage2.Controls.Add(Me.MetroTile4)
             Me.MetroTabPage2.Controls.Add(Me.MetroLabel15)
             Me.MetroTabPage2.Controls.Add(Me.MetroTile1)
@@ -1055,12 +1018,47 @@ Namespace GUI
             Me.MetroTabPage2.HorizontalScrollbarSize = 10
             Me.MetroTabPage2.Location = New System.Drawing.Point(4, 38)
             Me.MetroTabPage2.Name = "MetroTabPage2"
-            Me.MetroTabPage2.Size = New System.Drawing.Size(581, 420)
+            Me.MetroTabPage2.Size = New System.Drawing.Size(659, 433)
             Me.MetroTabPage2.TabIndex = 0
             Me.MetroTabPage2.Text = "Detalles del cálculo de la Base Imponible"
             Me.MetroTabPage2.VerticalScrollbarBarColor = True
             Me.MetroTabPage2.VerticalScrollbarHighlightOnWheel = False
             Me.MetroTabPage2.VerticalScrollbarSize = 10
+            '
+            'AnexoDataGridViewTextBoxColumn
+            '
+            Me.AnexoDataGridViewTextBoxColumn.DataPropertyName = "Anexo"
+            DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+            Me.AnexoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle9
+            Me.AnexoDataGridViewTextBoxColumn.HeaderText = "Anexo"
+            Me.AnexoDataGridViewTextBoxColumn.Name = "AnexoDataGridViewTextBoxColumn"
+            Me.AnexoDataGridViewTextBoxColumn.ReadOnly = True
+            Me.AnexoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+            Me.AnexoDataGridViewTextBoxColumn.Width = 45
+            '
+            'DescPredioDataGridViewTextBoxColumn
+            '
+            Me.DescPredioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+            Me.DescPredioDataGridViewTextBoxColumn.DataPropertyName = "DescPredio"
+            DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+            DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.DescPredioDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle10
+            Me.DescPredioDataGridViewTextBoxColumn.HeaderText = "Predio"
+            Me.DescPredioDataGridViewTextBoxColumn.Name = "DescPredioDataGridViewTextBoxColumn"
+            Me.DescPredioDataGridViewTextBoxColumn.ReadOnly = True
+            Me.DescPredioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+            '
+            'AutoavaluoDataGridViewTextBoxColumn
+            '
+            Me.AutoavaluoDataGridViewTextBoxColumn.DataPropertyName = "Autoavaluo"
+            DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+            DataGridViewCellStyle11.Format = "C2"
+            Me.AutoavaluoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle11
+            Me.AutoavaluoDataGridViewTextBoxColumn.HeaderText = "Autoavaluo"
+            Me.AutoavaluoDataGridViewTextBoxColumn.Name = "AutoavaluoDataGridViewTextBoxColumn"
+            Me.AutoavaluoDataGridViewTextBoxColumn.ReadOnly = True
+            Me.AutoavaluoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+            Me.AutoavaluoDataGridViewTextBoxColumn.Width = 120
             '
             'DashBoardUc
             '
@@ -1088,7 +1086,7 @@ Namespace GUI
             Me.Controls.Add(Me.MetroTextBox1)
             Me.Name = "DashBoardUc"
             Me.Padding = New System.Windows.Forms.Padding(5)
-            Me.Size = New System.Drawing.Size(1076, 531)
+            Me.Size = New System.Drawing.Size(1154, 544)
             CType(Me.HojaResumenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MetroTabControl1.ResumeLayout(False)
             Me.MetroTabPage1.ResumeLayout(False)
@@ -1130,17 +1128,18 @@ Namespace GUI
         Friend WithEvents Label3 As Label
         Friend WithEvents PrediosBindingSource As BindingSource
         Friend WithEvents MgPredios As MetroGrid
-        Friend WithEvents AnexoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-        Friend WithEvents DescPredioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-        Friend WithEvents AutoavaluoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
         Friend WithEvents MetroLabel15 As MetroLabel
         Friend WithEvents MetroTile1 As MetroTile
         Friend WithEvents MetroTile2 As MetroTile
-        Friend WithEvents MetroTile3 As MetroTile
+        Friend WithEvents MtAddPu As MetroTile
         Friend WithEvents MetroTile4 As MetroTile
         Friend WithEvents MtEditPredio As MetroTile
         Friend WithEvents MtDeletePredio As MetroTile
         Friend WithEvents MetroTabControl2 As MetroTabControl
         Friend WithEvents MetroTabPage2 As MetroTabPage
+        Friend WithEvents MetroLabel16 As MetroLabel
+        Friend WithEvents AnexoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+        Friend WithEvents DescPredioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+        Friend WithEvents AutoavaluoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     End Class
 End Namespace

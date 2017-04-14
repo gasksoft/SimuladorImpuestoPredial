@@ -103,6 +103,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="UProv.vb" />
+    <Compile Include="Uso.vb" />
+    <Compile Include="UsoGrupo.vb" />
+    <Compile Include="UsoSubGrupo.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

@@ -2,7 +2,7 @@
 Imports System.IO.Compression
 Imports System.Xml.Serialization
 
-Public Class Common
+Public Class Funciones
     Private Sub New()
     End Sub
 
